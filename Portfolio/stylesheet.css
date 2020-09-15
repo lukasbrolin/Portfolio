@@ -1,40 +1,41 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: black;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
 }
 
-html, body{
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
-div.header{
-    width: 100%;
-    top: 0;
+div.header {
+  width: 100%;
+  top: 0;
 }
 
-.headingNav h1, .headingNav a{
-    color:white;
-
+.headingNav h1,
+.headingNav a {
+  color: white;
 }
 
 div.backgroundHeader {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
 }
 
-div.backgroundHeader #myVideo{
-    width: 100%;
-    position: fixed;
+div.backgroundHeader #myVideo {
+  width: 100%;
+  position: fixed;
 }
 
-div.movieBackground{
-    background-color: rgba(99, 99, 99, 0.3);
-    position: fixed;
-    height: 100%;
-    width: 100%;
+div.movieBackground {
+  background-color: rgba(99, 99, 99, 0.3);
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
-
