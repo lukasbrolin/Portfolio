@@ -10,7 +10,7 @@
 <body>
     <div class="backgroundHeader">
         <video autoplay muted loop id="myVideo">
-            <source src="img/movie.mp4" type="video/mp4">
+            <source src="img/city.mp4" type="video/mp4">
         </video>
         <div class="movieBackground">
 
@@ -19,7 +19,7 @@
     <div class="header">
         <img src="img/logoWhite.png" alt="">
         <ul class="headingNav">
-            <li><a href="#">Members</a></li>
+            <li><a href="#membersTitle">Members</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
@@ -27,7 +27,10 @@
     <div class="headerContent">
         <h1>Lorem ipsum, labore?</h1>
     </div>
-    <div class="contentOne">
+    <div class="content">
+        <div class="contentTitle" id="membersTitle">
+            <p>Members</p>
+        </div>
         <ul class="members">
             <div class="lukas">
                 <li><a href="#"><img src="img/Lukas.jpg" alt=""><p>Lukas Brolin</p></a></li>
@@ -43,18 +46,48 @@
             </div>
         </ul>
     </div>
-    <div class="contentTwo">
+    <div class="content">
+        <div class="contentTitle" id="projectsTitle">
+            <p>Projects</p>
+        </div>
         <ul class="projects">
-            <li><a href="#">Alien administrative system</a></li>
-            <li><a href="#">University information system</a></li>
-            <li><a href="#">App for simplifying bicycling</a></li> <!-- comment -->
+            <div class="alienApp">
+                <li><a href="#">
+                    <div class="alienPicture">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="alienText">
+                        Alien administrative system
+                    </div>
+                </a></li>
+            </div>
+            <div class="universityApp">
+                <li><a href="#">
+                    <div class="universityPicture">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="universityText">
+                        University information system
+                    </div>
+                </a></li>
+            </div>
+            <div class="bicyclingApp">
+                <li><a href="#">
+                    <div class="bicyclingPicture">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="bicyclingText">
+                        App for simplifying bicycling
+                    </div>
+                </a></li>
+            </div>
+            <!-- <li><a href="#"></a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#"></a></li> -->
         </ul>
     </div>
     <div class="footer">
