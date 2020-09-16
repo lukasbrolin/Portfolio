@@ -92,13 +92,12 @@ ul.members div{
     width: 60%;
     height: 20%;
     border-top: 6px solid #4b7e74;
-    background-image: url(img/backgroundLightGradient.jpg); /* Testade med bild MED GRADIENT istället för color */
+    background-image: url(img/backgroundLightGradient.jpg);
     background-size: cover;
 }
 
 ul.members img{
     width: 30%;
-    max-height: 340px;
     object-fit: cover;
     overflow: hidden;
     border: 4px solid #4b7e74;
@@ -108,7 +107,7 @@ ul.members img{
 
 ul.members div.simon, ul.members div.isac{
     /* background-color: #b9b9b9; */
-    background-image: url(img/backgroundDark.jpg); /* Testade med bild istället för color */
+    background-image: url(img/background.jpg);
     margin-left: 40%;
 }
 
