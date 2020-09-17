@@ -21,14 +21,18 @@ body {
 
 #logo {
   /* Fixa klick´bara ytan på bild */
-  margin-left: 2em;
+  margin-left: 1.6em;
   height: 2em;
 }
 
 #hamburger {
   /* Fixa klick´bara ytan på bild */
-  margin-right: 2em;
-  width: 30px;
+  margin-right: 1em;
+  font-size: 40px;
+}
+
+#hamburger:hover {
+  color: #0e889e;
 }
 
 .headingNav {
