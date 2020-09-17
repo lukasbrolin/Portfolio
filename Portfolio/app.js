@@ -43,3 +43,8 @@ var el = document.getElementById("hamburger");
 el.addEventListener("click", () => {
   nav.classList.toggle("overlay");
 });
+
+var hamburger = document.querySelector(".hamburger");
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("is-active");
+});
