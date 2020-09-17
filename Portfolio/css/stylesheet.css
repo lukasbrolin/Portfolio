@@ -44,26 +44,24 @@ body {
 
 .headingNav h2 {
   font-size: 1em;
-  margin-left: 2%;
+  margin-left: 1%;
 }
 
 #hamburger {
-  /* Fixa klick´bara ytan på bild */
   margin-left: auto;
   margin-right: 0.5em;
   font-size: 35px;
 }
 
 #logo {
-  /* Fixa klick´bara ytan på bild */
-  margin-left: 0.5em;
+  margin-left: 1em;
   font-size: 35px;
 }
 
 #members,
 #projects,
 #contact {
-  margin-left: 2%;
+  margin-left: 5%;
   display: none;
   padding-right: 5%;
 }
