@@ -19,7 +19,7 @@ body {
   height: 100%;
 }
 
-/* OVERLAY */
+/* HEADER */
 
 .headingNav {
   display: flex;
@@ -44,7 +44,7 @@ body {
 
 .headingNav h2 {
   font-size: 1em;
-  margin-left: 10px;
+  margin-left: 2%;
 }
 
 #hamburger {
@@ -359,9 +359,8 @@ div.memberInfo ul {
     width: 1100px;
   }
 
-  div.memberPicture{
+  div.memberPicture {
     margin: 250px 491px 0px 0px;
-
   }
 
   div.memberInfo {
@@ -369,7 +368,7 @@ div.memberInfo ul {
     /* width: 1100px; */
   }
 
-  div.nameBanner{
+  div.nameBanner {
     margin: 290px 100px 0px 0px;
     padding: 40px;
   }
