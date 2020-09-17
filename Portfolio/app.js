@@ -1,6 +1,4 @@
-//hej1
-
-$(document).ready(function () {
+$(function () {
   window.addEventListener(
     "scroll",
     function () {
@@ -38,4 +36,10 @@ $(document).ready(function () {
     // saves the new position for iteration
     scrollPos = document.body.getBoundingClientRect().top;
   }
+});
+
+var nav = document.getElementById("headingNav");
+var el = document.getElementById("hamburger");
+el.addEventListener("click", () => {
+  nav.classList.toggle("overlay");
 });
