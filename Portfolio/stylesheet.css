@@ -230,53 +230,53 @@ div.contentTwo {
   background-color: #ebebeb;
 }
 
-div.contentHeader{
+div.contentHeader {
   background-color: darkgrey;
   height: 480px;
 }
 
-div.headerHtml{
+div.headerHtml {
   background-color: black;
 }
 
-div.bannerHeader{
+div.bannerHeader {
   display: flex;
   justify-content: center;
 }
 
-div.banner{
+div.banner {
   position: absolute;
-  display: flex; 
+  display: flex;
   justify-content: center;
   max-height: 40%;
-  min-height: 40%; 
+  min-height: 40%;
   width: 800px;
   max-width: 100vw;
 }
 
-div.banner img{
+div.banner img {
   width: 100%;
   border-radius: 0 0 5px 5px;
 }
 
-div.memberPicture{
+div.memberPicture {
   position: absolute;
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   width: 200px;
   margin: 250px 230px 0px 0px;
   /* transition: 0.1s; */
 }
 
-div.memberPicture img{
+div.memberPicture img {
   width: 200px;
   height: 200px;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: 3px solid darkgrey;
   z-index: 2;
 }
 
-div.nameBanner{
+div.nameBanner {
   margin: 290px 0px 0px 150px;
   /* width: 100vw; */
   padding: 40px;
@@ -286,26 +286,25 @@ div.nameBanner{
   border: 3px solid darkgrey;
 }
 
-div.contentContent{
+div.contentContent {
   background-color: grey;
 }
 
-div.memberInfo{
+div.memberInfo {
   max-width: 800px;
-  display: flex; 
-  text-align: center; 
+  display: flex;
+  text-align: center;
   margin: 0 auto;
   background-color: black;
   border-radius: 5px;
 }
 
-div.memberInfo ul{
+div.memberInfo ul {
   margin: 1em;
   line-height: 1.5em;
-  letter-spacing: 0.1em; 
+  letter-spacing: 0.1em;
   font-size: 1.2em;
   max-width: 800px;
-  
 }
 
 @media screen and (min-width: 768px) {
@@ -356,14 +355,13 @@ div.memberInfo ul{
     font-size: 0.5em;
   }
 
-  div.banner{
+  div.banner {
     width: 1100px;
   }
 
-  div.memberPicture{
+  div.memberPicture {
     margin: 250px 400px 0px 0px;
-    transition: .5s;
-    
+    transition: 0.5s;
   }
 
   div.memberInfo {
@@ -371,5 +369,3 @@ div.memberInfo ul{
     /* width: 1100px; */
   }
 }
-
-
