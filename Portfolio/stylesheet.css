@@ -89,6 +89,7 @@ div.headerContent h1 {
 }
 
 div.content {
+  margin: 0% 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +97,6 @@ div.content {
   /* min-height: 100vh; */
   background-image: url("");
   /* background-color: grey; */
-
 }
 
 div.contentTitle {
@@ -210,7 +210,6 @@ div.contentTwo {
 }
 
 @media screen and (min-width: 768px) {
-
   div.contentTitle {
     margin-top: 0.4em;
     padding-top: 0.4em;
@@ -221,13 +220,12 @@ div.contentTwo {
     width: 500px;
     height: 500px;
     margin: 40px 80px 80px 80px;
-
   }
-  
+
   div.member:hover {
     height: 660px;
   }
-  
+
   div.member:after {
     top: -4px;
     left: -4px;
@@ -235,16 +233,16 @@ div.contentTwo {
     bottom: -4px;
     filter: blur(40px);
   }
-  
+
   .member .contentBx {
     height: 150px;
   }
-  
+
   .member .contentBx h2 {
-    font-size:2.5em;
+    font-size: 2.5em;
     line-height: 25px;
   }
-  
+
   .member .contentBx h2 span {
     font-size: 0.5em;
   }
