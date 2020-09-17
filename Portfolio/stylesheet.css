@@ -19,32 +19,46 @@ body {
   height: 100%;
 }
 
+/* OVERLAY */
+
+.headingNav {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+.headingNav a {
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+#hamburger {
+  /* Fixa klick´bara ytan på bild */
+  margin-left: auto;
+  margin-right: 1em;
+  font-size: 40px;
+}
+
 #logo {
   /* Fixa klick´bara ytan på bild */
   margin-left: 1.6em;
   height: 2em;
 }
 
-#hamburger {
-  /* Fixa klick´bara ytan på bild */
-  margin-right: 1em;
-  font-size: 40px;
+#members {
+  margin-left: 5%;
 }
 
 #hamburger:hover {
   color: #0e889e;
 }
 
-.headingNav {
-  display: flex;
-  justify-content: space-between;
-  height: 10vh;
-}
-
-.headingNav a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#members,
+#projects,
+#contact {
+  display: none;
+  padding-right: 5%;
 }
 
 div.backgroundHeader {
@@ -210,6 +224,16 @@ div.contentTwo {
 }
 
 @media screen and (min-width: 768px) {
+  #members,
+  #projects,
+  #contact {
+    display: flex;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
   div.contentTitle {
     margin-top: 0.4em;
     padding-top: 0.4em;
