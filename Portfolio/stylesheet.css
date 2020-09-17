@@ -1,142 +1,143 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    list-style: none;
-    font-family: 'Fjalla One', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
-html, body{
-    height: 100%;
+html,
+body {
+  font-family: "Fjalla One", sans-serif;
+  height: 100%;
 }
 
-div.header{
-    width: 100%;
-    top: 0;
-    height: 15%;
-    display: flex;
+div.header {
+  width: 100%;
+  height: 15%;
+  display: flex;
 }
 
 div.headerContent {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
-div.headerContent h1{
-    margin-left: -1.5em;
+div.headerContent h1 {
+  margin-left: -1.5em;
 }
 
-div.header img{
-    height: 2em;
-    margin: 1em;
+div.header img {
+  height: 2em;
+  margin: 1em;
 }
 
-.headingNav h1, .headingNav a{
-    color:white;
+.headingNav h1,
+.headingNav a {
+  color: white;
 }
 
-.headingNav{
-    display: flex;
-    height: 10vh;
+.headingNav {
+  display: flex;
+  height: 10vh;
 }
 
-.headingNav ul{
-    top: 0;
+.headingNav ul {
+  top: 0;
 }
 
-.headingNav li{
-    margin: 1.8em;
-    top: 0;
+.headingNav li {
+  margin: 1.8em;
+  top: 0;
 }
 
 div.backgroundHeader {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
-div.backgroundHeader #myVideo{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
+div.backgroundHeader #myVideo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
 }
 
-div.movieBackground{
-    background-color: rgba(99, 99, 99, 0.4);
-    position: absolute;
-    height: 100%;
-    width: 100%;
+div.movieBackground {
+  background-color: rgba(99, 99, 99, 0.4);
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
-div.headerContent{
-    display: flex;
-    height: 85%;
-    align-items: center;
-    justify-content: center;
-    
+div.headerContent {
+  display: flex;
+  height: 85%;
+  align-items: center;
+  justify-content: center;
 }
 
-div.headerContent h1{
-    color: white;
-    font-size: 3em;
+div.headerContent h1 {
+  color: white;
+  font-size: 3em;
 }
 
-div.content{
-    width: 100%;
-    text-align: center;
-    background-color: #ebebeb;
+div.content {
+  width: 100%;
+  text-align: center;
+  background-color: #ebebeb;
 }
 
-div.contentTitle p{
-    padding-top: 1em;
-    font-size: 4em;
+div.contentTitle p {
+  padding-top: 1em;
+  font-size: 4em;
 }
 
-ul.members div{
-    margin: 6em 0%;
-    /* background-color: #dcdcdc; */
-    width: 60%;
-    height: 20%;
-    border-top: 6px solid #4b7e74;
-    background-image: url(img/backgroundLightGradient.jpg);
-    background-size: cover;
+ul.members div {
+  margin: 6em 0%;
+  /* background-color: #dcdcdc; */
+  width: 60%;
+  height: 20%;
+  border-top: 6px solid #4b7e74;
+  background-image: url(img/backgroundLightGradient.jpg);
+  background-size: cover;
 }
 
-ul.members img{
-    width: 30%;
-    object-fit: cover;
-    overflow: hidden;
-    border: 4px solid #4b7e74;
-    border-radius: 50%;
-    margin: -2em 2em;
+ul.members img {
+  width: 30%;
+  object-fit: cover;
+  overflow: hidden;
+  border: 4px solid #4b7e74;
+  border-radius: 50%;
+  margin: -2em 2em;
 }
 
-ul.members div.simon, ul.members div.isac{
-    /* background-color: #b9b9b9; */
-    background-image: url(img/background.jpg);
-    margin-left: 40%;
+ul.members div.simon,
+ul.members div.isac {
+  background-image: url(img/background.jpg);
+  margin-left: 40%;
 }
 
-ul.members li a{
-    display: flex;
-    align-items: center;
+ul.members li a {
+  display: flex;
+  align-items: center;
 }
 
-ul.members div.simon li a, ul.members div.isac li a{
-    justify-content: right;
+ul.members div.simon li a,
+ul.members div.isac li a {
+  justify-content: right;
 }
 
-ul.members div.isac{
-    margin-bottom: 0;
+ul.members div.isac {
+  margin-bottom: 0;
 }
 
 ul.members li a p {
-    font-size: 3em;
+  font-size: 3em;
 }
 
-div.contentTwo{
-    background-color:#ebebeb;
+div.contentTwo {
+  background-color: #ebebeb;
 }
-
