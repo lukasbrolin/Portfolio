@@ -24,7 +24,8 @@ $(document).ready(function () {
       );
     } else if (
       document.body.getBoundingClientRect().top > scrollPos &&
-      scrollPos + document.getElementById("backgroundHeader").clientHeight === 0
+      (scrollPos + document.getElementById("backgroundHeader").clientHeight > -10 &&
+       scrollPos + document.getElementById("backgroundHeader").clientHeight < 10) 
     ) {
       $("html,body").animate(
         {

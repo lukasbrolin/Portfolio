@@ -89,14 +89,17 @@ div.content {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-image: url("");
   /* background-color: grey; */
+
 }
 
 div.contentTitle {
   margin-top: 2em;
+  padding-top: 1em;
   font-size: 2em;
+  transition: 0.5s;
 }
 div.contentTitle p {
   color: black;
@@ -203,4 +206,42 @@ div.contentTwo {
 }
 
 @media screen and (min-width: 768px) {
+
+  div.contentTitle {
+    margin-top: 0.4em;
+    padding-top: 0.4em;
+    font-size: 6em;
+  }
+
+  div.member {
+    width: 500px;
+    height: 500px;
+    margin: 40px 80px 80px 80px;
+
+  }
+  
+  div.member:hover {
+    height: 660px;
+  }
+  
+  div.member:after {
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    filter: blur(40px);
+  }
+  
+  .member .contentBx {
+    height: 150px;
+  }
+  
+  .member .contentBx h2 {
+    font-size:2.5em;
+    line-height: 25px;
+  }
+  
+  .member .contentBx h2 span {
+    font-size: 0.5em;
+  }
 }
