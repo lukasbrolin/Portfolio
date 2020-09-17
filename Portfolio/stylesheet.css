@@ -23,8 +23,17 @@ body {
 
 .headingNav {
   display: flex;
-  align-items: center;
   height: 10vh;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+  background-color: rgba(0, 0, 0, 0.397);
 }
 
 .headingNav a {
@@ -33,30 +42,28 @@ body {
   align-items: center;
 }
 
+.headingNav h2 {
+  font-size: 1em;
+  margin-left: 10px;
+}
+
 #hamburger {
   /* Fixa klick´bara ytan på bild */
   margin-left: auto;
-  margin-right: 1em;
-  font-size: 40px;
+  margin-right: 0.5em;
+  font-size: 35px;
 }
 
 #logo {
   /* Fixa klick´bara ytan på bild */
-  margin-left: 1.6em;
-  height: 2em;
-}
-
-#members {
-  margin-left: 5%;
-}
-
-#hamburger:hover {
-  color: #0e889e;
+  margin-left: 0.5em;
+  font-size: 35px;
 }
 
 #members,
 #projects,
 #contact {
+  margin-left: 2%;
   display: none;
   padding-right: 5%;
 }
