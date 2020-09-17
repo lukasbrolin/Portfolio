@@ -359,13 +359,18 @@ div.memberInfo ul {
     width: 1100px;
   }
 
-  div.memberPicture {
-    margin: 250px 400px 0px 0px;
-    transition: 0.5s;
+  div.memberPicture{
+    margin: 250px 491px 0px 0px;
+
   }
 
   div.memberInfo {
     max-width: 1100px;
     /* width: 1100px; */
+  }
+
+  div.nameBanner{
+    margin: 290px 100px 0px 0px;
+    padding: 40px;
   }
 }
