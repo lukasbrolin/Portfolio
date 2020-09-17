@@ -18,7 +18,7 @@ $(document).ready(function () {
     ) {
       $("html,body").animate(
         {
-          scrollTop: $(".content").offset().top,
+          scrollTop: $(".contentTitle").offset().top,
         },
         "slow"
       );

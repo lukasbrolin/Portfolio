@@ -20,16 +20,20 @@ body {
 }
 
 #logo {
+  /* Fixa klick´bara ytan på bild */
+  margin-left: 2em;
   height: 2em;
 }
 
 #hamburger {
-  width: 40px;
-  justify-self: flex-end;
+  /* Fixa klick´bara ytan på bild */
+  margin-right: 2em;
+  width: 30px;
 }
 
 .headingNav {
   display: flex;
+  justify-content: space-between;
   height: 10vh;
 }
 
@@ -96,6 +100,7 @@ div.contentTitle {
 }
 div.contentTitle p {
   color: black;
+  text-align: center;
 }
 
 div.member {
@@ -195,4 +200,7 @@ div.member:after {
 
 div.contentTwo {
   background-color: #ebebeb;
+}
+
+@media screen and (min-width: 768px) {
 }
