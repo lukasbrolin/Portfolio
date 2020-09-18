@@ -37,12 +37,12 @@ $(function () {
     scrollPos = document.body.getBoundingClientRect().top;
   }
 
-  var nav = document.getElementById("headingNav");
-  var el = document.getElementById("hamburger");
-  el.addEventListener("click", () => {
-    nav.classList.toggle("overlay");
+  // Hamburger
+  var hamburger = document.querySelector(".hamburger");
+  var nav = document.getElementById("nav");
 
-
-});
-
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("is-active");
+    nav.classList.toggle("toggle");
+  });
 });

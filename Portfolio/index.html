@@ -4,35 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <!-- BACKGROUND VIDEO -->
     <div class="backgroundHeader" id="backgroundHeader">
         <video autoplay muted loop id="myVideo">
             <source src="img/city.mp4" type="video/mp4">
         </video>
         <div class="movieBackground">
-
         </div>
     </div>
-    <ul class="headingNav" id="headingNav">
-        <a href="#" id="logo">
-            <i class="fas fa-code"></i>
-            <h2>JOSILIUS</h2>
+
+    <!-- HEADER -->
+    <div class="nav-horizontal sticky" id="navbar">
+        <a href="#">
+            <img src="img/logo.png" alt="">
+            <!-- <i class="fas fa-code"></i> -->
+            <h2>JOSILUIS</h2>
         </a>
-        <!-- <img src="img/logoWhite.png" id="logo"> -->
-        <a href="#membersTitle" id="members">Members</a>
-        <a href="#" id="projects">Projects</a>
-        <a href="#" id="contact">Contact Us</a>
+        <ul class="links">
+            <a href="#membersTitle">Members</a>
+            <a href="#">Project</a>
+            <a href="#">Contact Us</a>
+        </ul>
         <a href="#" id="hamburger">
-            <i class="fa fa-bars"></i>
+            <button class="hamburger hamburger--vortex" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </a>
-    </ul>
+    </div>
+
+    <div id="nav" class="overlay nav-vertical">
+        <div class="overlay-content" id="overlay-content">
+            <a href="#membersTitle">Members</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
     <div class="headerContent" id="headerContent">
         <p>Say <strong>Hello</strong> to your new </p>
         <h1>Experience of innovative design</h1>
@@ -43,7 +61,7 @@
         </div>
         <div class="content">
             <a href="member.html">
-                    <div class="member" id="lukas">
+                <div class="member" id="lukas">
                     <div class="imgBx">
                         <img src="img/Lukas.jpg" alt="">
                     </div>

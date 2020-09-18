@@ -1,0 +1,435 @@
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: "Fjalla One", sans-serif;
+  height: 100%;
+}
+
+/* HEADER */
+
+.nav-horizontal {
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  height: 8vh;
+}
+
+.nav-horizontal > a {
+  display: flex;
+  align-items: center;
+}
+
+.nav-horizontal a#hamburger {
+  display: flex;
+  margin-left: auto;
+  padding-right: 2%;
+}
+
+/* .nav-horizontal i, */
+.nav-horizontal img {
+  width: 50px;
+  margin-right: 8px;
+}
+
+.nav-horizontal h2 {
+  font-size: 35px;
+}
+
+.nav-horizontal > ul {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.nav-horizontal ul a {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  font-size: 1.2em;
+}
+
+#hamburger {
+  z-index: 2;
+}
+
+#hamburger .hamburger {
+  z-index: 2;
+  outline: none;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  font-family: inherit;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #fff;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.toggle {
+  height: 100%;
+}
+
+.nav-horizontal ul {
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* background-color: #000; */
+  z-index: 2;
+}
+
+/* BACKGROUND VIDEO */
+
+div.backgroundHeader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+div.backgroundHeader #myVideo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+div.movieBackground {
+  background-color: rgba(99, 99, 99, 0.4);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* HEADER CONTENT */
+
+div.headerContent {
+  padding: 1.8em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.headerContent p {
+  font-size: 1.8em;
+  color: white;
+  text-align: left;
+}
+
+div.headerContent h1 {
+  text-align: center;
+  color: white;
+  font-size: 3.2em;
+}
+
+div.content {
+  margin: 0% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* min-height: 100vh; */
+  background-image: url("");
+  /* background-color: grey; */
+}
+
+div.contentTitle {
+  margin-top: 2em;
+  padding-top: 1em;
+  font-size: 2em;
+  transition: 0.5s;
+}
+div.contentTitle p {
+  color: black;
+  text-align: center;
+}
+
+div.member {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  background: #fff;
+  transition: 0.5s;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+div.member:hover {
+  height: 400px;
+}
+
+div.member:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+div.member:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgb(168, 174, 194);
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.member .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.member .imgBx img {
+  max-width: 100%;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.member .imgBx img:hover {
+  opacity: 1;
+}
+
+.member .contentBx {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 90px;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.member:hover .contentBx {
+  opacity: 1;
+}
+
+.member .contentBx h2 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.member .contentBx h2 span {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+div.contentTwo {
+  background-color: #ebebeb;
+}
+
+div.contentHeader {
+  background-color: darkgrey;
+  height: 480px;
+}
+
+div.headerHtml {
+  background-color: black;
+}
+
+div.bannerHeader {
+  display: flex;
+  justify-content: center;
+}
+
+div.banner {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  max-height: 40%;
+  min-height: 40%;
+  width: 800px;
+  max-width: 100vw;
+}
+
+div.banner img {
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+}
+
+div.memberPicture {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  margin: 250px 230px 0px 0px;
+  /* transition: 0.1s; */
+}
+
+div.memberPicture img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid darkgrey;
+  z-index: 2;
+}
+
+div.nameBanner {
+  margin: 290px 0px 0px 150px;
+  /* width: 100vw; */
+  padding: 40px;
+  z-index: 1;
+  background-color: grey;
+  border-radius: 5px;
+  border: 3px solid darkgrey;
+}
+
+div.contentContent {
+  background-color: grey;
+}
+
+div.memberInfo {
+  max-width: 800px;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  background-color: black;
+  border-radius: 5px;
+}
+
+div.memberInfo ul {
+  margin: 1em;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  font-size: 1.2em;
+  max-width: 800px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-horizontal ul {
+    display: flex;
+  }
+
+  div.contentTitle {
+    margin-top: 0.4em;
+    padding-top: 0.4em;
+    font-size: 6em;
+  }
+
+  div.member {
+    width: 500px;
+    height: 500px;
+    margin: 40px 80px 80px 80px;
+  }
+
+  div.member:hover {
+    height: 660px;
+  }
+
+  div.member:after {
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    filter: blur(40px);
+  }
+
+  .member .contentBx {
+    height: 150px;
+  }
+
+  .member .contentBx h2 {
+    font-size: 2.5em;
+    line-height: 25px;
+  }
+
+  .member .contentBx h2 span {
+    font-size: 0.5em;
+  }
+
+  div.banner {
+    width: 1100px;
+  }
+
+  div.memberPicture {
+    margin: 250px 491px 0px 0px;
+  }
+
+  div.memberInfo {
+    max-width: 1100px;
+    /* width: 1100px; */
+  }
+
+  div.nameBanner {
+    margin: 290px 100px 0px 0px;
+    padding: 40px;
+  }
+}
