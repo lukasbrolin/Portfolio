@@ -13,37 +13,48 @@
 </head>
 
 <body>
-    <div class="memberHeader" id="memberHeader">
-        <!-- <video autoplay muted loop id="myVideo">
-            <source src="img/city.mp4" type="video/mp4">
-        </video>
-        <div class="movieBackground">
-
-        </div> -->
-    </div>
-    <div class="headerHtml">
-
-        <ul class="headingNav">
-            <a href="#"><img src="img/logoWhite.png" id="logo"></a>
-            <!-- <a href="#membersTitle">Members</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact Us</a> -->
-            <a href="#"><i class="fa fa-bars" id="hamburger"></i></a>
+    <div class="nav-horizontal" id="navbar" style="background-color: black;">
+        <a href="#">
+            <img src="img/logo.png" alt="">
+            <!-- <i class="fas fa-code"></i> -->
+            <h2>JOSILUIS</h2>
+        </a>
+        <ul class="links">
+            <a href="#membersTitle">Members</a>
+            <a href="#">Project</a>
+            <a href="#">Contact Us</a>
         </ul>
+        <a href="#" id="hamburger">
+            <button class="hamburger hamburger--vortex" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </a>
+    </div>
+
+    <div id="nav" class="overlay nav-vertical">
+        <div class="overlay-content" id="overlay-content">
+            <a href="#membersTitle">Members</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
     </div>
     <div>
         <div class="contentHeader">
-            <div class="bannerHeader">
-                <div class="banner">
-                    <img src="img/banner.jpg" alt="">
-                </div>
-                <div class="memberPicture">
-                    <img src="img/Lukas.jpg" alt="">
-                </div>
-                <div class="nameBanner">
-                    <h1>Lukas Brolin</h1>
-                </div>
-
+            <img src="img/nimbus2000.jpg" alt=" " id="bannerImg" >
+            <div class="pictureLeft">
+                <img src="img/Lukas.jpg" id="pictureLeft" alt="">
+                <h1>Lukas Brolin</h1>
+            </div>
+            <div class="pictureMiddle">
+                <img src="img/SimonTest.jpg" id="pictureMiddle" alt="">
+                <h1>Lukas Brolin</h1>
+            </div>
+                <div class="pictureRight">
+                <img src="img/Jonatan.PNG" id="pictureRight" alt="">
+                <h1>Lukas Brolin</h1>
             </div>
         </div>
         <div class="contentContent">
