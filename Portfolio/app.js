@@ -2,12 +2,26 @@ $(function () {
   window.addEventListener(
     "scroll",
     function () {
-      scrollWindow();
+      scrollWindow()
+      navBarFunction();
     },
     false
   );
 
   var scrollPos = 0;
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  function navBarFunction(){
+    
+    if(document.body.getBoundingClientRect().top + document.getElementById("backgroundHeader").clientHeight < 0){
+      navbar.classList.add("sticky")
+    }
+    else if((document.body.getBoundingClientRect().top + document.getElementById("backgroundHeader").clientHeight >= 0)){
+      navbar.classList.remove("sticky")
+    }
+
+  }
 
   function scrollWindow() {
     if (
