@@ -16,16 +16,17 @@ $(function () {
     
     if(document.body.getBoundingClientRect().top + document.getElementById("backgroundHeader").clientHeight < 0){
       navbar.classList.add("sticky")
+      console.log("success")
     }
     else if((document.body.getBoundingClientRect().top + document.getElementById("backgroundHeader").clientHeight >= 0)){
       navbar.classList.remove("sticky")
+      console.log("fail")
     }
 
   }
 
   function scrollWindow() {
-    if (
-      document.body.getBoundingClientRect().top < scrollPos &&
+    if (document.body.getBoundingClientRect().top < scrollPos &&
       scrollPos === 0
     ) {
       $("html,body").animate(
@@ -36,13 +37,13 @@ $(function () {
       );
     } else if (
       document.body.getBoundingClientRect().top > scrollPos &&
-      scrollPos + document.getElementById("backgroundHeader").clientHeight >
+      scrollPos + (document.getElementById("backgroundHeader").clientHeight + 196) >
         -10 &&
-      scrollPos + document.getElementById("backgroundHeader").clientHeight < 10
+      scrollPos + (document.getElementById("backgroundHeader").clientHeight + 196) < 150
     ) {
       $("html,body").animate(
         {
-          scrollTop: $(".header").offset().top,
+          scrollTop: $("body").offset().top,
         },
         "slow"
       );
