@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <!-- BACKGROUND VIDEO -->
     <div class="backgroundHeader" id="backgroundHeader">
         <video autoplay muted loop id="myVideo">
@@ -22,17 +23,16 @@
         </div>
     </div>
 
-    <!-- HEADER -->
-    <div class="nav-horizontal" id="navbar">
+    <!-- HORIZONTAL NAV -->
+    <div class="nav-horizontal sticky" id="navbar">
         <a href="#">
-            <img src="img/logo.png" alt="">
-            <!-- <i class="fas fa-code"></i> -->
+            <img src="img/logo.png">
             <h2>JOSILUIS</h2>
         </a>
         <ul class="links">
             <a href="#membersTitle">Members</a>
-            <a href="#">Project</a>
-            <a href="#">Contact Us</a>
+            <a href="#projectsTitle">Project</a>
+            <a href="#contactUsTitle">Contact Us</a>
         </ul>
         <a href="#" id="hamburger">
             <button class="hamburger hamburger--vortex" type="button">
@@ -43,11 +43,12 @@
         </a>
     </div>
 
+    <!-- VERTICAL NAV -->
     <div id="nav" class="overlay nav-vertical">
         <div class="overlay-content" id="overlay-content">
             <a href="#membersTitle">Members</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact Us</a>
+            <a href="#projectsTitle">Projects</a>
+            <a href="#contactUsTitle">Contact Us</a>
         </div>
     </div>
 
@@ -59,6 +60,9 @@
         <div class="contentTitle" id="membersTitle">
             <p>Members</p>
         </div>
+
+
+        <!-- MEMBERS -->
         <div class="content">
             <a href="member.html">
                 <div class="member" id="lukas">
@@ -102,57 +106,76 @@
                     </h2>
                 </div>
             </div>
-
         </div>
     </div>
+
+
+    <!-- PROJECTS -->
     <div class="content">
-        <p>Projects</p>
         <div class="contentTitle" id="projectsTitle">
+            <p>Projects</p>
         </div>
         <ul class="projects">
             <div class="alienApp">
-                <li><a href="#">
+                <li>
+                    <a href="#">
                         <div class="alienPicture">
                             <img src="#" alt="">
                         </div>
-                        <div class="alienText">
-                            Alien administrative system
-                        </div>
-                    </a></li>
+                    </a>
+                </li>
             </div>
             <div class="universityApp">
-                <li><a href="#">
+                <li>
+                    <a href="#">
                         <div class="universityPicture">
                             <img src="#" alt="">
                         </div>
-                        <div class="universityText">
-                            University information system
-                        </div>
-                    </a></li>
+                    </a>
+                </li>
             </div>
             <div class="bicyclingApp">
-                <li><a href="#">
+                <li>
+                    <a href="#">
                         <div class="bicyclingPicture">
                             <img src="#" alt="">
                         </div>
-                        <div class="bicyclingText">
-                            App for simplifying bicycling
-                        </div>
-                    </a></li>
+
+                    </a>
+                </li>
             </div>
-            <!-- <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li> -->
         </ul>
     </div>
+
     <div class="footer">
+    </div>
+
+    <div class="contentTitle" id="contactUsTitle">
+        <p>Contact Us</p>
+    </div>
+
+    <!-- MAP -->
+    <div id="map">
 
     </div>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var oru = { lat: 59.253969, lng: 15.247674 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 14, center: oru });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: oru, map: map });
+        }
+    </script>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQOBQKCDNzap41-VM-CQ-k5KPI4y6cwvc&callback=initMap">
+        </script>
+
     <script src="app.js"></script>
+
 </body>
 
 </html>
