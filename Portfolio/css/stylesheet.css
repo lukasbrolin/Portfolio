@@ -433,4 +433,9 @@ div.memberInfo ul {
     margin: 290px 100px 0px 0px;
     padding: 40px;
   }
+  #map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+  }
 }
