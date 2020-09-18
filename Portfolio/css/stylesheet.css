@@ -158,6 +158,14 @@ div.headerContent {
   justify-content: center;
   align-items: center;
 }
+
+#membersTitle p {
+  margin-top: 150px;
+}
+
+#projectsTitle p {
+  text-align: center;
+}
 div.headerContent p {
   font-size: 1.8em;
   color: white;
@@ -176,16 +184,13 @@ div.content {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* min-height: 100vh; */
   background-image: url("");
-  /* background-color: grey; */
 }
 
 div.contentTitle {
   margin-top: 2em;
   padding-top: 1em;
   font-size: 2em;
-  transition: 0.5s;
 }
 div.contentTitle p {
   color: black;

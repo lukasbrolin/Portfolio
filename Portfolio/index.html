@@ -58,6 +58,7 @@
         <div class="contentTitle" id="membersTitle">
             <p>Members</p>
         </div>
+
         <div class="content">
             <a href="member.html">
                 <div class="member" id="lukas">
@@ -101,79 +102,76 @@
                     </h2>
                 </div>
             </div>
-
         </div>
     </div>
+
     <div class="content">
-        <p>Projects</p>
         <div class="contentTitle" id="projectsTitle">
+            <p>Projects</p>
         </div>
         <ul class="projects">
             <div class="alienApp">
-                <li><a href="#">
+                <li>
+                    <a href="#">
                         <div class="alienPicture">
                             <img src="#" alt="">
                         </div>
                         <div class="alienText">
                             Alien administrative system
                         </div>
-                    </a></li>
+                    </a>
+                </li>
             </div>
             <div class="universityApp">
-                <li><a href="#">
+                <li>
+                    <a href="#">
                         <div class="universityPicture">
                             <img src="#" alt="">
                         </div>
                         <div class="universityText">
                             University information system
                         </div>
-                    </a></li>
+                    </a>
+                </li>
             </div>
             <div class="bicyclingApp">
-                <li><a href="#">
+                <li>
+                    <a href="#">
                         <div class="bicyclingPicture">
                             <img src="#" alt="">
                         </div>
                         <div class="bicyclingText">
                             App for simplifying bicycling
                         </div>
-                    </a></li>
+                    </a>
+                </li>
             </div>
-            <!-- <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li> -->
         </ul>
     </div>
+
     <div class="footer">
-
     </div>
-
     <div id="map">
-        
+
     </div>
     <script>
         // Initialize and add the map
         function initMap() {
-          // The location of Uluru
-          var uluru = {lat: -25.344, lng: 131.036};
-          // The map, centered at Uluru
-          var map = new google.maps.Map(
-              document.getElementById('map'), {zoom: 4, center: uluru});
-          // The marker, positioned at Uluru
-          var marker = new google.maps.Marker({position: uluru, map: map});
+            // The location of Uluru
+            var uluru = { lat: -25.344, lng: 131.036 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 4, center: uluru });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: uluru, map: map });
         }
-            </script>
-        <script defer
+    </script>
+    <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQOBQKCDNzap41-VM-CQ-k5KPI4y6cwvc&callback=initMap">
         </script>
-        
-    
+
     <script src="app.js"></script>
-    
+
 </body>
 
 </html>
