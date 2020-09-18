@@ -37,6 +37,7 @@ $(function () {
     scrollPos = document.body.getBoundingClientRect().top;
   }
 
+  // Hamburger
   var hamburger = document.querySelector(".hamburger");
   var nav = document.getElementById("nav");
 
