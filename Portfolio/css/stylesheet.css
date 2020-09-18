@@ -439,8 +439,9 @@ div.memberInfo ul {
     padding: 40px;
   }
   #map {
-    width: 100%;
-    height: 400px;
+    width: 60%;
+    height: 700px;
     background-color: grey;
+    margin-left: 20%;
   }
 }
