@@ -2,14 +2,12 @@ $(function () {
   window.addEventListener(
     "scroll",
     function () {
-      // scrollWindow();
       navBarFunction();
     },
     false
   );
 
   var navbar = document.getElementById("navbar");
-  var sticky = navbar.offsetTop;
   function navBarFunction() {
     if (
       document.body.getBoundingClientRect().top +
@@ -66,6 +64,17 @@ $(function () {
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("is-active");
     nav.classList.toggle("toggle");
+  });
+
+  $(document).on("click", 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $("html, body").animate(
+      {
+        scrollTop: $($.attr(this, "href")).offset().top,
+      },
+      500
+    );
   });
 });
 
