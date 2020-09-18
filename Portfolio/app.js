@@ -38,8 +38,11 @@ $(function () {
   }
 
   var hamburger = document.querySelector(".hamburger");
+  var nav = document.getElementById("nav");
+  var links = document.getElementById(".overlay-content");
+
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("is-active");
-    document.getElementById("nav").style.height = "100%";
+    nav.classList.toggle("toggle");
   });
 });
