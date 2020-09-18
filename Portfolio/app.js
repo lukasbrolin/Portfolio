@@ -36,15 +36,10 @@ $(function () {
     // saves the new position for iteration
     scrollPos = document.body.getBoundingClientRect().top;
   }
-});
 
-var nav = document.getElementById("headingNav");
-var el = document.getElementById("hamburger");
-el.addEventListener("click", () => {
-  nav.classList.toggle("overlay");
-});
-
-var hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("is-active");
+  var hamburger = document.querySelector(".hamburger");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("is-active");
+    document.getElementById("nav").style.height = "100%";
+  });
 });

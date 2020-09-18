@@ -21,50 +21,63 @@ body {
 
 /* HEADER */
 
-.headingNav {
-  display: flex;
-  height: 10vh;
-}
-
-.overlay {
-  width: 100vw;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s ease;
-  background-color: rgba(0, 0, 0, 0.397);
-}
-
-.headingNav a {
-  font-size: 1.1em;
+.logo-container {
   display: flex;
   align-items: center;
+  margin-left: 2%;
 }
 
-.headingNav h2 {
-  font-size: 1em;
-  margin-left: 1%;
+.logo-container a {
+  display: flex;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+.logo-container i {
+  font-size: 30px;
+  margin-right: 8px;
+}
+
+.logo-container h2 {
+  font-size: 35px;
 }
 
 #hamburger {
-  margin-left: auto;
-  margin-right: 0.5em;
-  font-size: 35px;
+  z-index: 2;
 }
 
-#logo {
-  margin-left: 1em;
-  font-size: 35px;
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
 }
 
-#members,
-#projects,
-#contact {
-  margin-left: 5%;
-  display: none;
-  padding-right: 5%;
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
+
+.overlay a {
+  font-family: inherit;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s ease;
+}
+
+/* END HEADER */
 
 div.backgroundHeader {
   width: 100%;
@@ -89,7 +102,7 @@ div.movieBackground {
 
 div.headerContent {
   padding: 1.8em;
-  height: 85%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,17 +318,9 @@ div.memberInfo ul {
   max-width: 800px;
 }
 
+/* MEDIA QUERIES */
+
 @media screen and (min-width: 768px) {
-  #members,
-  #projects,
-  #contact {
-    display: flex;
-  }
-
-  #hamburger {
-    display: none;
-  }
-
   div.contentTitle {
     margin-top: 0.4em;
     padding-top: 0.4em;
