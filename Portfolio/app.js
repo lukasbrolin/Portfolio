@@ -1,4 +1,4 @@
-$(function () {
+$( document ).ready(function() {
   window.addEventListener(
     "scroll",
     function () {
@@ -11,20 +11,52 @@ $(function () {
   function navBarFunction() {
     if (
       document.body.getBoundingClientRect().top +
-        document.getElementById("backgroundHeader").clientHeight <
+        document.getElementById("backgroundHeader").clientHeight <=
       0
     ) {
       navbar.classList.add("sticky");
       console.log("success");
     } else if (
       document.body.getBoundingClientRect().top +
-        document.getElementById("backgroundHeader").clientHeight >=
+        document.getElementById("backgroundHeader").clientHeight >
       0
     ) {
       navbar.classList.remove("sticky");
       console.log("fail");
     }
   }
+
+  var members =[ {
+    "name": "Lukas Brolin",
+    "image": "img/Lukas.jpg",
+
+  },{
+    "name": "Simon Wallstedt Bernsdorff",
+    "image": "img/SimonTest.jpg",
+  },{
+    "name": "Jonatan Angergård",
+    "image": "img/Jonatan.png",
+  },{
+    "name": "Sven Isac Hedengren",
+    "image": "img/Isac.png",
+  }
+];
+
+
+
+var queryString = location.search.substring(1);
+
+
+// function fillMembers(){
+  // console.log("xd0");
+  // $( document ).ready(function() {
+  //   var box1 = document.getElementById("pictureMiddle");
+  //   box1.setAttribute("src", members[queryString].image)
+  //   box1.setAttribute("src", members[queryString].image)
+  //   console.log(members[queryString].image);
+  //   console.log(members[1]);
+  // })
+// }
 
   // function scrollWindow() {
   //   if (
@@ -77,5 +109,5 @@ $(function () {
     );
   });
 
-  document.
+  
 });
