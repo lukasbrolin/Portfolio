@@ -23,30 +23,44 @@ body {
 
 /* HEADER */
 
-.logo-container {
+.nav-horizontal {
   display: flex;
   align-items: center;
   margin-left: 2%;
+  height: 10vh;
 }
 
-.logo-container > a {
+.nav-horizontal > a {
   display: flex;
   align-items: center;
 }
 
-.logo-container a#hamburger {
+.nav-horizontal a#hamburger {
   display: flex;
   margin-left: auto;
   margin-right: 2%;
 }
 
-.logo-container i {
+.nav-horizontal i {
   font-size: 30px;
   margin-right: 8px;
 }
 
-.logo-container h2 {
+.nav-horizontal h2 {
   font-size: 35px;
+}
+
+.nav-horizontal > ul {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.nav-horizontal ul a {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  font-size: 1.2em;
 }
 
 #hamburger {
@@ -91,6 +105,10 @@ body {
 
 .toggle {
   height: 100%;
+}
+
+.nav-horizontal ul {
+  display: none;
 }
 
 div.backgroundHeader {
@@ -335,6 +353,14 @@ div.memberInfo ul {
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-horizontal ul {
+    display: flex;
+  }
+
   div.contentTitle {
     margin-top: 0.4em;
     padding-top: 0.4em;
