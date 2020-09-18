@@ -296,16 +296,20 @@ div.contentTwo {
   background-color: #ebebeb;
 }
 
+div#mainContent{
+
+}
+
 div.contentHeader{
   width: 100%;
-  height: 35vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
 }
 
 div.contentHeader #bannerImg{
   position: absolute;
-  height: 35vh;
+  height: 40vh;
   width: 100%;
   z-index: -1;
 }
@@ -320,20 +324,86 @@ div.contentHeader div{
 div.contentHeader div img{
   width: 200px;
   height: 200px;
-  border: 2px solid white;
+  /* border: 10px solid white; */
+}
+
+.sideImage{
+  opacity: 0.4;
+  border: 6px solid white;
+}
+
+.picture{
+  background-color: white;
+}
+
+.sideDiv{
+  background-color: white;
 }
 
 div.contentHeader div.pictureMiddle{
-  width: 250px;
-  height: 250px;
-  margin: auto 1em;
+  width: 300px;
+  height: 360px;
+  margin: 0.8em 1em;
 
+}
+
+#pictureContent{
+  width: 280px;
+  height: 50px;
+  margin: 5px 10px 10px 10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#pictureContent h1{
 }
 
 div.contentHeader div #pictureMiddle{
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
+  margin-top: 10px;
 }
+
+div.contentContent{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+}
+div.contentBackground{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  background-color: grey;
+}
+
+div.memberInfo{
+  height: 92%;
+  width: 80%;
+  position: relative;
+  margin-top: 6%;
+  background-color: darkgrey;
+}
+
+div.memberinfo ul{
+
+}
+
+div.memberInfo ul li{
+  margin: 1.5em;
+  color:black;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+div.memberInfo ul li strong{
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  color:black;
+}
+
 
 
 
@@ -386,21 +456,18 @@ div.contentHeader div #pictureMiddle{
     font-size: 0.5em;
   }
 
+  div.contentHeader #bannerImg{
+    width: 70%;
   }
 
-  div.memberPicture {
-    margin: 250px 491px 0px 0px;
+  div.contentBackground{
+    width: 70%;
   }
 
-  div.memberInfo {
-    max-width: 1100px;
-    /* width: 1100px; */
+  div.memberInfo{
   }
 
-  div.nameBanner {
-    margin: 290px 100px 0px 0px;
-    padding: 40px;
-  }
+  
   #map {
     width: 60%;
     height: 700px;
