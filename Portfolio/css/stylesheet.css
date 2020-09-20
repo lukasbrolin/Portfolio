@@ -27,7 +27,7 @@ body {
   display: flex;
   align-items: center;
   padding-left: 2%;
-  height: 8vh;
+  min-height: 10vh;
 }
 
 .nav-horizontal > a {
@@ -82,7 +82,7 @@ body {
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
   overflow-y: hidden;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .overlay-content {
@@ -160,11 +160,16 @@ div.headerContent {
 }
 
 #membersTitle p {
-  margin-top: 150px;
+  margin-top: 40px;
 }
 
 #projectsTitle p {
   text-align: center;
+  margin-top: 40px;
+}
+
+#contactUsTitle p {
+  margin-top: 40px;
 }
 div.headerContent p {
   font-size: 1.8em;
