@@ -41,7 +41,6 @@ body {
   padding-right: 2%;
 }
 
-/* .nav-horizontal i, */
 .nav-horizontal img {
   width: 50px;
   margin-right: 8px;
@@ -152,15 +151,11 @@ div.movieBackground {
 
 div.headerContent {
   padding: 1.8em;
-  height: 100%;
+  height: 92%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#membersTitle p {
-  margin-top: 40px;
 }
 
 #projectsTitle p {
@@ -184,7 +179,6 @@ div.headerContent h1 {
 }
 
 div.content {
-  margin: 0% 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,8 +187,8 @@ div.content {
 }
 
 div.contentTitle {
-  margin-top: 2em;
-  padding-top: 1em;
+  /* margin-top: 2em; */
+  padding-top: 6em;
   font-size: 2em;
 }
 div.contentTitle p {
@@ -302,80 +296,112 @@ div.contentTwo {
 }
 
 div.contentHeader {
-  background-color: darkgrey;
-  height: 480px;
-}
-
-div.headerHtml {
-  background-color: black;
-}
-
-div.bannerHeader {
-  display: flex;
-  justify-content: center;
-}
-
-div.banner {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  max-height: 40%;
-  min-height: 40%;
-  width: 800px;
-  max-width: 100vw;
-}
-
-div.banner img {
   width: 100%;
-  border-radius: 0 0 5px 5px;
-}
-
-div.memberPicture {
-  position: absolute;
+  height: 40vh;
   display: flex;
   justify-content: center;
-  width: 200px;
-  margin: 250px 230px 0px 0px;
-  /* transition: 0.1s; */
 }
 
-div.memberPicture img {
+div.contentHeader #bannerImg {
+  position: absolute;
+  height: 40vh;
+  width: 100%;
+  z-index: -1;
+}
+
+div.contentHeader div {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
-  border: 3px solid darkgrey;
-  z-index: 2;
+  margin: auto 1em;
+  text-align: center;
 }
 
-div.nameBanner {
-  margin: 290px 0px 0px 150px;
-  /* width: 100vw; */
-  padding: 40px;
-  z-index: 1;
-  background-color: grey;
-  border-radius: 5px;
-  border: 3px solid darkgrey;
+div.contentHeader div img {
+  width: 200px;
+  height: 200px;
+  /* border: 10px solid white; */
+}
+
+.sideImage {
+  opacity: 0.4;
+  border: 6px solid white;
+}
+
+.picture {
+  background-color: white;
+}
+
+.sideDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.sideDiv h1 {
+  position: absolute;
+  font-size: 1.4em;
+}
+
+div.contentHeader div.pictureMiddle {
+  width: 300px;
+  height: 360px;
+  margin: 0.8em 1em;
+}
+
+#pictureContent {
+  width: 280px;
+  height: 50px;
+  margin: 6px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#pictureContent h1 {
+  font-size: 1.5em;
+}
+
+div.contentHeader div #pictureMiddle {
+  width: 280px;
+  height: 280px;
+  margin-top: 10px;
 }
 
 div.contentContent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+div.contentBackground {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
   background-color: grey;
 }
 
 div.memberInfo {
-  max-width: 800px;
-  display: flex;
-  text-align: center;
-  margin: 0 auto;
-  background-color: black;
-  border-radius: 5px;
+  height: 92%;
+  width: 80%;
+  position: relative;
+  margin-top: 6%;
+  background-color: darkgrey;
 }
 
-div.memberInfo ul {
-  margin: 1em;
-  line-height: 1.5em;
+div.memberInfo ul li {
+  margin: 1.5em;
+  color: black;
   letter-spacing: 0.1em;
-  font-size: 1.2em;
-  max-width: 800px;
+  font-weight: 500;
+}
+
+div.memberInfo ul li strong {
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  color: black;
 }
 
 /* MEDIA QUERIES */
@@ -385,13 +411,16 @@ div.memberInfo ul {
     display: none;
   }
 
+  div.contentTitle {
+    padding-top: 2em;
+  }
   .nav-horizontal ul {
     display: flex;
   }
 
   div.contentTitle {
-    margin-top: 0.4em;
-    padding-top: 0.4em;
+    /* margin-top: 0.4em; */
+    /* padding-top: 0.4em; */
     font-size: 6em;
   }
 
@@ -426,23 +455,14 @@ div.memberInfo ul {
     font-size: 0.5em;
   }
 
-  div.banner {
-    width: 1100px;
+  div.contentHeader #bannerImg {
+    width: 70%;
   }
 
-  div.memberPicture {
-    margin: 250px 491px 0px 0px;
+  div.contentBackground {
+    width: 70%;
   }
 
-  div.memberInfo {
-    max-width: 1100px;
-    /* width: 1100px; */
-  }
-
-  div.nameBanner {
-    margin: 290px 100px 0px 0px;
-    padding: 40px;
-  }
   #map {
     width: 60%;
     height: 700px;
