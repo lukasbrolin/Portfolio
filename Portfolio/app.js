@@ -24,50 +24,54 @@ $(document).ready(function () {
     }
   }
 
-  var ctx = document.getElementById('myChart').getContext('2d');
+  var ctx = document.getElementById("myChart").getContext("2d");
   var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: "bar",
     data: {
-        labels: ['PS', 'Java', 'HTML', 'CSS', 'JS'],
-        datasets: [{
-            label: "Expertise",
-            data: [7, 8, 7, 6, 5],
-            backgroundColor: [
-                'rgba(163, 162, 152,1)',
-                'rgba(99,99,92,1)',
-                'rgba(163, 162, 152,1)',
-                'rgba(99,99,92,1)',
-                'rgba(163, 162, 152,1)',
-                'rgba(99,99,92,1)'
-            ],
-            borderColor: [
-              'rgba(163, 162, 152,1)',
-                'rgba(99,99,92,1)',
-                'rgba(163, 162, 152,1)',
-                'rgba(99,99,92,1)',
-                'rgba(163, 162, 152,1)',
-                'rgba(99,99,92,1)'
-            ],
-            borderWidth: 1
-        }]
+      labels: ["PS", "Java", "HTML", "CSS", "JS"],
+      datasets: [
+        {
+          label: "Expertise",
+          data: [7, 8, 7, 6, 5],
+          backgroundColor: [
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+          ],
+          borderColor: [
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+          ],
+          borderWidth: 1,
+        },
+      ],
     },
     options: {
-        legend:{
-          display: true,
-          labels : {
-            boxWidth: 0
-          }
+      legend: {
+        display: true,
+        labels: {
+          boxWidth: 0,
         },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true,
-                    max : 10
-                }
-            }]
-        }
-    }
-});
+      },
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              max: 10,
+            },
+          },
+        ],
+      },
+    },
+  });
 
 var element = document.querySelector(".main-carousel")
 console.log(element);
@@ -114,40 +118,41 @@ $(".mainCarousel").flickity({
   //       chart.draw(data, options);
   //     };
 
-  var members =[ {
-    "name": "Lukas Brolin",
-    "image": "img/Lukas.jpg",
+  // var members = [
+  //   {
+  //     name: "Lukas Brolin",
+  //     image: "img/Lukas.jpg",
+  //   },
+  //   {
+  //     name: "Simon Wallstedt Bernsdorff",
+  //     image: "img/SimonTest.jpg",
+  //   },
+  //   {
+  //     name: "Jonatan Angergård",
+  //     image: "img/Jonatan.png",
+  //   },
+  //   {
+  //     name: "Sven Isac Hedengren",
+  //     image: "img/Isac.png",
+  //   },
+  // ];
 
-  },{
-    "name": "Simon Wallstedt Bernsdorff",
-    "image": "img/SimonTest.jpg",
-  },{
-    "name": "Jonatan Angergård",
-    "image": "img/Jonatan.png",
-  },{
-    "name": "Sven Isac Hedengren",
-    "image": "img/Isac.png",
-  }
-];
+  // // var queryString = location.search.substring(1);
 
+  // var queryString = location.search.substring(1);
+  // console.log(queryString);
 
-
-// var queryString = location.search.substring(1);
-
-  var queryString = location.search.substring(1);
-  console.log(queryString);
-
-  function fillMembers(){
-  console.log("xd0");
-  // $( document ).ready(function() {
-    var box1 = document.getElementById("pictureMiddle");
-    box1.setAttribute("src", members[queryString].image)
-    box1.setAttribute("src", members[queryString].image)
-    console.log(members[queryString].image);
-    console.log(members[1]);
-  // })
-  }
-  fillMembers()
+  // function fillMembers() {
+  //   console.log("xd0");
+  //   // $( document ).ready(function() {
+  //   var box1 = document.getElementById("pictureMiddle");
+  //   box1.setAttribute("src", members[queryString].image);
+  //   box1.setAttribute("src", members[queryString].image);
+  //   console.log(members[queryString].image);
+  //   console.log(members[1]);
+  //   // })
+  // }
+  // fillMembers();
 
   // function scrollWindow() {
   //   if (
@@ -195,7 +200,7 @@ $(".mainCarousel").flickity({
   });
 
   // Add smooth scrolling to all links
-  $(".links a").on("click", function (event) {
+  $(".links a, .overlay-content a").on("click", function (event) {
     if (this.hash !== "") {
       event.preventDefault();
 
@@ -213,18 +218,7 @@ $(".mainCarousel").flickity({
     }
   });
 
-  // Move to next image
-  $("#dot1").on("click", () => {
-    currentSlide(1);
-  });
-  $("#dot2").on("click", () => {
-    currentSlide(2);
-  });
-  $("#dot3").on("click", () => {
-    currentSlide(3);
-  });
-
-  // Forward and backwards
+  // Interaktion
   $(".prev").on("click", () => {
     plusSlides(-1);
   });
@@ -233,39 +227,45 @@ $(".mainCarousel").flickity({
     plusSlides(1);
   });
 
-  // SLIDESHOW
-  var slideIndex = 1;
-  showSlides(slideIndex);
+  // var slideIndex = 1;
+  // showSlides(slideIndex);
 
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides((slideIndex += n));
+  // // Next/previous controls
+  // function plusSlides(n) {
+  //   showSlides((slideIndex += n));
+  // }
+
+  // // Thumbnail image controls
+  // function currentSlide(n) {
+  //   showSlides((slideIndex = n));
+  // }
+
+  // function showSlides(n) {
+  //   var i;
+  //   var slides = document.getElementsByClassName("mySlides");
+  //   var dots = document.getElementsByClassName("dot");
+  //   if (n > slides.length) {
+  //     slideIndex = 1;
+  //   }
+  //   if (n < 1) {
+  //     slideIndex = slides.length;
+  //   }
+  //   for (i = 0; i < slides.length; i++) {
+  //     slides[i].style.display = "none";
+  //   }
+  //   for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  //   }
+  //   slides[slideIndex - 1].style.display = "block";
+  //   dots[slideIndex - 1].className += " active";
+  // }
+
+  // REGEX
+  function emailIsValid(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides((slideIndex = n));
-  }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  }
-
+  let inputs = document.querySelectorAll("form input");
+  inputs.addEventListener;
   navBarFunction();
 });
