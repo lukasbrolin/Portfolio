@@ -24,54 +24,54 @@ $(document).ready(function () {
     }
   }
 
-  // var ctx = document.getElementById("myChart").getContext("2d");
-  // var myChart = new Chart(ctx, {
-  //   type: "bar",
-  //   data: {
-  //     labels: ["PS", "Java", "HTML", "CSS", "JS"],
-  //     datasets: [
-  //       {
-  //         label: "Expertise",
-  //         data: [7, 8, 7, 6, 5],
-  //         backgroundColor: [
-  //           "rgba(93, 132, 93,1)",
-  //           "rgba(141,203,141,1)",
-  //           "rgba(93,132,93,1)",
-  //           "rgba(141,203,141,1)",
-  //           "rgba(93,132,93,1)",
-  //           "rgba(141,203,141,1)",
-  //         ],
-  //         borderColor: [
-  //           "rgba(93, 132, 93,1)",
-  //           "rgba(141, 203, 141, 1)",
-  //           "rgba(93,132,93,1)",
-  //           "rgba(141,203,141,1)",
-  //           "rgba(93,132,93,1)",
-  //           "rgba(141,203,141,1)",
-  //         ],
-  //         borderWidth: 1,
-  //       },
-  //     ],
-  //   },
-  //   options: {
-  //     legend: {
-  //       display: true,
-  //       labels: {
-  //         boxWidth: 0,
-  //       },
-  //     },
-  //     scales: {
-  //       yAxes: [
-  //         {
-  //           ticks: {
-  //             beginAtZero: true,
-  //             max: 10,
-  //           },
-  //         },
-  //       ],
-  //     },
-  //   },
-  // });
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var myChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["PS", "Java", "HTML", "CSS", "JS"],
+      datasets: [
+        {
+          label: "Expertise",
+          data: [7, 8, 7, 6, 5],
+          backgroundColor: [
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+          ],
+          borderColor: [
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+            "rgba(163, 162, 152,1)",
+            "rgba(99,99,92,1)",
+          ],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      legend: {
+        display: true,
+        labels: {
+          boxWidth: 0,
+        },
+      },
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              max: 10,
+            },
+          },
+        ],
+      },
+    },
+  });
 
   // google.charts.load('current', {'packages':['bar']});
   //     google.charts.setOnLoadCallback(drawStuff);

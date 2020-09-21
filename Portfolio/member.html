@@ -47,7 +47,10 @@
         <div class="contentHeader">
             <img src="img/nimbus2000.jpg" alt=" " id="bannerImg" >
             <div class="pictureLeft picture sideDiv">
-                <img src="img/Lukas.jpg" id="pictureLeft" class="sideImage" alt="">
+                <div>
+                    <img src="img/Lukas.jpg" id="pictureLeft" class="sideImage" alt="">
+                    <a class="prev" id="prevMember">&#10094;</a>
+                </div>
                 <h1>Lukas Brolin</h1>
             </div>
             <div class="pictureMiddle picture midDiv">
@@ -57,18 +60,24 @@
                 </div>
             </div>
                 <div class="pictureRight picture sideDiv">
-                <img src="img/Jonatan.PNG" id="pictureRight" class="sideImage" alt="">
-                <h1>Jonatan Angergård</h1>
+                    <div>
+                        <img src="img/Jonatan.PNG" id="pictureRight" class="sideImage" alt="">
+                        <a class="next" id="nextMember">&#10095;</a>
+                    </div>
+                    <h1>Jonatan Angergård</h1>
             </div>
         </div>
         <div class="contentContent">
             <div class="contentBackground">
                 <div class="memberInfo">
+                    <div id="topContent">
                     <div class="textContent">
                         <p><h1>Lukas Brolin</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos provident dolorum reprehenderit doloremque, facere expedita nam aperiam. Aperiam optio fuga culpa hic. Magni aut doloribus iusto fuga id earum!</p>
                     </div>
-                    <div id="chart" style="width: 80%; position: relative; margin: 0 auto;">
-                        <canvas id="myChart" style="width: 200%; height: 600px; position: relative;"></canvas>
+                    <div id="chart" >
+                        <!-- När Chart.js startar skapas divisioner runt canvasen som renderar med hjälp av parametrarna som har angets i "style", därav är styling i html nödvändigt för detta element -->
+                        <canvas id="myChart" style="width: 200%; height: 600px;"></canvas>
+                    </div>
                     </div>
                     <ul>
                         <li><Strong>Name: </Strong>Lukas Brolin</li>
