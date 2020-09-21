@@ -13,6 +13,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="app.js"></script>
     
 </head>
 
@@ -53,13 +54,16 @@
                     <h1>Lukas Brolin</h1>
                 </div>
                 <div class="cell">
-                    <img src="img/SimonTest.jpg" alt="">
+                    <img src="img/SimonTest.jpg" onclick="getInstance()" alt="">
+                    <h1>Simon Bernsdorff Wallstedt</h1>
                 </div>
                 <div class="cell">
                     <img src="img/Jonatan.PNG" alt="">
+                    <h1>Jonatan Angergård<h1>
                 </div>
                 <div class="cell">
                     <img src="img/Isac.png" alt="">
+                    <h1>Sven Isac Hedengren</h1>
                 </div>
             </div>
             <!-- <img src="img/nimbus2000.jpg" alt=" " id="bannerImg" >
@@ -89,7 +93,8 @@
                 <div class="memberInfo">
                     <div id="topContent">
                     <div class="textContent">
-                        <p><h1>Lukas Brolin</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos provident dolorum reprehenderit doloremque, facere expedita nam aperiam. Aperiam optio fuga culpa hic. Magni aut doloribus iusto fuga id earum!</p>
+                        <!-- <p id="memberIntro"><h1>Lukas Brolin</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos provident dolorum reprehenderit doloremque, facere expedita nam aperiam. Aperiam optio fuga culpa hic. Magni aut doloribus iusto fuga id earum!</p> -->
+                        <p id="memberIntro"></p>
                     </div>
                     <div id="chart" >
                         <!-- När Chart.js startar skapas divisioner runt canvasen som renderar med hjälp av parametrarna som har angets i "style", därav är styling i html nödvändigt för detta element -->
@@ -97,10 +102,10 @@
                     </div>
                     </div>
                     <ul>
-                        <li><Strong>Name: </Strong>Lukas Brolin</li>
-                        <li><Strong>Location: </Strong>Västerås, SE</li>
-                        <li><Strong>Email: </Strong>lukas.brolin@live.se</li>
-                        <li><Strong>Phone: </Strong>+46 707 818 096</li>
+                        <li id="memberName"><Strong>Name: </Strong>Lukas Brolin</li>
+                        <li id="memberLocation"><Strong>Location: </Strong>Västerås, SE</li>
+                        <li id="memberMail"><Strong>Email: </Strong>lukas.brolin@live.se</li>
+                        <li id="memberPhone"><Strong>Phone: </Strong>+46 707 818 096</li>
                         <!-- <li><Strong>Adress: </Strong>Benvägen 17</li> -->
                     </ul>
                 </div>
@@ -109,7 +114,7 @@
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="app.js"></script>
+    
 </body>
 
 </html>

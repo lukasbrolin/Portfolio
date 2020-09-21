@@ -1,4 +1,20 @@
 $(document).ready(function () {
+
+
+    var $carousel = $(".mainCarousel").flickity({
+      cellAlign: "center",
+      wrapAround: true,
+      on: {
+        change: function(index){
+          $("memberName").createTextNode = "HEJ";
+          console.log($(".memberIntro"));
+          console.log("<h1>" + members[index].name + "<h1>" + members[index].introText);
+        }
+      }
+      // freeScroll: true
+    });
+  
+
   window.addEventListener(
     "scroll",
     function () {
@@ -73,15 +89,55 @@ $(document).ready(function () {
     },
   });
 
-var element = document.querySelector(".main-carousel")
-console.log(element);
+  var element = document.querySelector(".main-carousel")
+  console.log(element);
+  
+  var members = [
+    {
+      name: "Lukas Brolin",
+      introText: "Hej jag heter Lukas",
+      image: "img/Lukas.jpg",
+      location: "Västerås",
+      email: "lukas@oru.se",
+      phone: "+46 707 818 096"
+    },
+    {
+      name: "Simon Wallstedt Bernsdorff",
+      introText: "Hej jag heter Simon",
+      image: "img/SimonTest.jpg",
+      location: "Örebro",
+      email: "simon@oru.se",
+      phone: "0202020250"
+    },
+    {
+      name: "Jonatan Angergård",
+      introText: "Hej jag heter Jonatan",
+      image: "img/Jonatan.png",
+      location: "Örebro",
+      email: "jonte@oru.se",
+      phone: "020202040"
+    },
+    {
+      name: "Sven Isac Hedengren",
+      introText: "Hej jag heter Isac",
+      image: "img/Isac.png",
+      location: "Örebro",
+      email: "isac@oru.se",
+      phone: "020202030"
+    },
+  ];
 
-$(".mainCarousel").flickity({
-  cellAlign: "center",
-  wrapAround: true,
-  // freeScroll: true
-});
 
+
+
+function getInstance(){
+var flkty = $carousel.data('flickity')
+console.log(flkty.selectedIndex);
+
+
+
+
+}
 
   // google.charts.load('current', {'packages':['bar']});
   //     google.charts.setOnLoadCallback(drawStuff);
@@ -118,24 +174,6 @@ $(".mainCarousel").flickity({
   //       chart.draw(data, options);
   //     };
 
-  // var members = [
-  //   {
-  //     name: "Lukas Brolin",
-  //     image: "img/Lukas.jpg",
-  //   },
-  //   {
-  //     name: "Simon Wallstedt Bernsdorff",
-  //     image: "img/SimonTest.jpg",
-  //   },
-  //   {
-  //     name: "Jonatan Angergård",
-  //     image: "img/Jonatan.png",
-  //   },
-  //   {
-  //     name: "Sven Isac Hedengren",
-  //     image: "img/Isac.png",
-  //   },
-  // ];
 
   // // var queryString = location.search.substring(1);
 
