@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
   window.addEventListener(
     "scroll",
     function () {
@@ -15,14 +15,12 @@ $( document ).ready(function() {
       0
     ) {
       navbar.classList.add("sticky");
-      console.log("success");
     } else if (
       document.body.getBoundingClientRect().top +
         document.getElementById("backgroundHeader").clientHeight >
       0
     ) {
       navbar.classList.remove("sticky");
-      console.log("fail");
     }
   }
 
@@ -126,8 +124,9 @@ $( document ).ready(function() {
 
 var queryString = location.search.substring(1);
 
+  var queryString = location.search.substring(1);
 
-// function fillMembers(){
+  // function fillMembers(){
   // console.log("xd0");
   // $( document ).ready(function() {
   //   var box1 = document.getElementById("pictureMiddle");
@@ -136,7 +135,7 @@ var queryString = location.search.substring(1);
   //   console.log(members[queryString].image);
   //   console.log(members[1]);
   // })
-// }
+  // }
 
   // function scrollWindow() {
   //   if (
@@ -173,21 +172,34 @@ var queryString = location.search.substring(1);
   var hamburger = document.querySelector(".hamburger");
   var nav = document.getElementById("nav");
 
-  hamburger.addEventListener("click", () => {
+  $("#hamburger").on("click", () => {
     hamburger.classList.toggle("is-active");
     nav.classList.toggle("toggle");
   });
 
-  $(document).on("click", 'a[href^="#"]', function (event) {
-    event.preventDefault();
-
-    $("html, body").animate(
-      {
-        scrollTop: $($.attr(this, "href")).offset().top,
-      },
-      500
-    );
+  $(".overlay-content a").on("click", () => {
+    hamburger.classList.toggle("is-active");
+    nav.classList.toggle("toggle");
   });
 
-  
+  // Add smooth scrolling to all links
+  $("a").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        350,
+        function () {
+          window.location.hash = hash;
+        }
+      );
+    }
+  });
+
+  navBarFunction();
 });
