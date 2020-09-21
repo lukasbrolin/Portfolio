@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/hamburgers.css">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/stylesheet.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </head>
 
 <body>
@@ -69,6 +71,9 @@
                         <li><Strong>Adress: </Strong>Benvägen 17</li>
                         <li><Strong>Adress: </Strong>Benvägen 17</li>
                     </ul>
+                    <div id="chart" style="width: 80%; height: 100%; position: relative; margin: 0 auto;">
+                        <canvas id="myChart" style="width: 200%; height: 600px; position: relative;"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
