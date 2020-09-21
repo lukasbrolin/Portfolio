@@ -23,6 +23,7 @@ $(document).ready(function () {
     false
   );
 
+  // Sticky Navbar
   var navbar = document.getElementById("navbar");
   function navBarFunction() {
     if (
@@ -40,6 +41,7 @@ $(document).ready(function () {
     }
   }
 
+  // Charts
   var ctx = document.getElementById("myChart").getContext("2d");
   var myChart = new Chart(ctx, {
     type: "bar",
@@ -256,54 +258,10 @@ console.log(flkty.selectedIndex);
     }
   });
 
-  // Interaktion
-  $(".prev").on("click", () => {
-    plusSlides(-1);
-  });
-
-  $(".next").on("click", () => {
-    plusSlides(1);
-  });
-
-  // var slideIndex = 1;
-  // showSlides(slideIndex);
-
-  // // Next/previous controls
-  // function plusSlides(n) {
-  //   showSlides((slideIndex += n));
-  // }
-
-  // // Thumbnail image controls
-  // function currentSlide(n) {
-  //   showSlides((slideIndex = n));
-  // }
-
-  // function showSlides(n) {
-  //   var i;
-  //   var slides = document.getElementsByClassName("mySlides");
-  //   var dots = document.getElementsByClassName("dot");
-  //   if (n > slides.length) {
-  //     slideIndex = 1;
-  //   }
-  //   if (n < 1) {
-  //     slideIndex = slides.length;
-  //   }
-  //   for (i = 0; i < slides.length; i++) {
-  //     slides[i].style.display = "none";
-  //   }
-  //   for (i = 0; i < dots.length; i++) {
-  //     dots[i].className = dots[i].className.replace(" active", "");
-  //   }
-  //   slides[slideIndex - 1].style.display = "block";
-  //   dots[slideIndex - 1].className += " active";
-  // }
-
   // REGEX
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  let inputs = document.querySelectorAll("form input");
-  inputs.addEventListener;
   navBarFunction();
 });

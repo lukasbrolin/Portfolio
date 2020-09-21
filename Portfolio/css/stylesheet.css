@@ -359,8 +359,8 @@ div.project:after {
   opacity: 1;
 }
 
-.previous{
-  position: relative
+.previous {
+  position: relative;
 }
 
 .project .contentBxTwo {
@@ -404,9 +404,6 @@ div.contentTwo {
   background-color: #ebebeb;
 }
 
-div#mainContent {
-}
-
 /* div.contentHeader {
   width: 100%;
   height: 40vh;
@@ -419,9 +416,7 @@ div#mainContent {
   height: 40vh;
   display: flex;
   justify-content: center; */
-  /* margin-bottom: 2em; */
-
-}
+/* margin-bottom: 2em; */
 
 /* div.contentHeader #bannerImg {
   position: absolute;
@@ -433,15 +428,15 @@ div#mainContent {
 
 /* div.contentHeader div {
   width: 200px; */
-  /* height: 200px; */
-  /* margin: auto 1em;
+/* height: 200px; */
+/* margin: auto 1em;
   text-align: center;
 } */
 
 /* div.contentHeader div img {
   width: 200px;
   height: 200px; */
-  /* border: 10px solid white; */
+/* border: 10px solid white; */
 /* } */
 
 .sideImage {
@@ -670,37 +665,36 @@ div.mySlides img {
   }
 }
 
-.contentHeader{
+.contentHeader {
   height: 550px;
 }
 
-.mainCarousel{
+.mainCarousel {
   width: 100%;
   margin: 0 auto;
   height: 500px;
   justify-content: center;
- 
 }
 
-.cell{
-  width: 100%; 
+.cell {
+  width: 100%;
   height: 500px;
   justify-content: center;
   margin: 0 15px;
   padding: 15px;
-  border: 3px solid #f1c40f; 
-  border-radius: 8px; 
+  border: 3px solid #f1c40f;
+  border-radius: 8px;
   overflow: hidden;
   text-align: center;
 }
 
-.cell img{
+.cell img {
   width: 100%;
   height: 400px;
   object-fit: cover;
 }
 
-.cell h1{
+.cell h1 {
   color: black;
 }
 
