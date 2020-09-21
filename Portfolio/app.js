@@ -28,9 +28,9 @@ $(document).ready(function () {
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Photoshop', 'Java', 'HTML', 'CSS', 'JS'],
+        labels: ['PS', 'Java', 'HTML', 'CSS', 'JS'],
         datasets: [{
-            label: "Value",
+            label: "Expertise",
             data: [7, 8, 7, 6, 5],
             backgroundColor: [
                 'rgba(93, 132, 93,1)',
@@ -122,20 +122,22 @@ $(document).ready(function () {
 
 
 
-var queryString = location.search.substring(1);
+// var queryString = location.search.substring(1);
 
   var queryString = location.search.substring(1);
+  console.log(queryString);
 
-  // function fillMembers(){
-  // console.log("xd0");
+  function fillMembers(){
+  console.log("xd0");
   // $( document ).ready(function() {
-  //   var box1 = document.getElementById("pictureMiddle");
-  //   box1.setAttribute("src", members[queryString].image)
-  //   box1.setAttribute("src", members[queryString].image)
-  //   console.log(members[queryString].image);
-  //   console.log(members[1]);
+    var box1 = document.getElementById("pictureMiddle");
+    box1.setAttribute("src", members[queryString].image)
+    box1.setAttribute("src", members[queryString].image)
+    console.log(members[queryString].image);
+    console.log(members[1]);
   // })
-  // }
+  }
+  fillMembers()
 
   // function scrollWindow() {
   //   if (
