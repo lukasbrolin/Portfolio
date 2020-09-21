@@ -423,6 +423,25 @@ div.textContent{
   align-items: center;
 }
 
+#formWrapper
+{
+  text-align: center;
+  height: auto;
+  /* background-color: #000; */
+  width: 60%;
+  margin-left: 20%;
+  border: solid 2px black;
+  
+}
+
+#map {
+  width: 60%;
+  height: 700px;
+  background-color: grey;
+  margin-left: 20%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
 
 
 
@@ -495,5 +514,7 @@ div.textContent{
     height: 700px;
     background-color: grey;
     margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 3%;
   }
 }
