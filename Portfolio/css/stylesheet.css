@@ -174,7 +174,10 @@ div.headerContent h1 {
   font-size: 3.2em;
 }
 
-div.mainContent {
+div#mainContent {
+  background-color: #F0EFDF;
+  position: relative;
+  z-index: -1;
 }
 
 div.content {
@@ -301,6 +304,7 @@ div.contentHeader {
   height: 40vh;
   display: flex;
   justify-content: center;
+  margin-bottom: 2em;
 }
 
 div.contentHeader #bannerImg {
@@ -308,6 +312,7 @@ div.contentHeader #bannerImg {
   height: 40vh;
   width: 100%;
   z-index: -1;
+  border-radius: 0 0 15px 15px;
 }
 
 div.contentHeader div {
@@ -372,6 +377,7 @@ div.contentHeader div #pictureMiddle {
 }
 
 div.contentContent {
+  background-color: #C9C9BB;
   height: auto;
   display: flex;
   justify-content: center;
@@ -381,15 +387,20 @@ div.contentBackground {
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: grey;
+  background-color: #C9C9BB;
+  border-radius: 15px;
+  box-shadow: 0px 0px 24px -8px rgba(47,47,45,1);
+  margin-top: 1em;
 }
 
 div.memberInfo {
   height: 92%;
   width: 80%;
   position: relative;
-  margin-top: 6%;
-  background-color: darkgrey;
+  margin: 6% 0 ;
+  padding-bottom: 1em;
+  background-color: #e2e1d2;
+  border-radius: 15px;
 }
 
 div.memberInfo ul {
@@ -398,8 +409,8 @@ div.memberInfo ul {
 }
 
 div.memberInfo ul li {
-  margin: 0.5em;
-  color: black;
+  margin: 0.5em 0.5em 0.5em 0;
+  color: #2F2F2D;
   letter-spacing: 0.05em;
   font-weight: 500;
 }
@@ -407,14 +418,32 @@ div.memberInfo ul li {
 div.memberInfo ul li strong {
   font-size: 1.2em;
   letter-spacing: 0.05em;
-  color: black;
+  color: #2F2F2D;
 }
+
+ #chart{
+  width: 80%; 
+  position: relative; 
+  margin: 0 auto;
+}
+
+#myChart{
+  width: 200%; 
+  height: 600px; 
+  position: relative;
+}
+
+
 
 div.textContent {
   width: 80%;
   margin: 1em auto;
   text-align: center;
   align-items: center;
+  color: #2F2F2D;
+}
+div.textContent h1 {
+  color: #2F2F2D;
 }
 
 /* PROJECTS */
@@ -443,6 +472,19 @@ div.textContent {
   border-radius: 0 3px 3px 0;
   user-select: none;
   background-color: rgba(0, 0, 0, 0.8);
+}
+#prevMember {
+  top: 64px;
+  margin-top: 0px;
+  right: -22px;
+  width: 48px;
+}
+
+#nextMember{
+  top:64px;
+  margin-top: 0px;
+  left:-22px;
+  width: 48px;
 }
 
 .next {
@@ -570,8 +612,6 @@ div.textContent {
     width: 70%;
   }
 
-  div.memberInfo {
-  }
 
   #map {
     width: 60%;
@@ -581,4 +621,24 @@ div.textContent {
     margin-top: 2%;
     margin-bottom: 3%;
   }
+
+   #topContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  } 
+
+  div.textContent {
+    width: 40%;
+    margin: 1em;
+    font-size: 1em;
+  }
+
+  #chart {
+    width: 60%;
+    margin: 1em;
+  }
+
+
+
 }
