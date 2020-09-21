@@ -27,7 +27,7 @@ body {
   display: flex;
   align-items: center;
   padding-left: 2%;
-  min-height: 10vh;
+  height: 8vh;
 }
 
 .nav-horizontal > a {
@@ -41,6 +41,7 @@ body {
   padding-right: 2%;
 }
 
+/* .nav-horizontal i, */
 .nav-horizontal img {
   width: 50px;
   margin-right: 8px;
@@ -81,7 +82,7 @@ body {
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
   overflow-y: hidden;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .overlay-content {
@@ -160,11 +161,6 @@ div.headerContent {
 
 #projectsTitle p {
   text-align: center;
-  margin-top: 40px;
-}
-
-#contactUsTitle p {
-  margin-top: 40px;
 }
 div.headerContent p {
   font-size: 1.8em;
@@ -176,6 +172,9 @@ div.headerContent h1 {
   text-align: center;
   color: white;
   font-size: 3.2em;
+}
+
+div.mainContent {
 }
 
 div.content {
@@ -294,6 +293,9 @@ div.contentTwo {
   background-color: #ebebeb;
 }
 
+div#mainContent {
+}
+
 div.contentHeader {
   width: 100%;
   height: 40vh;
@@ -370,7 +372,7 @@ div.contentHeader div #pictureMiddle {
 }
 
 div.contentContent {
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
 }
@@ -390,17 +392,29 @@ div.memberInfo {
   background-color: darkgrey;
 }
 
+div.memberInfo ul {
+  width: 80%;
+  margin: 0 auto;
+}
+
 div.memberInfo ul li {
-  margin: 1.5em;
+  margin: 0.5em;
   color: black;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   font-weight: 500;
 }
 
 div.memberInfo ul li strong {
-  font-size: 1.5em;
+  font-size: 1.2em;
   letter-spacing: 0.05em;
   color: black;
+}
+
+div.textContent {
+  width: 80%;
+  margin: 1em auto;
+  text-align: center;
+  align-items: center;
 }
 
 /* PROJECTS */
@@ -556,10 +570,15 @@ div.memberInfo ul li strong {
     width: 70%;
   }
 
+  div.memberInfo {
+  }
+
   #map {
     width: 60%;
     height: 700px;
     background-color: grey;
     margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 3%;
   }
 }

@@ -16,7 +16,7 @@
     <!-- BACKGROUND VIDEO -->
     <div class="backgroundHeader" id="backgroundHeader">
         <video autoplay muted loop id="myVideo">
-            <source src="img/c  ity.mp4" type="video/mp4">
+            <source src="img/city.mp4" type="video/mp4">
         </video>
         <div class="movieBackground">
         </div>
@@ -162,11 +162,25 @@
     <div class="contentTitle" id="contactUsTitle">
         <p>Contact Us</p>
     </div>
-    <div id="containerForm">
+
+    <div id="formWrapper">
+
         <div id="name">
-            <label for="username"> "Namn" </label>
+            <label for="username"> Name: </label>
             <input type="text" id="username" />
         </div>
+
+        <div id="emailForm">
+            <label for="email"> Email: </label>
+            <input type="text" id="email" />
+        </div>
+
+        <div id="messageForm">
+            <label for="message"> Message: </label>
+            <input type="text" id="message" style="height: 50px;"/>
+        </div>
+
+        <button>Submit</button>
     </div>
 
     <!-- MAP -->
@@ -174,14 +188,14 @@
     <script>
         // Initialize and add the map
         function initMap() {
-            // The location of Uluru
+            // The location of Oru
             var oru = { lat: 59.253969, lng: 15.247674 };
-            // The map, centered at Uluru
+            // The map, centered at Oru and zoom adjusted
             var map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 14,
                 center: oru,
             });
-            // The marker, positioned at Uluru
+            // The marker, positioned at Oru
             var marker = new google.maps.Marker({ position: oru, map: map });
         }
     </script>

@@ -24,37 +24,120 @@ $(document).ready(function () {
     }
   }
 
-  var members = [
-    {
-      name: "Lukas Brolin",
-      image: "img/Lukas.jpg",
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['PS', 'Java', 'HTML', 'CSS', 'JS'],
+        datasets: [{
+            label: "Expertise",
+            data: [7, 8, 7, 6, 5],
+            backgroundColor: [
+                'rgba(93, 132, 93,1)',
+                'rgba(141,203,141,1)',
+                'rgba(93,132,93,1)',
+                'rgba(141,203,141,1)',
+                'rgba(93,132,93,1)',
+                'rgba(141,203,141,1)'
+            ],
+            borderColor: [
+              'rgba(93, 132, 93,1)',
+                'rgba(141, 203, 141, 1)',
+                'rgba(93,132,93,1)',
+                'rgba(141,203,141,1)',
+                'rgba(93,132,93,1)',
+                'rgba(141,203,141,1)'
+            ],
+            borderWidth: 1
+        }]
     },
-    {
-      name: "Simon Wallstedt Bernsdorff",
-      image: "img/SimonTest.jpg",
-    },
-    {
-      name: "Jonatan Angergård",
-      image: "img/Jonatan.png",
-    },
-    {
-      name: "Sven Isac Hedengren",
-      image: "img/Isac.png",
-    },
-  ];
+    options: {
+        legend:{
+          display: true,
+          labels : {
+            boxWidth: 0
+          }
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max : 10
+                }
+            }]
+        }
+    }
+});
+
+  // google.charts.load('current', {'packages':['bar']});
+  //     google.charts.setOnLoadCallback(drawStuff);
+
+  //     function drawStuff() {
+  //       var data = new google.visualization.arrayToDataTable([
+  //         ['Opening Move', 'Percentage'],
+  //         ["King's pawn (e4)", 9],
+  //         ["Queen's pawn (d4)", 6],
+  //         ["Knight to King 3 (Nf3)", 5],
+  //         ["Queen's bishop pawn (c4)", 4],
+  //         ['Other', 3]
+  //       ]);
+
+  //       var options = {
+  //         title: 'Chess opening moves',
+  //         width: '100%',
+  //         backgroundColor:{
+  //           fill: "red"
+  //         },
+  //         legend: { position: 'none' },
+  //         chart: { title: 'Chess opening moves',
+  //                  subtitle: 'popularity by percentage' },
+  //         bars: 'horizontal', // Required for Material Bar Charts.
+  //         axes: {
+  //           x: {
+  //             0: { side: 'top', label: 'Points'} // Top x-axis.
+  //           }
+  //         },
+  //         bar: { groupWidth: "90%" }
+  //       };
+
+  //       var chart = new google.charts.Bar(document.getElementById('chart'));
+  //       chart.draw(data, options);
+  //     };
+
+  var members =[ {
+    "name": "Lukas Brolin",
+    "image": "img/Lukas.jpg",
+
+  },{
+    "name": "Simon Wallstedt Bernsdorff",
+    "image": "img/SimonTest.jpg",
+  },{
+    "name": "Jonatan Angergård",
+    "image": "img/Jonatan.png",
+  },{
+    "name": "Sven Isac Hedengren",
+    "image": "img/Isac.png",
+  }
+];
+
+
+
+// var queryString = location.search.substring(1);
 
   var queryString = location.search.substring(1);
+  console.log(queryString);
 
-  // function fillMembers(){
-  // console.log("xd0");
+  function fillMembers(){
+  console.log("xd0");
   // $( document ).ready(function() {
-  //   var box1 = document.getElementById("pictureMiddle");
-  //   box1.setAttribute("src", members[queryString].image)
-  //   box1.setAttribute("src", members[queryString].image)
-  //   console.log(members[queryString].image);
-  //   console.log(members[1]);
+    var box1 = document.getElementById("pictureMiddle");
+    box1.setAttribute("src", members[queryString].image)
+    box1.setAttribute("src", members[queryString].image)
+    console.log(members[queryString].image);
+    console.log(members[1]);
   // })
-  // }
+  }
+  fillMembers()
 
   // function scrollWindow() {
   //   if (
