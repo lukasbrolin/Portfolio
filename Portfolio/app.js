@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
   window.addEventListener(
     "scroll",
     function () {
@@ -7,6 +7,7 @@ $(document).ready(function () {
     false
   );
 
+  // Sticky Navbar
   var navbar = document.getElementById("navbar");
   function navBarFunction() {
     if (
@@ -24,6 +25,7 @@ $(document).ready(function () {
     }
   }
 
+  // Charts
   var ctx = document.getElementById("myChart").getContext("2d");
   var myChart = new Chart(ctx, {
     type: "bar",
@@ -222,7 +224,5 @@ $(document).ready(function () {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  let inputs = document.querySelectorAll("form input");
-  inputs.addEventListener;
   navBarFunction();
 });
