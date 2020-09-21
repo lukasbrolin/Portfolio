@@ -69,6 +69,16 @@ $(document).ready(function () {
     }
 });
 
+var element = document.querySelector(".main-carousel")
+console.log(element);
+
+$(".mainCarousel").flickity({
+  cellAlign: "center",
+  wrapAround: true,
+  // freeScroll: true
+});
+
+
   // google.charts.load('current', {'packages':['bar']});
   //     google.charts.setOnLoadCallback(drawStuff);
 

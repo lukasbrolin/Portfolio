@@ -12,6 +12,8 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    
 </head>
 
 <body>
@@ -45,28 +47,43 @@
     </div>
     <div id="mainContent">
         <div class="contentHeader">
-            <img src="img/nimbus2000.jpg" alt=" " id="bannerImg" >
-            <div class="pictureLeft picture sideDiv">
-                <div>
-                    <img src="img/Lukas.jpg" id="pictureLeft" class="sideImage" alt="">
-                    <a class="prev" id="prevMember">&#10094;</a>
+            <div class="mainCarousel">
+                <div class="cell" >
+                    <img src="img/Lukas.jpg" alt="">
+                    <h1>Lukas Brolin</h1>
                 </div>
-                <h1>Lukas Brolin</h1>
-            </div>
-            <div class="pictureMiddle picture midDiv">
-                <img src="img/SimonTest.jpg" id="pictureMiddle" alt="">
-                <div class="pictureContent" id="pictureContent">
-                    <h1>Simon Wallstedt Bernsdorff</h1>
+                <div class="cell">
+                    <img src="img/SimonTest.jpg" alt="">
+                </div>
+                <div class="cell">
+                    <img src="img/Jonatan.PNG" alt="">
+                </div>
+                <div class="cell">
+                    <img src="img/Isac.png" alt="">
                 </div>
             </div>
+            <!-- <img src="img/nimbus2000.jpg" alt=" " id="bannerImg" >
+                <div class="pictureLeft picture sideDiv">
+                    <div>
+                        <img src="img/Lukas.jpg" id="pictureLeft" class="sideImage" alt="">
+                        <a class="prev" id="prevMember">&#10094;</a>
+                    </div>
+                    <h1>Lukas Brolin</h1>
+                </div>
+                <div class="pictureMiddle picture midDiv">
+                    <img src="img/SimonTest.jpg" id="pictureMiddle" alt="">
+                    <div class="pictureContent" id="pictureContent">
+                        <h1>Simon Wallstedt Bernsdorff</h1>
+                    </div>
+                </div>
                 <div class="pictureRight picture sideDiv">
                     <div>
                         <img src="img/Jonatan.PNG" id="pictureRight" class="sideImage" alt="">
                         <a class="next" id="nextMember">&#10095;</a>
                     </div>
                     <h1>Jonatan Angergård</h1>
+                </div> -->
             </div>
-        </div>
         <div class="contentContent">
             <div class="contentBackground">
                 <div class="memberInfo">
@@ -90,6 +107,8 @@
             </div>
         </div>
     </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="app.js"></script>
 </body>
 

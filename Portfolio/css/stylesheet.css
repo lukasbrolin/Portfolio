@@ -174,11 +174,11 @@ div.headerContent h1 {
   font-size: 3.2em;
 }
 
-div#mainContent {
+/* div#mainContent {
   background-color: #F0EFDF;
   position: relative;
   z-index: -1;
-}
+} */
 
 div.content {
   display: flex;
@@ -292,6 +292,109 @@ div.member:after {
   letter-spacing: 2px;
 }
 
+/* Lukas Test */
+
+div.project {
+  position: relative;
+  width: 250px;
+  height: 535px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  background: #fff;
+  transition: 0.5s;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+div.project:hover {
+  height: 700px;
+}
+
+div.project:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+div.project:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgb(168, 174, 194);
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.project .imgBxTwo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.project .imgBxTwo img {
+  max-width: 100%;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.project .imgBxTwo img:hover {
+  opacity: 1;
+}
+
+.previous{
+  position: relative
+}
+
+.project .contentBxTwo {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 155px;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.project:hover .contentBxTwo {
+  opacity: 1;
+}
+
+.project .contentBxTwo h2 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.project .contentBxTwo h2 span {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+/* Lukas Test Slut */
+
 div.contentTwo {
   background-color: #ebebeb;
 }
@@ -299,34 +402,42 @@ div.contentTwo {
 div#mainContent {
 }
 
-div.contentHeader {
+/* div.contentHeader {
   width: 100%;
   height: 40vh;
   display: flex;
   justify-content: center;
   margin-bottom: 2em;
+} */
+/* div.mainCarousel {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center; */
+  /* margin-bottom: 2em; */
+
 }
 
-div.contentHeader #bannerImg {
+/* div.contentHeader #bannerImg {
   position: absolute;
   height: 40vh;
   width: 100%;
   z-index: -1;
   border-radius: 0 0 15px 15px;
-}
+} */
 
-div.contentHeader div {
-  width: 200px;
-  height: 200px;
-  margin: auto 1em;
+/* div.contentHeader div {
+  width: 200px; */
+  /* height: 200px; */
+  /* margin: auto 1em;
   text-align: center;
-}
+} */
 
-div.contentHeader div img {
+/* div.contentHeader div img {
   width: 200px;
-  height: 200px;
+  height: 200px; */
   /* border: 10px solid white; */
-}
+/* } */
 
 .sideImage {
   opacity: 0.4;
@@ -370,11 +481,11 @@ div.contentHeader div.pictureMiddle {
   font-size: 1.5em;
 }
 
-div.contentHeader div #pictureMiddle {
+/* div.contentHeader div #pictureMiddle {
   width: 280px;
   height: 280px;
   margin-top: 10px;
-}
+} */
 
 div.contentContent {
   background-color: #C9C9BB;
@@ -455,10 +566,11 @@ div.textContent h1 {
 
 .mySlides {
   display: none;
+  position: absolute;
 }
 
-.prev,
-.next {
+.prevBut,
+.nextBut {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -555,6 +667,45 @@ div.textContent h1 {
   }
 }
 
+.contentHeader{
+  height: 550px;
+}
+
+.mainCarousel{
+  width: 100%;
+  margin: 0 auto;
+  height: 500px;
+  justify-content: center;
+ 
+}
+
+.cell{
+  width: 100%; 
+  height: 500px;
+  justify-content: center;
+  margin: 0 15px;
+  padding: 15px;
+  border: 3px solid #f1c40f; 
+  border-radius: 8px; 
+  overflow: hidden;
+  text-align: center;
+}
+
+.cell img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.cell h1{
+  color: black;
+}
+
+.flickity-button {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
@@ -604,9 +755,9 @@ div.textContent h1 {
     font-size: 0.5em;
   }
 
-  div.contentHeader #bannerImg {
+  /* div.contentHeader #bannerImg {
     width: 70%;
-  }
+  } */
 
   div.contentBackground {
     width: 70%;
