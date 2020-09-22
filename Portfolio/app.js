@@ -60,8 +60,24 @@ $(document).ready(function () {
     })
     
   }
-  sessionStorage.setItem("number", "")
+
+  
+
+   function setValues(theValue){
+     console.log("saywut")
+    document.getElementById("memberIntro").innerHTML = "<p><h1>" + members[theValue].name + "</h1>" + members[theValue].introText + "</p>"
+    document.getElementById("memberName").innerHTML = "<Strong>Name: </Strong>" + members[theValue].name
+    document.getElementById("memberLocation").innerHTML = "<Strong>Location: </Strong>" + members[theValue].location
+    document.getElementById("memberMail").innerHTML = "<Strong>Email: </Strong>" + members[theValue].ematheValue
+    document.getElementById("memberPhone").innerHTML = "<Strong>Phone: </Strong>" + members[theValue].phone
+    console.log("yeeee")
+   }
+
+   
+   sessionStorage.setItem("number", "")
    LoadChart(indexBefore);
+  //  setValues(indexBefore)
+
   
   window.addEventListener(
     "scroll",
@@ -88,8 +104,14 @@ $(document).ready(function () {
             navbar.classList.remove("sticky");
           }
         }
-        
-        
+
+        function removeData(chart) {
+          chart.data.labels.pop();
+          chart.data.datasets.forEach((dataset) => {
+              dataset.data.pop();
+          });
+          chart.update();
+      }
         
         // Charts
         function LoadChart(i){
@@ -97,6 +119,7 @@ $(document).ready(function () {
           if(i === ""){
             i=0;
           }
+          
   var ctx = document.getElementById("myChart").getContext("2d");
   var myChart = new Chart(ctx, {
     type: "bar",
@@ -148,6 +171,23 @@ $(document).ready(function () {
   });
 }
 
+function setValues(indexBefore){
+  if(indexBefore === ""){
+    indexBefore=0;
+  }
+  console.log("saywut")
+  console.log(members[1])
+  console.log(indexBefore + "hej")
+ document.getElementById("memberIntro").innerHTML = "<p><h1>" + members[indexBefore].name + "</h1>" + members[indexBefore].introText + "</p>"
+ document.getElementById("memberName").innerHTML = "<Strong>Name: </Strong>" + members[indexBefore].name
+ document.getElementById("memberLocation").innerHTML = "<Strong>Location: </Strong>" + members[indexBefore].location
+ document.getElementById("memberMail").innerHTML = "<Strong>Email: </Strong>" + members[indexBefore].ematheValue
+ document.getElementById("memberPhone").innerHTML = "<Strong>Phone: </Strong>" + members[indexBefore].phone
+ console.log("yeeee")
+}
+
+setValues(indexBefore)
+
   var carouselIndex = 0;
   var $carousel = $(".mainCarousel").flickity({
     cellAlign: "center",
@@ -162,6 +202,12 @@ $(document).ready(function () {
       document.getElementById("memberPhone").innerHTML = "<Strong>Phone: </Strong>" + members[index].phone
       carouselIndex = index;
         // myChart.options.labels.pop();
+        // removeData(myChart)
+        // function updateConfigByMutating(chart) {
+          // myChart.data.labels = "hej";
+          // myChart.data.datasets[0] = 6
+          // chart.update();
+      // }
         LoadChart(carouselIndex);
         // myChart.update();
         console.log(members[carouselIndex].chartLabel)    
@@ -170,12 +216,8 @@ $(document).ready(function () {
      // freeScroll: true
    });
 
-  //  function setValues(theValue){
-  //   document.getElementById("memberIntro").innerHTML = "<p><h1>" + members[theValue].name + "</h1>" + members[theValue].introText + "</p>"
-  //   document.getElementById("memberName").innerHTML = "<Strong>Name: </Strong>" + members[theValue].name
-  //   document.getElementById("memberLocation").innerHTML = "<Strong>Location: </Strong>" + members[theValue].location
-  //   document.getElementById("memberMail").innerHTML = "<Strong>Email: </Strong>" + members[theValue].ematheValuedocument.getElementById("memberPhone").innerHTML = "<Strong>Phone: </Strong>" + members[theValue].phone
-  //  }
+   $carousel.flickity( 'select', indexBefore );
+  
 
   var element = document.querySelector(".main-carousel");
   console.log(element);
