@@ -1,15 +1,10 @@
 $(document).ready(function () {
   $(function () {
-    // $(".mainCarousel").flickity({
-    //   cellAlign: "center",
-    //   wrapAround: true,
-    //   // freeScroll: true
-    // });
   
-    // $(".projectCarousel").flickity({
-    //   cellAlign: "center",
-    //   wrapAround: true,
-    // });
+    $(".projectCarousel").flickity({
+      cellAlign: "center",
+      wrapAround: true,
+    });
   var ix = 0;
   var members = [
     {
