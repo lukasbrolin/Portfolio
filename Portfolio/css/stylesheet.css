@@ -730,7 +730,7 @@ div.mySlides img {
   outline: none;
   width: 100%;
   background: #fff;
-  margin-bottom: 2%;
+  margin-bottom: 0;
   border: 1px solid #ccc;
   padding: 12px;
   color: #000;
@@ -858,4 +858,17 @@ textarea {
     width: 60%;
     margin: 1em;
   }
+
+  .error {
+    margin-bottom: 1%;
+  }
+
+  .emsg {
+    color: red;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
 }
+
