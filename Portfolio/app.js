@@ -177,21 +177,14 @@ $(document).ready(function () {
   //   document.getElementById("memberMail").innerHTML = "<Strong>Email: </Strong>" + members[theValue].ematheValuedocument.getElementById("memberPhone").innerHTML = "<Strong>Phone: </Strong>" + members[theValue].phone
   //  }
 
-  var element = document.querySelector(".main-carousel")
+  var element = document.querySelector(".main-carousel");
   console.log(element);
   
 
-
-
-
-function getInstance(){
-var flkty = $carousel.data('flickity')
-console.log(flkty.selectedIndex);
-
-
-
-
-}
+  function getInstance() {
+    var flkty = $carousel.data("flickity");
+    console.log(flkty.selectedIndex);
+  }
 
   // google.charts.load('current', {'packages':['bar']});
   //     google.charts.setOnLoadCallback(drawStuff);
@@ -227,7 +220,6 @@ console.log(flkty.selectedIndex);
   //       var chart = new google.charts.Bar(document.getElementById('chart'));
   //       chart.draw(data, options);
   //     };
-
 
   // // var queryString = location.search.substring(1);
 
