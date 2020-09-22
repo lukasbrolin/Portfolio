@@ -621,30 +621,6 @@ div.textContent h1 {
   border-radius: 8px;
 }
 
-.flickity-button {
-  background: #333;
-}
-.flickity-button:hover {
-  background: #f90;
-}
-
-.flickity-prev-next-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-}
-/* icon color */
-.flickity-button-icon {
-  fill: white;
-}
-/* position outside */
-.flickity-prev-next-button.previous {
-  left: -40px;
-}
-.flickity-prev-next-button.next {
-  right: -40px;
-}
-
 /* CONTACT US */
 .form {
   padding: 16px;
