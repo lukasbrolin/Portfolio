@@ -539,14 +539,17 @@ div.memberInfo ul li strong {
   position: relative;
 }
 
-div.textContent {
+#textContent {
   width: 80%;
   margin: 1em auto;
   text-align: center;
   align-items: center;
   color: #2f2f2d;
 }
-div.textContent h1 {
+#textContent h1 {
+  color: #2f2f2d;
+}
+#textContent p {
   color: #2f2f2d;
 }
 
@@ -844,7 +847,7 @@ textarea {
     align-items: center;
   }
 
-  div.textContent {
+  #textContent {
     width: 40%;
     margin: 1em;
     font-size: 1em;
