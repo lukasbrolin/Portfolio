@@ -689,6 +689,18 @@ textarea {
   border-radius: 10px;
 }
 
+.error {
+  margin-bottom: 1%;
+}
+
+.emsg {
+  color: red;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
   .hamburger {
@@ -769,15 +781,5 @@ textarea {
     margin: 1em;
   }
 
-  .error {
-    margin-bottom: 1%;
-  }
-
-  .emsg {
-    color: red;
-  }
-
-  .hidden {
-    visibility: hidden;
-  }
+  
 }

@@ -66,6 +66,7 @@ var ix = 0;
   console.log(sessionStorage.getItem("number"))
   var getIndex = sessionStorage.getItem("number")
   var indexBefore = getIndex.substring(getIndex.length - 1)
+  console.log(indexBefore + " dehära");
   var clickedAnchor = "";
   var contentAnchors = document.getElementsByClassName("contentAnchor")
   console.log(contentAnchors)
@@ -80,15 +81,15 @@ var ix = 0;
     
   }
 
-  function setValues(theValue){
-    console.log("saywut")
-   document.getElementById("memberIntro").innerHTML = "<p><h1>" + members[theValue].name + "</h1>" + members[theValue].introText + "</p>"
-   document.getElementById("memberName").innerHTML = "<Strong>Name: </Strong>" + members[theValue].name
-   document.getElementById("memberLocation").innerHTML = "<Strong>Location: </Strong>" + members[theValue].location
-   document.getElementById("memberMail").innerHTML = "<Strong>Email: </Strong>" + members[theValue].email
-   document.getElementById("memberPhone").innerHTML = "<Strong>Phone: </Strong>" + members[theValue].phone
-   console.log("yeeee")
-  }
+  // function setValues(indexBefore){
+  //   console.log("saywut")
+  //  document.getElementById("memberIntro").innerHTML = "<p><h1>" + members[indexBefore].name + "</h1>" + members[indexBefore].introText + "</p>"
+  //  document.getElementById("memberName").innerHTML = "<Strong>Name: </Strong>" + members[indexBefore].name
+  //  document.getElementById("memberLocation").innerHTML = "<Strong>Location: </Strong>" + members[indexBefore].location
+  //  document.getElementById("memberMail").innerHTML = "<Strong>Email: </Strong>" + members[indexBefore].email
+  //  document.getElementById("memberPhone").innerHTML = "<Strong>Phone: </Strong>" + members[indexBefore].phone
+  //  console.log("yeeee")
+  // }
 
   var config = {
     type: "bar",

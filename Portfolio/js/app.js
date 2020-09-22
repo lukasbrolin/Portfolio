@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(function () {
+  
 
     
   
@@ -8,7 +8,20 @@ $(document).ready(function () {
       wrapAround: true,
     });
 
-    sessionStorage.setItem("number", "")
+  var clickedAnchor = "";
+  var contentAnchors = document.getElementsByClassName("contentAnchor")
+  console.log(contentAnchors)
+  for(i = 0; i < contentAnchors.length; i++){
+    console.log("hej")
+      //document. 
+      contentAnchors[i].addEventListener("click", function(e){
+      sessionStorage.setItem("number", this)
+      clickedAnchor = e;
+      console.log(e)
+    })
+    
+  }
+    // sessionStorage.setItem("number", "")
    
   window.addEventListener(
     "scroll",
@@ -51,9 +64,9 @@ $(document).ready(function () {
     }
   });
 
-  navBarFunction();
   // Sticky Navbar
   var navbar = document.getElementById("navbar");
+  navBarFunction();
   function navBarFunction() {
     if (
       document.body.getBoundingClientRect().top +
@@ -77,45 +90,45 @@ $(document).ready(function () {
         });
         chart.update();
     }
-});
+
 });
 window.onload = function () {};
 
-var $regexName = /^[a-öA-Ö- ]+$/;
-var $regexNum = /^[0-9+-]+$/;
-var $regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-$("#input-name").on("keypress keydown keyup", function () {
-  if (!$(this).val().match($regexName)) {
-    $("#fname").removeClass("hidden");
-    $("#fname").show();
-  } else {
-    $("#fname").addClass("hidden");
-  }
-});
+// var $regexName = /^[a-öA-Ö- ]+$/;
+// var $regexNum = /^[0-9+-]+$/;
+// var $regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// $("#input-name").on("keypress keydown keyup", function () {
+//   if (!$(this).val().match($regexName)) {
+//     $("#fname").removeClass("hidden");
+//     $("#fname").show();
+//   } else {
+//     $("#fname").addClass("hidden");
+//   }
+// });
 
-$("#input-lastname").on("keypress keydown keyup", function () {
-  if (!$(this).val().match($regexName)) {
-    $("#lname").removeClass("hidden");
-    $("#lname").show();
-  } else {
-    $("#lname").addClass("hidden");
-  }
-});
+// $("#input-lastname").on("keypress keydown keyup", function () {
+//   if (!$(this).val().match($regexName)) {
+//     $("#lname").removeClass("hidden");
+//     $("#lname").show();
+//   } else {
+//     $("#lname").addClass("hidden");
+//   }
+// });
 
-$("#input-phone").on("keypress keydown keyup", function () {
-  if (!$(this).val().match($regexNum)) {
-    $("#phone").removeClass("hidden");
-    $("#phone").show();
-  } else {
-    $("#phone").addClass("hidden");
-  }
-});
+// $("#input-phone").on("keypress keydown keyup", function () {
+//   if (!$(this).val().match($regexNum)) {
+//     $("#phone").removeClass("hidden");
+//     $("#phone").show();
+//   } else {
+//     $("#phone").addClass("hidden");
+//   }
+// });
 
-$("#input-email").on("keypress keydown keyup", function () {
-  if (!$(this).val().match($regexEmail)) {
-    $("#email").removeClass("hidden");
-    $("#email").show();
-  } else {
-    $("#email").addClass("hidden");
-  }
-});
+// $("#input-email").on("keypress keydown keyup", function () {
+//   if (!$(this).val().match($regexEmail)) {
+//     $("#email").removeClass("hidden");
+//     $("#email").show();
+//   } else {
+//     $("#email").addClass("hidden");
+//   }
+// });
