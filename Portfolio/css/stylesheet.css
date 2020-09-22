@@ -483,8 +483,8 @@ div.contentContent {
 }
 div.contentBackground {
   width: 100%;
+  display: flex;
   height: 100%;
-  display: none;
   justify-content: center;
   background-color: #c9c9bb;
   border-radius: 15px;
@@ -614,13 +614,36 @@ div.textContent h1 {
 
 .projectCell {
   width: 50%;
-  min-height: 200px;
   margin-right: 10px;
 }
 
 .projectCell img {
   width: 100%;
   border-radius: 8px;
+}
+
+.flickity-button {
+  background: #333;
+}
+.flickity-button:hover {
+  background: #f90;
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+/* icon color */
+.flickity-button-icon {
+  fill: white;
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+.flickity-prev-next-button.next {
+  right: -40px;
 }
 
 /* CONTACT US */
