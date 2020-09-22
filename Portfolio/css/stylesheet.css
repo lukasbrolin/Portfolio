@@ -196,6 +196,7 @@ div.contentTitle p {
   text-align: center;
 }
 
+/* MEMBER BOX */
 div.member {
   position: relative;
   width: 300px;
@@ -291,16 +292,15 @@ div.member:after {
   letter-spacing: 2px;
 }
 
-/* Lukas Test */
-
+/* PROJECT BOX */
 div.project {
   position: relative;
-  width: 250px;
+  width: 60%;
   height: 535px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px;
+  margin: 10px;
   background: #fff;
   transition: 0.5s ease;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -378,7 +378,7 @@ div.project:after {
 
 .project .contentBxTwo h2 {
   font-size: 20px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 1px;
@@ -606,9 +606,14 @@ div.textContent h1 {
 }
 
 /* PROJECTS CAROUSEL */
-.projectCarousel {
-  width: 70%;
+.projectCarouselInteraktion,
+.projectCarouselMib,
+.projectCarouselScrumXP {
+  width: 80%;
   margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-height: 150px;
 }
 
 .projectCell {
@@ -617,8 +622,13 @@ div.textContent h1 {
 }
 
 .projectCell img {
-  width: 100%;
+  padding-right: 20px;
+  width: 70%;
   border-radius: 8px;
+}
+
+.projects {
+  margin-top: 50px;
 }
 
 /* CONTACT US */
@@ -781,5 +791,27 @@ textarea {
     margin: 1em;
   }
 
-  
+  .projectCarouselInteraktion,
+  .projectCarouselMib,
+  .projectCarouselScrumXP {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  .projectCell {
+    width: 90%;
+    margin-right: 10px;
+  }
+
+  .projectCell img {
+    padding-right: 20px;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .projects {
+    margin-top: 50px;
+  }
 }

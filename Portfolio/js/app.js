@@ -1,62 +1,71 @@
 $(document).ready(function () {
-  
-
-    
-  
-    $(".projectCarousel").flickity({
-      cellAlign: "center",
-      wrapAround: true,
-    });
+  $(".projectCarouselInteraktion").flickity({
+    cellAlign: "center",
+    wrapAround: true,
+    prevNextButtons: false,
+    autoPlay: true,
+  });
+  $(".projectCarouselMib").flickity({
+    cellAlign: "center",
+    wrapAround: true,
+    prevNextButtons: false,
+    autoPlay: true,
+  });
+  $(".projectCarouselScrumXP").flickity({
+    cellAlign: "center",
+    wrapAround: true,
+    prevNextButtons: false,
+    autoPlay: true,
+  });
 
   var clickedAnchor = "";
-  var contentAnchors = document.getElementsByClassName("contentAnchor")
-  console.log(contentAnchors)
-  for(i = 0; i < contentAnchors.length; i++){
-    console.log("hej")
-      //document. 
-      contentAnchors[i].addEventListener("click", function(e){
-      sessionStorage.setItem("number", this)
+  var contentAnchors = document.getElementsByClassName("contentAnchor");
+  console.log(contentAnchors);
+  for (i = 0; i < contentAnchors.length; i++) {
+    console.log("hej");
+    //document.
+    contentAnchors[i].addEventListener("click", function (e) {
+      sessionStorage.setItem("number", this);
       clickedAnchor = e;
-      console.log(e)
-    })
-    
+      console.log(e);
+    });
   }
-    // sessionStorage.setItem("number", "")
-   
+  // sessionStorage.setItem("number", "")
+
   window.addEventListener(
     "scroll",
     function () {
       navBarFunction();
     },
     false
-    );
-    
-    // Hamburger
-    var hamburger = document.querySelector(".hamburger");
-    var nav = document.getElementById("nav");
-    
-    $("#hamburger").on("click", () => {
-      hamburger.classList.toggle("is-active");
-      nav.classList.toggle("toggle");
-    });
-    
-    $(".overlay-content a").on("click", () => {
-      hamburger.classList.toggle("is-active");
-      nav.classList.toggle("toggle");
-    });
-    
-    // Add smooth scrolling to all links
-    $(".links a, .overlay-content a").on("click", function (event) {
-      if (this.hash !== "") {
-        event.preventDefault();
-        
-        var hash = this.hash;
-        
-        $("html, body").animate(
-          {
-            scrollTop: $(hash).offset().top,
-          },
-          350,
+  );
+
+  // Hamburger
+  var hamburger = document.querySelector(".hamburger");
+  var nav = document.getElementById("nav");
+
+  $("#hamburger").on("click", () => {
+    hamburger.classList.toggle("is-active");
+    nav.classList.toggle("toggle");
+  });
+
+  $(".overlay-content a").on("click", () => {
+    hamburger.classList.toggle("is-active");
+    nav.classList.toggle("toggle");
+  });
+
+  // Add smooth scrolling to all links
+  $(".links a, .overlay-content a").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        350,
         function () {
           window.location.hash = hash;
         }
@@ -70,27 +79,26 @@ $(document).ready(function () {
   function navBarFunction() {
     if (
       document.body.getBoundingClientRect().top +
-      document.getElementById("backgroundHeader").clientHeight <=
+        document.getElementById("backgroundHeader").clientHeight <=
       0
-      ) {
-        navbar.classList.add("sticky");
-      } else if (
-        document.body.getBoundingClientRect().top +
+    ) {
+      navbar.classList.add("sticky");
+    } else if (
+      document.body.getBoundingClientRect().top +
         document.getElementById("backgroundHeader").clientHeight >
-        0
-        ) {
-          navbar.classList.remove("sticky");
-        }
-      }
-  
-      function removeData(chart) {
-        chart.data.labels.pop();
-        chart.data.datasets.forEach((dataset) => {
-            dataset.data.pop();
-        });
-        chart.update();
+      0
+    ) {
+      navbar.classList.remove("sticky");
     }
+  }
 
+  function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.forEach((dataset) => {
+      dataset.data.pop();
+    });
+    chart.update();
+  }
 });
 window.onload = function () {};
 
