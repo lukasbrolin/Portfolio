@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <link rel="stylesheet" href="css/hamburgers.css" />
+    <title>JOSILUIS</title>
     <link rel="stylesheet" href="css/stylesheet.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/hamburgers.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="app.js"></script>
 </head>
 
 <body>
@@ -61,7 +65,7 @@
         </div>
 
         <div class="content">
-            <a href="member.html?0" class="contentAnchor" id="contentAnchorOne">
+            <a href="member.html?0" id="contentAnchorOne">
                 <div class="member" id="lukas">
                     <div class="imgBx">
                         <img src="img/Lukas.jpg" alt="" />
@@ -74,76 +78,65 @@
                     </div>
                 </div>
             </a>
-            <a href="member.html?1" class="contentAnchor" id="contentAnchorTwo">
-                <div class="member">
-                    <div class="imgBx">
-                        <img src="img/SimonTest.jpg" alt="" />
-                    </div>
-                    <div class="contentBx">
-                        <h2>
-                            Simon Wallstedt Bernsdorff<br />
-                            <span>Best Worldwide</span>
-                        </h2>
-                    </div>
+            <div class="member">
+                <div class="imgBx">
+                    <img src="img/SimonTest.jpg" alt="" />
                 </div>
-            </a>
-            <a href="member.html?2" class="contentAnchor" id="contentAnchorThree">
-                <div class="member">
-                    <div class="imgBx">
-                        <img src="img/Jonatan.PNG" alt="" />
-                    </div>
-                    <div class="contentBx">
-                        <h2>
-                            Jonatan Angergård<br />
-                            <span>Best Worldwide</span>
-                        </h2>
-                    </div>
+                <div class="contentBx">
+                    <h2>
+                        Simon Wallstedt Bernsdorff<br />
+                        <span>Best Worldwide</span>
+                    </h2>
                 </div>
-            </a>
-            <a href="member.html?3" class="contentAnchor" id="contentAnchorFour">
-                <div class="member">
-                    <div class="imgBx">
-                        <img src="img/Isac.png" alt="" />
-                    </div>
-                    <div class="contentBx">
-                        <h2>
-                            Sven Isac Hedengren<br />
-                            <span>Best Worldwide</span>
-                        </h2>
-                    </div>
+            </div>
+            <div class="member">
+                <div class="imgBx">
+                    <img src="img/Jonatan.PNG" alt="" />
                 </div>
-            </a>
+                <div class="contentBx">
+                    <h2>
+                        Jonatan Angergård<br />
+                        <span>Best Worldwide</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="member">
+                <div class="imgBx">
+                    <img src="img/Isac.png" alt="" />
+                </div>
+                <div class="contentBx">
+                    <h2>
+                        Sven Isac Hedengren<br />
+                        <span>Best Worldwide</span>
+                    </h2>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- PROJECTS -->
-    <div class="content">
-        <div class="project" id="interaktion1">
-            <div class="imgBxTwo">
-                <p><img src="img/interaktion/interaktion1.png" alt="" /></p>
-
-            </div>
-            <div class="contentBxTwo">
-                <h2>
-                    Interaktionsprojekt<br />
-                    <span>Adobe XD</span>
-                </h2>
-            </div>
+    <div class="projectCarousel">
+        <div class="projectCell">
+            <img src="img/interaktion/interaktion1.png" alt="">
+            <h1>Interaktionsdesign</h1>
         </div>
-        <div class="project" id="interaktion2">
-            <div class="imgBxTwo">
-                <img src="img/interaktion/interaktion2.png" alt="" />
-            </div>
-            <div class="contentBxTwo">
-                <h2>
-                    Interaktionsprojekt<br />
-                    <span>Adobe XD</span>
-                </h2>
-            </div>
+        <div class="projectCell">
+            <img src="img/interaktion/interaktion2.png" alt="">
+            <h1>Interaktionsdesign</h1>
+        </div>
+        <div class="projectCell">
+            <img src="img/interaktion/interaktion3.png" alt="">
+            <h1>Interaktionsdesign</h1>
+        </div>
+        <div class="projectCell">
+            <img src="img/interaktion/interaktion4.png" alt="">
+            <h1>Interaktionsdesign</h1>
+        </div>
+        <div class="projectCell">
+            <img src="img/interaktion/interaktion5.png" alt="">
+            <h1>Interaktionsdesign</h1>
         </div>
     </div>
-
-    <div class="footer"></div>
 
     <!-- CONTACT US -->
     <div class="contentTitle" id="contactUsTitle">
@@ -154,15 +147,19 @@
         <form>
             <label for="input-name">Name</label>
             <input type="text" id="input-name">
+            <p class="error"><span class="emsg hidden" id="fname">Please Enter a Valid Name</span></p>
 
             <label for="input-lastname">Lastname</label>
             <input type="text" id="input-lastname">
+            <p class="error"><span class="emsg hidden" id="lname">Please Enter a Valid Name</span></p>
 
             <label for="input-phone">Phone</label>
-            <input type="tel" id="input-phone">
+            <input type="tel" id="input-phone" />
+            <p class="error"><span class="emsg hidden" id="phone">Please Enter a Valid Phonenumber</span></p>
 
             <label for="input-email">Email Address</label>
             <input type="email" id="input-email" />
+            <p class="error"><span class="emsg hidden" id="email">Please Enter a Valid Emailadress</span></p>
 
             <label for="input-textarea">Type your Message</label>
             <textarea id="input-textarea"></textarea>
@@ -188,10 +185,10 @@
         }
     </script>
     <script defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQOBQKCDNzap41-VM-CQ-k5KPI4y6cwvc&callback=initMap"></script>
-
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQOBQKCDNzap41-VM-CQ-k5KPI4y6cwvc&callback=initMap">
+        </script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="app.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>

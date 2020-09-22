@@ -178,13 +178,9 @@ div.headerContent h1 {
   font-size: 3.2em;
 }
 
-/* div#mainContent {
-  background-color: #F0EFDF;
-  position: relative;
-  z-index: -1;
-} */
-
 div.content {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,7 +189,6 @@ div.content {
 }
 
 div.contentTitle {
-  /* margin-top: 2em; */
   padding-top: 6em;
   font-size: 2em;
 }
@@ -308,7 +303,7 @@ div.project {
   align-items: center;
   margin: 40px;
   background: #fff;
-  transition: 0.5s;
+  transition: 0.5s ease;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
@@ -346,7 +341,6 @@ div.project:after {
   width: 100%;
   height: 100%;
   padding: 10px;
-  box-sizing: border-box;
 }
 
 .project .imgBxTwo img {
@@ -481,12 +475,6 @@ div.contentHeader div.pictureMiddle {
   font-size: 1.5em;
 }
 
-/* div.contentHeader div #pictureMiddle {
-  width: 280px;
-  height: 280px;
-  margin-top: 10px;
-} */
-
 div.contentContent {
   background-color: #c9c9bb;
   height: auto;
@@ -496,7 +484,7 @@ div.contentContent {
 div.contentBackground {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   background-color: #c9c9bb;
   border-radius: 15px;
@@ -539,56 +527,17 @@ div.memberInfo ul li strong {
   position: relative;
 }
 
-#textContent {
+div.textContent {
   width: 80%;
   margin: 1em auto;
   text-align: center;
   align-items: center;
   color: #2f2f2d;
 }
-#textContent h1 {
-  color: #2f2f2d;
-}
-#textContent p {
+div.textContent h1 {
   color: #2f2f2d;
 }
 
-/* PROJECTS */
-.slideshow-container {
-  max-width: 25%;
-  position: relative;
-  margin: auto;
-}
-
-div.mySlides img {
-  width: 100%;
-}
-
-.dots {
-  text-align: center;
-}
-
-.mySlides {
-  display: none;
-  position: absolute;
-}
-
-.prevBut,
-.nextBut {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  background-color: rgba(0, 0, 0, 0.8);
-}
 #prevMember {
   top: 64px;
   margin-top: 0px;
@@ -627,51 +576,11 @@ div.mySlides img {
   top: 0;
 }
 
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .contentHeader {
   height: 550px;
 }
 
+/* MEMBERS CAROUSEL */
 .mainCarousel {
   width: 100%;
   margin: 0 auto;
@@ -697,16 +606,23 @@ div.mySlides img {
   object-fit: cover;
 }
 
-.cell h1 {
-  color: black;
+/* PROJECTS CAROUSEL */
+.projectCarousel {
+  width: 70%;
+  margin: 0 auto;
 }
 
-.flickity-button {
-  margin-left: 20px;
-  margin-right: 20px;
+.projectCell {
+  width: 50%;
+  min-height: 200px;
+  margin-right: 10px;
 }
 
-/* MEDIA QUERIES */
+.projectCell img {
+  width: 100%;
+  border-radius: 8px;
+}
+
 /* CONTACT US */
 .form {
   padding: 16px;
@@ -730,7 +646,7 @@ div.mySlides img {
   outline: none;
   width: 100%;
   background: #fff;
-  margin-bottom: 2%;
+  margin-bottom: 0;
   border: 1px solid #ccc;
   padding: 12px;
   color: #000;
@@ -739,7 +655,6 @@ div.mySlides img {
 
 textarea {
   resize: none;
-  min-height: 180px;
 }
 
 .form input[type="submit"],
@@ -824,10 +739,6 @@ textarea {
     font-size: 0.5em;
   }
 
-  /* div.contentHeader #bannerImg {
-    width: 70%;
-  } */
-
   div.contentBackground {
     width: 70%;
   }
@@ -840,6 +751,7 @@ textarea {
   .form {
     width: 60%;
     margin: auto;
+    margin-bottom: 25px;
   }
 
   #topContent {
@@ -848,7 +760,7 @@ textarea {
     align-items: center;
   }
 
-  #textContent {
+  div.textContent {
     width: 40%;
     margin: 1em;
     font-size: 1em;
@@ -857,5 +769,17 @@ textarea {
   #chart {
     width: 60%;
     margin: 1em;
+  }
+
+  .error {
+    margin-bottom: 1%;
+  }
+
+  .emsg {
+    color: red;
+  }
+
+  .hidden {
+    visibility: hidden;
   }
 }
