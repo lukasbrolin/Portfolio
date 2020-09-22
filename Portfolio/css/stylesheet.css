@@ -736,6 +736,7 @@ div.mySlides img {
 
 textarea {
   resize: none;
+  min-height: 180px;
 }
 
 .form input[type="submit"],
@@ -854,7 +855,4 @@ textarea {
     width: 60%;
     margin: 1em;
   }
-
-  
-  
 }

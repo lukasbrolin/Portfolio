@@ -1,19 +1,18 @@
 $(document).ready(function () {
-
-
-    var $carousel = $(".mainCarousel").flickity({
-      cellAlign: "center",
-      wrapAround: true,
-      on: {
-        change: function(index){
-          $("memberName").createTextNode = "HEJ";
-          console.log($(".memberIntro"));
-          console.log("<h1>" + members[index].name + "<h1>" + members[index].introText);
-        }
-      }
-      // freeScroll: true
-    });
-  
+  var $carousel = $(".mainCarousel").flickity({
+    cellAlign: "center",
+    wrapAround: true,
+    on: {
+      change: function (index) {
+        $("memberName").createTextNode = "HEJ";
+        console.log($(".memberIntro"));
+        console.log(
+          "<h1>" + members[index].name + "<h1>" + members[index].introText
+        );
+      },
+    },
+    // freeScroll: true
+  });
 
   window.addEventListener(
     "scroll",
@@ -91,9 +90,9 @@ $(document).ready(function () {
     },
   });
 
-  var element = document.querySelector(".main-carousel")
+  var element = document.querySelector(".main-carousel");
   console.log(element);
-  
+
   var members = [
     {
       name: "Lukas Brolin",
@@ -101,7 +100,7 @@ $(document).ready(function () {
       image: "img/Lukas.jpg",
       location: "Västerås",
       email: "lukas@oru.se",
-      phone: "+46 707 818 096"
+      phone: "+46 707 818 096",
     },
     {
       name: "Simon Wallstedt Bernsdorff",
@@ -109,7 +108,7 @@ $(document).ready(function () {
       image: "img/SimonTest.jpg",
       location: "Örebro",
       email: "simon@oru.se",
-      phone: "0202020250"
+      phone: "0202020250",
     },
     {
       name: "Jonatan Angergård",
@@ -117,7 +116,7 @@ $(document).ready(function () {
       image: "img/Jonatan.png",
       location: "Örebro",
       email: "jonte@oru.se",
-      phone: "020202040"
+      phone: "020202040",
     },
     {
       name: "Sven Isac Hedengren",
@@ -125,21 +124,14 @@ $(document).ready(function () {
       image: "img/Isac.png",
       location: "Örebro",
       email: "isac@oru.se",
-      phone: "020202030"
+      phone: "020202030",
     },
   ];
 
-
-
-
-function getInstance(){
-var flkty = $carousel.data('flickity')
-console.log(flkty.selectedIndex);
-
-
-
-
-}
+  function getInstance() {
+    var flkty = $carousel.data("flickity");
+    console.log(flkty.selectedIndex);
+  }
 
   // google.charts.load('current', {'packages':['bar']});
   //     google.charts.setOnLoadCallback(drawStuff);
@@ -175,7 +167,6 @@ console.log(flkty.selectedIndex);
   //       var chart = new google.charts.Bar(document.getElementById('chart'));
   //       chart.draw(data, options);
   //     };
-
 
   // // var queryString = location.search.substring(1);
 
