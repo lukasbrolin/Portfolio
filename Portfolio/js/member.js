@@ -20,8 +20,8 @@ var ix = 0;
     {
       name: "Lukas Brolin",
       introText: "Hej jag heter Lukas",
-      chartLabel: ["PS", "Java", "HTML", "CSS", "JS"],
-      chartValue: ["2", "1", "1", "1", "1"],
+      chartLabel: ["PS", "Java", "HTML", "CSS", "JS", "XD", "Sketchup"],
+      chartValue: ["7", "8", "7", "6", "7", "8", "5"],
       image: "img/Lukas.jpg",
       location: "Västerås, SE",
       email: "lukas@oru.se",
@@ -107,8 +107,20 @@ var ix = 0;
               "rgba(99,99,92,1)",
               "rgba(163, 162, 152,1)",
               "rgba(99,99,92,1)",
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
             ],
             borderColor: [
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
               "rgba(163, 162, 152,1)",
               "rgba(99,99,92,1)",
               "rgba(163, 162, 152,1)",
@@ -124,6 +136,7 @@ var ix = 0;
         legend: {
           display: true,
           labels: {
+            fontColor: "#2f2f2d",
             boxWidth: 0,
           },
         },
@@ -139,7 +152,8 @@ var ix = 0;
         },
       }
     }
-    
+
+    Chart.defaults.global.defaultFontColor = "#2f2f2d";
     
     function theFunction(){
       console.log("check")
@@ -157,12 +171,23 @@ var ix = 0;
       if(index === ""){
         index=0;
       }
-      for(i = 0; i < myChart.data.labels.length; i++){
+      if(members[index].chartValue.length < myChart.data.labels.length){
+        while(members[index].chartValue.length < myChart.data.labels.length){
+          config.data.labels.splice(-1, 1)
+        }
+      }
+      for(i = 0; i < members[index].chartValue.length; i++){
         myChart.data.labels[i] = members[index].chartLabel[i]
       }
-      for(i = 0; i < myChart.data.datasets[0].data.length; i++){
+      for(i = 0; i < members[index].chartValue.length; i++){
       myChart.data.datasets[0].data[i] = members[index].chartValue[i]
       }
+      // for(i = 0; i < myChart.data.labels.length; i++){
+      //   myChart.data.labels[i] = members[index].chartLabel[i]
+      // }
+      // for(i = 0; i < myChart.data.datasets[0].data.length; i++){
+      // myChart.data.datasets[0].data[i] = members[index].chartValue[i]
+      // }
       myChart.update();
     }
 
