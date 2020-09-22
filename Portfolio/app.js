@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   var members = [
     {
       name: "Lukas Brolin",
@@ -9,7 +8,7 @@ $(document).ready(function () {
       image: "img/Lukas.jpg",
       location: "Västerås, SE",
       email: "lukas@oru.se",
-      phone: "+46 707 818 096"
+      phone: "+46 707 818 096",
     },
     {
       name: "Simon Wallstedt Bernsdorff",
@@ -19,7 +18,7 @@ $(document).ready(function () {
       image: "img/SimonTest.jpg",
       location: "Örebro, SE",
       email: "simon@oru.se",
-      phone: "0202020250"
+      phone: "0202020250",
     },
     {
       name: "Jonatan Angergård",
@@ -29,7 +28,7 @@ $(document).ready(function () {
       image: "img/Jonatan.png",
       location: "Örebro, SE",
       email: "jonte@oru.se",
-      phone: "020202040"
+      phone: "020202040",
     },
     {
       name: "Sven Isac Hedengren",
@@ -39,136 +38,140 @@ $(document).ready(function () {
       image: "img/Isac.png",
       location: "Örebro, SE",
       email: "isac@oru.se",
-      phone: "020202030"
+      phone: "020202030",
     },
   ];
 
-
-  console.log(sessionStorage.getItem("number"))
-  var getIndex = sessionStorage.getItem("number")
-  var indexBefore = getIndex.substring(getIndex.length - 1)
+  console.log(sessionStorage.getItem("number"));
+  var getIndex = sessionStorage.getItem("number");
+  var indexBefore = getIndex.substring(getIndex.length - 1);
   var clickedAnchor = "";
-  var contentAnchors = document.getElementsByClassName("contentAnchor")
-  console.log(contentAnchors)
-  for(i = 0; i < contentAnchors.length; i++){
-    console.log("hej")
-      //document. 
-      contentAnchors[i].addEventListener("click", function(e){
-      sessionStorage.setItem("number", this)
+  var contentAnchors = document.getElementsByClassName("contentAnchor");
+  console.log(contentAnchors);
+  for (i = 0; i < contentAnchors.length; i++) {
+    console.log("hej");
+    //document.
+    contentAnchors[i].addEventListener("click", function (e) {
+      sessionStorage.setItem("number", this);
       clickedAnchor = e;
-      console.log(e)
-    })
-    
+      console.log(e);
+    });
   }
-  sessionStorage.setItem("number", "")
-   LoadChart(indexBefore);
-  
+  sessionStorage.setItem("number", "");
+  LoadChart(indexBefore);
+
   window.addEventListener(
     "scroll",
     function () {
       navBarFunction();
     },
     false
-    );
-    
-    // Sticky Navbar
-    var navbar = document.getElementById("navbar");
-    function navBarFunction() {
-      if (
-        document.body.getBoundingClientRect().top +
+  );
+
+  // Sticky Navbar
+  var navbar = document.getElementById("navbar");
+  function navBarFunction() {
+    if (
+      document.body.getBoundingClientRect().top +
         document.getElementById("backgroundHeader").clientHeight <=
-        0
-        ) {
-          navbar.classList.add("sticky");
-        } else if (
-          document.body.getBoundingClientRect().top +
-          document.getElementById("backgroundHeader").clientHeight >
-          0
-          ) {
-            navbar.classList.remove("sticky");
-          }
-        }
-        
-        
-        
-        // Charts
-        function LoadChart(i){
-          console.log(i)
-          if(i === ""){
-            i=0;
-          }
-  var ctx = document.getElementById("myChart").getContext("2d");
-  var myChart = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: members[i].chartLabel,
-      // labels: ["PS", "Java", "HTML", "CSS", "JS"],
-      datasets: [
-        {
-          label: "Expertise",
-          data: members[i].chartValue,
-          backgroundColor: [
-            "rgba(163, 162, 152,1)",
-            "rgba(99,99,92,1)",
-            "rgba(163, 162, 152,1)",
-            "rgba(99,99,92,1)",
-            "rgba(163, 162, 152,1)",
-            "rgba(99,99,92,1)",
-          ],
-          borderColor: [
-            "rgba(163, 162, 152,1)",
-            "rgba(99,99,92,1)",
-            "rgba(163, 162, 152,1)",
-            "rgba(99,99,92,1)",
-            "rgba(163, 162, 152,1)",
-            "rgba(99,99,92,1)",
-          ],
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      legend: {
-        display: true,
-        labels: {
-          boxWidth: 0,
-        },
-      },
-      scales: {
-        yAxes: [
+      0
+    ) {
+      navbar.classList.add("sticky");
+    } else if (
+      document.body.getBoundingClientRect().top +
+        document.getElementById("backgroundHeader").clientHeight >
+      0
+    ) {
+      navbar.classList.remove("sticky");
+    }
+  }
+
+  // Charts
+  function LoadChart(i) {
+    console.log(i);
+    if (i === "") {
+      i = 0;
+    }
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: members[i].chartLabel,
+        // labels: ["PS", "Java", "HTML", "CSS", "JS"],
+        datasets: [
           {
-            ticks: {
-              beginAtZero: true,
-              max: 10,
-            },
+            label: "Expertise",
+            data: members[i].chartValue,
+            backgroundColor: [
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
+            ],
+            borderColor: [
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
+              "rgba(163, 162, 152,1)",
+              "rgba(99,99,92,1)",
+            ],
+            borderWidth: 1,
           },
         ],
       },
-    },
-  });
-}
+      options: {
+        legend: {
+          display: true,
+          labels: {
+            boxWidth: 0,
+          },
+        },
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                max: 10,
+              },
+            },
+          ],
+        },
+      },
+    });
+  }
 
   var carouselIndex = 0;
   var $carousel = $(".mainCarousel").flickity({
     cellAlign: "center",
     wrapAround: true,
     on: {
-      change: function(index){
-        
-        document.getElementById("memberIntro").innerHTML = "<p><h1>" + members[index].name + "</h1>" + members[index].introText + "</p>"
-        document.getElementById("memberName").innerHTML = "<Strong>Name: </Strong>" + members[index].name
-        document.getElementById("memberLocation").innerHTML = "<Strong>Location: </Strong>" + members[index].location
-        document.getElementById("memberMail").innerHTML = "<Strong>Email: </Strong>" + members[index].email
-      document.getElementById("memberPhone").innerHTML = "<Strong>Phone: </Strong>" + members[index].phone
-      carouselIndex = index;
+      change: function (index) {
+        document.getElementById("memberIntro").innerHTML =
+          "<p><h1>" +
+          members[index].name +
+          "</h1>" +
+          members[index].introText +
+          "</p>";
+        document.getElementById("memberName").innerHTML =
+          "<Strong>Name: </Strong>" + members[index].name;
+        document.getElementById("memberLocation").innerHTML =
+          "<Strong>Location: </Strong>" + members[index].location;
+        document.getElementById("memberMail").innerHTML =
+          "<Strong>Email: </Strong>" + members[index].email;
+        document.getElementById("memberPhone").innerHTML =
+          "<Strong>Phone: </Strong>" + members[index].phone;
+        carouselIndex = index;
         // myChart.options.labels.pop();
         LoadChart(carouselIndex);
         // myChart.update();
-        console.log(members[carouselIndex].chartLabel)    
-       }
-    }
-     // freeScroll: true
-   });
+        console.log(members[carouselIndex].chartLabel);
+      },
+    },
+    // freeScroll: true
+  });
 
   //  function setValues(theValue){
   //   document.getElementById("memberIntro").innerHTML = "<p><h1>" + members[theValue].name + "</h1>" + members[theValue].introText + "</p>"
@@ -179,7 +182,6 @@ $(document).ready(function () {
 
   var element = document.querySelector(".main-carousel");
   console.log(element);
-  
 
   function getInstance() {
     var flkty = $carousel.data("flickity");
@@ -309,8 +311,4 @@ $(document).ready(function () {
 
   navBarFunction();
 });
-window.onload = function() {
-  
-  
-
-};
+window.onload = function () {};
