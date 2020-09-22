@@ -623,7 +623,7 @@ div.textContent h1 {
 
 .projectCell img {
   padding-right: 20px;
-  width: 70%;
+  width: 100%;
   border-radius: 8px;
 }
 
@@ -801,12 +801,12 @@ textarea {
   }
 
   .projectCell {
-    width: 90%;
+    width: 60%;
     margin-right: 10px;
   }
 
   .projectCell img {
-    padding-right: 20px;
+    padding-right: 5px;
     width: 100%;
     border-radius: 8px;
   }
