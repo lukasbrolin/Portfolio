@@ -8,7 +8,6 @@ $(document).ready(function () {
   var $regexNum = /^[0-9+-]+$/;
   var $regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   $("#input-name").on("keypress keydown keyup", function () {
-    console.log("keypress");
     if (!$(this).val().match($regexName)) {
       console.log(this);
       $("#fname").removeClass("hidden");
@@ -53,7 +52,7 @@ $(document).ready(function () {
     }
   });
 
-  // const handleFormSubmit = event => 
+  // const handleFormSubmit = event =>
   // {
   //   event.preventDeafult();
 
@@ -65,52 +64,58 @@ $(document).ready(function () {
   // }
 
   // $(".theForm").submit(function() {
-    
+
   //     console.log($(this).formToJson());
-    
+
   //     return false;
-    
+
   //   });
-    
-  if (window.localStorage)
-  {
-    var txtFName = document.getElementById('input-name');
-    var txtLName = document.getElementById('input-lastname');
-    var txtPhone = document.getElementById('input-phone');
-    var txtEmail = document.getElementById('input-email');
-    
-    txtFName.value = localStorage.getItem('input-name');
-    txtLName.value = localStorage.getItem('input-lastname');
-    txtPhone.value = localStorage.getItem('input-phone');
-    txtEmail.value = localStorage.getItem('input-email');
 
-    txtFName.addEventListener('input', function()
-    {
-      localStorage.setItem('input-name', txtFName.value);
-      
+  if (window.localStorage) {
+    var txtFName = document.getElementById("input-name");
+    var txtLName = document.getElementById("input-lastname");
+    var txtPhone = document.getElementById("input-phone");
+    var txtEmail = document.getElementById("input-email");
 
-    }, false);
+    txtFName.value = localStorage.getItem("input-name");
+    txtLName.value = localStorage.getItem("input-lastname");
+    txtPhone.value = localStorage.getItem("input-phone");
+    txtEmail.value = localStorage.getItem("input-email");
 
-    txtLName.addEventListener('input', function()
-    {
-      localStorage.setItem('input-lastname', txtLName.value);
-      
-    }, false);
+    txtFName.addEventListener(
+      "input",
+      function () {
+        localStorage.setItem("input-name", txtFName.value);
+      },
+      false
+    );
 
-    txtPhone.addEventListener('input', function()
-    {
-      localStorage.setItem('input-phone', txtPhone.value);
-      
-    }, false);
+    txtLName.addEventListener(
+      "input",
+      function () {
+        localStorage.setItem("input-lastname", txtLName.value);
+      },
+      false
+    );
 
-    txtEmail.addEventListener('input', function()
-    {
-      localStorage.setItem('input-email', txtEmail.value);
-      
-    }, false);
+    txtPhone.addEventListener(
+      "input",
+      function () {
+        localStorage.setItem("input-phone", txtPhone.value);
+      },
+      false
+    );
 
+    txtEmail.addEventListener(
+      "input",
+      function () {
+        localStorage.setItem("input-email", txtEmail.value);
+      },
+      false
+    );
   }
 
-      
-
+  document.getElementById("formSubmit").addEventListener("click", (e) => {
+    e.preventDefault();
+  });
 });

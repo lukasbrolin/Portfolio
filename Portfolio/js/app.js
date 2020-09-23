@@ -21,6 +21,14 @@ $(document).ready(function () {
     fullscreen: true,
   });
 
+  document.getElementById("stop").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    $(".projectCarouselInteraktion").flickity({
+      autoPlay: false,
+    });
+  });
+
   var clickedAnchor = "";
   var contentAnchors = document.getElementsByClassName("contentAnchor");
   console.log(contentAnchors);
@@ -108,4 +116,3 @@ $(document).ready(function () {
     chart.update();
   }
 });
-window.onload = function () {};
