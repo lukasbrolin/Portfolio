@@ -4,18 +4,21 @@ $(document).ready(function () {
     wrapAround: true,
     prevNextButtons: false,
     autoPlay: true,
+    fullscreen: true,
   });
   $(".projectCarouselMib").flickity({
     cellAlign: "center",
     wrapAround: true,
     prevNextButtons: false,
     autoPlay: true,
+    fullscreen: true,
   });
   $(".projectCarouselScrumXP").flickity({
     cellAlign: "center",
     wrapAround: true,
     prevNextButtons: false,
     autoPlay: true,
+    fullscreen: true,
   });
 
   var clickedAnchor = "";
@@ -80,7 +83,7 @@ $(document).ready(function () {
     if (
       document.body.getBoundingClientRect().top +
         document.getElementById("backgroundHeader").clientHeight <=
-      0
+      15
     ) {
       navbar.classList.add("sticky");
     } else if (

@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
     <script src="js/app.js"></script>
     <script src="js/validation.js"></script>
 </head>
@@ -123,7 +124,7 @@
 
     <!-- PROJECTS -->
     <div class="mainContent" id="projectContent">
-        <div class="contentTitle" id="membersTitle">
+        <div class="contentTitle" id="projectsTitle">
             <p>Projects</p>
         </div>
         <div class="content">
@@ -192,7 +193,7 @@
         </div>
 
         <div class="form">
-            <form>
+            <form class="theForm">
                 <label for="input-name">Name</label>
                 <input type="text" id="input-name">
                 <p class="error"><span class="emsg hidden" id="fname">Please Enter a Valid Name</span></p>
@@ -212,7 +213,7 @@
                 <label for="input-textarea">Type your Message</label>
                 <textarea id="input-textarea"></textarea>
 
-                <input type="submit" value="Send" />
+                <input type="submit" class="formSubmit" value="Send" />
             </form>
         </div>
 
@@ -237,6 +238,7 @@
             </script>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
 </body>
 
 </html>
