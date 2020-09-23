@@ -2,7 +2,7 @@ $(document).ready(function () {
     var carouselIndex = 0;
     var $carousel = $(".mainCarousel").flickity({
     cellAlign: "center",
-    wrapAround: true,
+    wrapAround: false,
     on: {
         change: function(index){
       
@@ -50,8 +50,8 @@ var ix = 0;
     {
       name: "Sven Isac Hedengren",
       introText: "Hej jag heter Isac",
-      chartLabel: ["PS", "Java", "HTML", "CSS", "JS"],
-      chartValue: ["1", "10", "5", "2", "6"],
+      chartLabel: ["PS", "Java", "HTML", "CSS"],
+      chartValue: ["1", "10", "5", "2"],
       image: "img/Isac.png",
       location: "Örebro, SE",
       email: "isac@oru.se",
