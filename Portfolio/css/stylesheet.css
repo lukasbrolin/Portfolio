@@ -770,9 +770,6 @@ a#stop {
     display: none;
   }
 
-  div.contentTitle {
-    /* padding-top: 2em; */
-  }
   .nav-horizontal ul {
     display: flex;
   }
