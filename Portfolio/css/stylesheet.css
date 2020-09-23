@@ -493,13 +493,13 @@ div.contentBackground {
   height: 100%;
   justify-content: center;
   background-color: #c9c9bb;
-  border-radius: 15px;
-  box-shadow: 0px 0px 24px -8px rgba(47, 47, 45, 1);
+  /* border-radius: 15px; */
+  /* box-shadow: 0px 0px 24px -8px rgba(47, 47, 45, 1); */
   margin-top: 1em;
 }
 
 div.memberInfo {
-  height: 92%;
+  height: 100%;
   width: 80%;
   position: relative;
   margin: 6% 0;
@@ -584,43 +584,66 @@ div.memberInfo ul li strong {
 }
 
 .contentHeader {
-  height: 550px;
+  height: 460px;
+  background-color: #f0efdf;
 }
 
 /* MEMBERS CAROUSEL */
 .mainCarousel {
   width: 100%;
   margin: 0 auto;
-  height: 500px;
+  height: 420px;
   justify-content: center;
 }
 
 .cell {
-  width: 100%;
-  height: 500px;
+  position: relative;
+  width: 80%;
+  height: 400px;
   justify-content: center;
-  margin: 0 15px;
-  padding: 15px;
-  border: 3px solid #f1c40f;
+  margin: 15px auto;
+  /* padding: 30px; */
+  /* border: 3px solid #f1c40f; */
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 15px;
+  box-shadow: 0px 0px 24px -8px rgba(47, 47, 45, 1);
+  
+  
 }
 
 .cell img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
+  margin-top: 25px;
+  border-radius: 15px;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  
+  
+}
+
+.is-selected{
+  opacity: 1;
+  transition: 0.5s;
 }
 
 .mainCarousel h1 {
   color: #2f2f2d;
-  margin-top: 0.5em;
+  margin-top: 16px;
+  font-size: 1.5em;
 }
 
 .flickity-button {
-  background: #e2e1d2 !important ;
+  background: #C9C9BB !important ;
+  box-shadow: 0px 0px 24px -8px rgba(47, 47, 45, 1);
 }
+
+/* .flickity-viewport{
+  height: 600px !important;
+} */
 
 .arrow {
   color: #2f2f2d;
@@ -867,17 +890,16 @@ textarea {
   height: 500px;
   justify-content: center;
   margin: 0 15px;
-  padding: 15px;
-  border: 3px solid #f1c40f;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
+
 }
 
 .cell img {
   width: 100%;
   height: 400px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .mainCarousel h1{
@@ -892,6 +914,8 @@ textarea {
 .arrow{
   color: #2f2f2d;
 }
+
+
 
 
 
