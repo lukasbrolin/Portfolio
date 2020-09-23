@@ -205,6 +205,10 @@ div.contentTitle p {
   text-align: center;
 }
 
+#wave {
+  position: absolute;
+}
+
 /* MEMBER BOX */
 div.member {
   position: relative;
@@ -615,8 +619,6 @@ div.memberInfo ul li strong {
   transition: 0.5s;
   border-radius: 15px;
   box-shadow: 0px 0px 24px -8px rgba(47, 47, 45, 1);
-  
-  
 }
 
 .cell img {
@@ -625,11 +627,9 @@ div.memberInfo ul li strong {
   width: 300px;
   height: 300px;
   object-fit: contain;
-  
-  
 }
 
-.is-selected{
+.is-selected {
   opacity: 1;
   transition: 0.5s;
 }
@@ -641,7 +641,7 @@ div.memberInfo ul li strong {
 }
 
 .flickity-button {
-  background: #C9C9BB !important ;
+  background: #c9c9bb !important ;
   box-shadow: 0px 0px 24px -8px rgba(47, 47, 45, 1);
 }
 
@@ -652,8 +652,6 @@ div.memberInfo ul li strong {
 .arrow {
   color: #2f2f2d;
 }
-
-
 
 /* PROJECTS CAROUSEL */
 .projectCarouselInteraktion,
@@ -889,51 +887,43 @@ a#stop {
     border-radius: 10px;
   }
 
-  
-
   /* MEMBERS CAROUSEL */
-.mainCarousel {
-  width: 100%;
-  margin: 0 auto;
-  height: 500px;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
+  .mainCarousel {
+    width: 100%;
+    margin: 0 auto;
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 
-.cell {
-  width: 50%;
-  max-width: 500px;
-  height: 500px;
-  justify-content: center;
-  margin: 0 15px;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
+  .cell {
+    width: 50%;
+    max-width: 500px;
+    height: 500px;
+    justify-content: center;
+    margin: 0 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
 
-}
+  .cell img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+  }
 
-.cell img {
-  width: 100%;
-  height: 400px;
-  object-fit: contain;
-}
+  .mainCarousel h1 {
+    color: #2f2f2d;
+    margin-top: 0.5em;
+  }
 
-.mainCarousel h1{
-  color: #2f2f2d;
-  margin-top: 0.5em;
-}
+  .flickity-button {
+    background: #e2e1d2 !important ;
+  }
 
-.flickity-button{
-  background: #e2e1d2 !important ;
-}
-
-.arrow{
-  color: #2f2f2d;
-}
-
-
-
-
-
+  .arrow {
+    color: #2f2f2d;
+  }
 }
