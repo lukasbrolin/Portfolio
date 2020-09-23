@@ -128,7 +128,6 @@ body {
 }
 
 /* BACKGROUND VIDEO */
-
 div.backgroundHeader {
   width: 100%;
   height: 100vh;
@@ -205,8 +204,14 @@ div.contentTitle p {
   text-align: center;
 }
 
-#wave {
+#wave-top {
   position: absolute;
+  opacity: 0.25;
+}
+
+#wave-bottom {
+  position: absolute;
+  opacity: 0.25;
 }
 
 /* MEMBER BOX */
@@ -722,6 +727,8 @@ textarea {
 
 .form input[type="submit"],
 .form input[type="button"] {
+  border-radius: 5px;
+  margin-top: 10px;
   font-family: inherit;
   width: 100%;
   padding: 2%;
@@ -748,16 +755,32 @@ a#stop {
   transform: translateY(1px);
 }
 
-.stop {
+.center {
   margin-top: 20px;
   text-align: center;
 }
 
-a#stop {
+.stop {
+  border-radius: 5px;
   font-family: inherit;
   width: 100%;
   padding: 1%;
   background: #945a5a;
+  border-bottom: 2px solid #d3d3d3;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.start {
+  border-radius: 5px;
+  font-family: inherit;
+  width: 100%;
+  padding: 1%;
+  background: #5a946d;
   border-bottom: 2px solid #d3d3d3;
   border-top-style: none;
   border-right-style: none;
@@ -773,6 +796,7 @@ a#stop {
   min-height: 600px;
   margin: 20px 5% 0;
   border-radius: 10px;
+  padding: 20px;
 }
 
 .error {

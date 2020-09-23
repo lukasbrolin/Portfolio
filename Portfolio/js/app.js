@@ -23,10 +23,22 @@ $(document).ready(function () {
 
   document.getElementById("stop").addEventListener("click", (e) => {
     e.preventDefault();
-
-    $(".projectCarouselInteraktion").flickity({
-      autoPlay: false,
-    });
+    let $carousels = $(
+      ".projectCarouselInteraktion, .projectCarouselMib, .projectCarouselScrumXP"
+    );
+    // Stop slideshows and change appearance of button
+    if (e.target.classList.contains("stop")) {
+      e.target.classList.add("start");
+      e.target.classList.remove("stop");
+      e.target.textContent = "Start Slideshow";
+      $carousels.flickity("stopPlayer");
+      // Start slideshows and change appearance of button
+    } else {
+      e.target.classList.add("stop");
+      e.target.classList.remove("start");
+      e.target.textContent = "Stop Slideshow";
+      $carousels.flickity("playPlayer");
+    }
   });
 
   var clickedAnchor = "";
