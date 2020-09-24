@@ -204,16 +204,12 @@ div.contentTitle p {
   text-align: center;
 }
 
-.group-info p {
-  font-size: 1.2em;
-  margin-top: 1.5em;
-  text-align: center;
-  color: #000;
-  padding: 0 10%;
-  line-height: 1.6em;
+#wave-top {
+  position: absolute;
+  opacity: 0.25;
 }
 
-#wave-top {
+#wave-bottom {
   position: absolute;
   opacity: 0.25;
 }
@@ -591,6 +587,8 @@ div.memberInfo ul li strong {
   margin: 0 auto;
 }
 
+
+
 #myChart {
   width: 200%;
   height: 600px;
@@ -774,6 +772,10 @@ a#stop {
   transform: translateY(1px);
 }
 
+.formBx{
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
 .center {
   margin-top: 20px;
   text-align: center;
@@ -816,6 +818,8 @@ a#stop {
   margin: 20px 5% 0;
   border-radius: 10px;
   padding: 20px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
 }
 
 .error {
@@ -881,7 +885,7 @@ a#stop {
 
   #map {
     width: 60%;
-    margin: auto;
+    margin: 40px auto 0;
   }
 
   .form {
@@ -889,6 +893,8 @@ a#stop {
     margin: auto;
     margin-bottom: 25px;
   }
+
+  
 
   #topContent {
     display: flex;
