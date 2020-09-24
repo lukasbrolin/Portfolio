@@ -1,6 +1,11 @@
 $(document).ready(function () {
+  // Set variables for user inputs
+  var txtFName = document.getElementById("input-name");
+  var txtLName = document.getElementById("input-lastname");
+  var txtPhone = document.getElementById("input-phone");
+  var txtEmail = document.getElementById("input-email");
 
-  // Regex - regular expressions. 
+  // Regex - regular expressions patterns.
   var $regexName = /^[a-öA-Ö- ]+$/;
   var $regexNum = /^[0-9+-]+$/;
   var $regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -51,69 +56,70 @@ $(document).ready(function () {
     }
   });
 
-  // Save the data input, from the forms, into local storage.
-  if (window.localStorage) {
-    var txtFName = document.getElementById("input-name");
-    var txtLName = document.getElementById("input-lastname");
-    var txtPhone = document.getElementById("input-phone");
-    var txtEmail = document.getElementById("input-email");
+  // // Save the data input, from the forms, into local storage.
+  // if (window.localStorage) {
+  //   txtFName.addEventListener(
+  //     "input",
+  //     function () {
+  //       localStorage.setItem("input-name", txtFName.value);
+  //     },
+  //     false
+  //   );
 
-    txtFName.value = localStorage.getItem("input-name");
-    txtLName.value = localStorage.getItem("input-lastname");
-    txtPhone.value = localStorage.getItem("input-phone");
-    txtEmail.value = localStorage.getItem("input-email");
+  //   txtLName.addEventListener(
+  //     "input",
+  //     function () {
+  //       localStorage.setItem("input-lastname", txtLName.value);
+  //     },
+  //     false
+  //   );
 
-    txtFName.addEventListener(
-      "input",
-      function () {
-        localStorage.setItem("input-name", txtFName.value);
-      },
-      false
-    );
+  //   txtPhone.addEventListener(
+  //     "input",
+  //     function () {
+  //       localStorage.setItem("input-phone", txtPhone.value);
+  //     },
+  //     false
+  //   );
 
-    txtLName.addEventListener(
-      "input",
-      function () {
-        localStorage.setItem("input-lastname", txtLName.value);
-      },
-      false
-    );
+  //   txtEmail.addEventListener(
+  //     "input",
+  //     function () {
+  //       localStorage.setItem("input-email", txtEmail.value);
+  //     },
+  //     false
+  //   );
+  // }
 
-    txtPhone.addEventListener(
-      "input",
-      function () {
-        localStorage.setItem("input-phone", txtPhone.value);
-      },
-      false
-    );
-
-    txtEmail.addEventListener(
-      "input",
-      function () {
-        localStorage.setItem("input-email", txtEmail.value);
-      },
-      false
-    );
-  }
-  
+  // Button on submit
   document.getElementById("formSubmit").addEventListener("click", (e) => {
+    // prevent site form reloading
     e.preventDefault();
+    // set JS object and set its data to the user inputs
+    const user = {
+      name: txtFName.value,
+      lastname: txtLName.value,
+      phone: txtPhone.value,
+      email: txtEmail.value,
+    };
+
+    // Convert the user object into JSON string and save it into storage
+    localStorage.setItem("user", JSON.stringify(user));
   });
 
   window.addEventListener("load", fetchStorage);
 
   function fetchStorage() {
+    var jsonString = localStorage.getItem("user");
+    var retrievedObject = JSON.parse(jsonString);
+
     // firstname
-    let name = localStorage.getItem("input-name");
-    txtFName.value = name;
-    // lastname
-    let lastname = localStorage.getItem("input-lastname");
-    txtLName.value = lastname;
+    txtFName.value = retrievedObject.name;
+    // lastName
+    txtLName.value = retrievedObject.lastname;
     // phone
-    let phone = localStorage.getItem("input-phone");
-    txtPhone.value = phone;
+    txtPhone.value = retrievedObject.phone;
     // email
-    let email = localStorage.getItem("input-email");
-    txtEmail.value = email;
+    txtEmail.value = retrievedObject.email;
   }
 });
