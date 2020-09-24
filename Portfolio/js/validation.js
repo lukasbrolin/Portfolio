@@ -1,12 +1,11 @@
 $(document).ready(function () {
-  var fNameSend = false;
-  var lNameSend = false;
-  var phoneSend = false;
-  var emailSend = false;
 
+  // Regex - regular expressions. 
   var $regexName = /^[a-öA-Ö- ]+$/;
   var $regexNum = /^[0-9+-]+$/;
   var $regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  // JQuery realtime validation - forms.
   $("#input-name").on("keypress keydown keyup", function () {
     if (!$(this).val().match($regexName)) {
       console.log(this);
@@ -52,25 +51,7 @@ $(document).ready(function () {
     }
   });
 
-  // const handleFormSubmit = event =>
-  // {
-  //   event.preventDeafult();
-
-  //   const data = {};
-
-  //   const dataContainer = document.getElementsByClassName('theForm')[0];
-
-  //   dataContainer.textContent = JSON.stringify(data, null, "");
-  // }
-
-  // $(".theForm").submit(function() {
-
-  //     console.log($(this).formToJson());
-
-  //     return false;
-
-  //   });
-
+  // Save the data input, from the forms, into local storage.
   if (window.localStorage) {
     var txtFName = document.getElementById("input-name");
     var txtLName = document.getElementById("input-lastname");
@@ -114,7 +95,7 @@ $(document).ready(function () {
       false
     );
   }
-
+  
   document.getElementById("formSubmit").addEventListener("click", (e) => {
     e.preventDefault();
   });
