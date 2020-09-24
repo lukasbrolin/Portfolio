@@ -99,4 +99,21 @@ $(document).ready(function () {
   document.getElementById("formSubmit").addEventListener("click", (e) => {
     e.preventDefault();
   });
+
+  window.addEventListener("load", fetchStorage);
+
+  function fetchStorage() {
+    // firstname
+    let name = localStorage.getItem("input-name");
+    txtFName.value = name;
+    // lastname
+    let lastname = localStorage.getItem("input-lastname");
+    txtLName.value = lastname;
+    // phone
+    let phone = localStorage.getItem("input-phone");
+    txtPhone.value = phone;
+    // email
+    let email = localStorage.getItem("input-email");
+    txtEmail.value = email;
+  }
 });
