@@ -5,13 +5,15 @@ $(document).ready(function () {
   var txtPhone = document.getElementById("input-phone");
   var txtEmail = document.getElementById("input-email");
 
+  var fNameSend, lNameSend, phoneSend, emailSend;
+
   // Regex - regular expressions patterns.
   var $regexName = /^[a-öA-Ö- ]+$/;
   var $regexNum = /^[0-9+-]+$/;
   var $regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   // JQuery realtime validation - forms.
-  $("#input-name").on("keypress keydown keyup", function () {
+  $("#input-name").on("keypress keydown keyup blur", function () {
     if (!$(this).val().match($regexName)) {
       console.log(this);
       $("#fname").removeClass("hidden");
@@ -23,7 +25,7 @@ $(document).ready(function () {
     }
   });
 
-  $("#input-lastname").on("keypress keydown keyup", function () {
+  $("#input-lastname").on("keypress keydown keyup blur", function () {
     if (!$(this).val().match($regexName)) {
       $("#lname").removeClass("hidden");
       $("#lname").show();
@@ -34,7 +36,7 @@ $(document).ready(function () {
     }
   });
 
-  $("#input-phone").on("keypress keydown keyup", function () {
+  $("#input-phone").on("keypress keydown keyup blur", function () {
     if (!$(this).val().match($regexNum)) {
       $("#phone").removeClass("hidden");
       $("#phone").show();
@@ -45,7 +47,7 @@ $(document).ready(function () {
     }
   });
 
-  $("#input-email").on("keypress keydown keyup", function () {
+  $("#input-email").on("keypress keydown keyup blur", function () {
     if (!$(this).val().match($regexEmail)) {
       $("#email").removeClass("hidden");
       $("#email").show();
@@ -91,35 +93,49 @@ $(document).ready(function () {
   //   );
   // }
 
-  // Button on submit
   document.getElementById("formSubmit").addEventListener("click", (e) => {
-    // prevent site form reloading
-    e.preventDefault();
-    // set JS object and set its data to the user inputs
-    const user = {
-      name: txtFName.value,
-      lastname: txtLName.value,
-      phone: txtPhone.value,
-      email: txtEmail.value,
-    };
+    e.preventDefault(); // prevent site form reloading
 
-    // Convert the user object into JSON string and save it into storage
-    localStorage.setItem("user", JSON.stringify(user));
+    console.log(fNameSend, lNameSend, phoneSend, emailSend);
+
+    // if all fields are correct submit to localStorage
+    if (fNameSend && lNameSend && phoneSend && emailSend) {
+      // set JS object and set its data to the user inputs
+      const user = {
+        name: txtFName.value,
+        lastname: txtLName.value,
+        phone: txtPhone.value,
+        email: txtEmail.value,
+      };
+
+      // Convert the user object into JSON string and save it into storage
+      localStorage.setItem("user", JSON.stringify(user));
+
+      // Empty fields
+      txtFName.value = "";
+      txtLName.value = "";
+      txtPhone.value = "";
+      txtEmail.value = "";
+    } else {
+      console.log("false");
+    }
   });
 
+  // run function fetchStorage when page loads
   window.addEventListener("load", fetchStorage);
 
+  // Fetch data from localStorage when page loads
   function fetchStorage() {
     var jsonString = localStorage.getItem("user");
     var retrievedObject = JSON.parse(jsonString);
 
-    // firstname
+    // fetch firstname
     txtFName.value = retrievedObject.name;
-    // lastName
+    // fetch lastName
     txtLName.value = retrievedObject.lastname;
-    // phone
+    // fetch phone
     txtPhone.value = retrievedObject.phone;
-    // email
+    // fetch email
     txtEmail.value = retrievedObject.email;
   }
 });
