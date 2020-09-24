@@ -204,17 +204,12 @@ div.contentTitle p {
   text-align: center;
 }
 
-.group-info p {
-  font-size: 1.2em;
-  margin-top: 1.5em;
-  text-align: center;
-  color: #000;
-  padding: 0 10%;
-  line-height: 1.6em;
-  /* hej */
+#wave-top {
+  position: absolute;
+  opacity: 0.25;
 }
 
-#wave-top {
+#wave-bottom {
   position: absolute;
   opacity: 0.25;
 }
@@ -318,22 +313,60 @@ div.member:after {
 /* PROJECT BOX */
 div.project {
   position: relative;
-  width: 60%;
-  height: 535px;
+  width: 100%;
+  height: 540px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 10px;
-  background: #fff;
-  transition: 0.5s ease;
+  /* align-items: center; */
+  margin: 40px 0;
+  /* margin: 0 auto; */
+  /* background-color: red; */
+  transition: 0.5s;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  /* flex-wrap: wrap; */
+  z-index: -0;
 }
 
 div.project:hover {
   height: 700px;
 }
 
-div.project:before {
+.project .projectBx {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 140px;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.project:hover .projectBx {
+  opacity: 1;
+}
+
+.project .projectBx h2 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.project .projectBx h2 span {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+/* div.project:before {
   content: "";
   position: absolute;
   top: -2px;
@@ -354,64 +387,70 @@ div.project:after {
   background: rgb(168, 174, 194);
   z-index: -1;
   filter: blur(40px);
-}
+} */
 
-.project .imgBxTwo {
+.project .imgBx {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   padding: 10px;
+  box-sizing: border-box;
 }
 
-.project .imgBxTwo img {
-  max-width: 100%;
+/* PROJECTS CAROUSEL */
+.projectCarouselInteraktion,
+.projectCarouselMib,
+.projectCarouselScrumXP {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
   opacity: 0.4;
   transition: 0.5s;
 }
 
-.project .imgBxTwo img:hover {
+.project .flickity-page-dots {
+  bottom: -20px;
+}
+
+.projectCarouselInteraktion:hover,
+.projectCarouselMib:hover,
+.projectCarouselScrumXP:hover {
   opacity: 1;
+}
+
+.projectCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #353333c9; */
+  width: 100%;
+  height: 100%;
+  /* border-radius: 10px; */
+}
+
+.projectCell img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+.projects {
+  margin: 10px;
+  margin-bottom: 30px;
+}
+
+.project {
+  min-width: 350px;
 }
 
 .previous {
   position: relative;
-}
-
-.project .contentBxTwo {
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  height: 155px;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.project:hover .contentBxTwo {
-  opacity: 1;
-}
-
-.project .contentBxTwo h2 {
-  font-size: 20px;
-  color: rgb(0, 0, 0);
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 1px;
-}
-
-.project .contentBxTwo h2 span {
-  font-size: 14px;
-  color: #fff;
-  font-weight: 200;
-  letter-spacing: 2px;
 }
 
 /* Lukas Test Slut */
@@ -663,39 +702,6 @@ div.memberInfo ul li strong {
   color: #2f2f2d;
 }
 
-/* PROJECTS CAROUSEL */
-.projectCarouselInteraktion,
-.projectCarouselMib,
-.projectCarouselScrumXP {
-  width: 100%;
-  height: 500px;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-
-.projectCell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #353333c9;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.projectCell img {
-  object-fit: contain;
-  height: 100%;
-  width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
-  border-radius: 10px;
-}
-
-.projects {
-  margin-bottom: 40px;
-}
-
 /* CONTACT US */
 .form {
   padding: 16px;
@@ -760,6 +766,10 @@ a#stop {
   transform: translateY(1px);
 }
 
+.formBx {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
 .center {
   margin-top: 20px;
   text-align: center;
@@ -802,6 +812,7 @@ a#stop {
   margin: 20px 5% 0;
   border-radius: 10px;
   padding: 20px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 .error {
@@ -867,7 +878,7 @@ a#stop {
 
   #map {
     width: 60%;
-    margin: auto;
+    margin: 40px auto 0;
   }
 
   .form {
@@ -893,26 +904,40 @@ a#stop {
     margin: 1em;
   }
 
+  .project {
+    width: auto;
+  }
+
+  #interaktion {
+    width: 350px;
+    margin: 40px 300px;
+  }
+
   .projectCarouselInteraktion,
   .projectCarouselMib,
   .projectCarouselScrumXP {
-    width: 70%;
+    width: 100%;
     /* margin: 1em auto; */
     border-radius: 10px;
   }
 
   .projectCell {
     border-radius: 10px;
-    background-color: #353333c9;
+    /* background-color: #353333c9; */
     width: 100%;
     margin-right: 10px;
+  }
+
+  .project {
+    max-width: 800px;
   }
 
   .projectCell img {
     object-fit: contain;
     text-align: center;
     padding: 0px 0px;
-    width: 100%;
+    /* width: 100%; */
+    height: 100%;
     border-radius: 10px;
   }
 
