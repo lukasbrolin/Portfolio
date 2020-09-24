@@ -205,11 +205,11 @@ div.contentTitle p {
 }
 
 .group-info p {
-  font-size: 0.9em;
+  font-size: 1.2em;
   margin-top: 1.5em;
   text-align: center;
   color: #000;
-  padding: 0 8%;
+  padding: 0 10%;
   line-height: 1.6em;
 }
 
@@ -543,8 +543,6 @@ div.memberInfo ul li strong {
   position: relative;
   margin: 0 auto;
 }
-
-
 
 #myChart {
   width: 200%;
