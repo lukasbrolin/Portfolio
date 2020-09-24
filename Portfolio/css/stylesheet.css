@@ -326,13 +326,9 @@ div.project {
   height: 540px;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   margin: 40px 0;
-  /* margin: 0 auto; */
-  /* background-color: red; */
   transition: 0.5s;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  /* flex-wrap: wrap; */
   z-index: -0;
 }
 
@@ -356,6 +352,11 @@ div.project:hover {
   transition: 0.5s;
 }
 
+.projectBx img {
+  width: 10%;
+  margin-left: 10px;
+}
+
 .project:hover .projectBx {
   opacity: 1;
 }
@@ -374,29 +375,6 @@ div.project:hover {
   font-weight: 200;
   letter-spacing: 2px;
 }
-
-/* div.project:before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: #fff;
-  z-index: -1;
-}
-
-div.project:after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: rgb(168, 174, 194);
-  z-index: -1;
-  filter: blur(40px);
-} */
 
 .project .imgBx {
   position: absolute;
@@ -434,10 +412,8 @@ div.project:after {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #353333c9; */
   width: 100%;
   height: 100%;
-  /* border-radius: 10px; */
 }
 
 .projectCell img {
@@ -462,46 +438,9 @@ div.project:after {
   position: relative;
 }
 
-/* Lukas Test Slut */
-
 div.contentTwo {
   background-color: #ebebeb;
 }
-
-/* div.contentHeader {
-  width: 100%;
-  height: 40vh;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2em;
-} */
-/* div.mainCarousel {
-  width: 100%;
-  height: 40vh;
-  display: flex;
-  justify-content: center; */
-/* margin-bottom: 2em; */
-
-/* div.contentHeader #bannerImg {
-  position: absolute;
-  height: 40vh;
-  width: 100%;
-  z-index: -1;
-  border-radius: 0 0 15px 15px;
-} */
-
-/* div.contentHeader div {
-  width: 200px; */
-/* height: 200px; */
-/* margin: auto 1em;
-  text-align: center;
-} */
-
-/* div.contentHeader div img {
-  width: 200px;
-  height: 200px; */
-/* border: 10px solid white; */
-/* } */
 
 .sideImage {
   opacity: 0.4;
@@ -703,17 +642,13 @@ div.memberInfo ul li strong {
   box-shadow: 0px 0px 24px -8px rgba(47, 47, 45, 1);
 }
 
-/* .flickity-viewport{
-  height: 600px !important;
-} */
-
 .arrow {
   color: #2f2f2d;
 }
 
 /* CONTACT US */
 .form {
-  padding: 16px;
+  padding: 16px 0px;
   background: #f7f7f7;
   font-family: inherit;
   border-radius: 10px;
