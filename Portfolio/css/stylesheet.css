@@ -204,12 +204,16 @@ div.contentTitle p {
   text-align: center;
 }
 
-#wave-top {
-  position: absolute;
-  opacity: 0.25;
+.group-info p {
+  font-size: 0.9em;
+  margin-top: 1.5em;
+  text-align: center;
+  color: #000;
+  padding: 0 8%;
+  line-height: 1.6em;
 }
 
-#wave-bottom {
+#wave-top {
   position: absolute;
   opacity: 0.25;
 }
