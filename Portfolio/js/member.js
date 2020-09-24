@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+
+  
+
     var carouselIndex = 0;
     var $carousel = $(".mainCarousel").flickity({
     cellAlign: "center",
@@ -14,6 +18,7 @@ $(document).ready(function () {
     }
   }
 });
+
 
 var ix = 0;
   var members = [
@@ -63,6 +68,8 @@ var ix = 0;
     },
   ];
 
+  
+
   console.log(sessionStorage.getItem("number"))
   var getIndex = sessionStorage.getItem("number")
   var indexBefore = getIndex.substring(getIndex.length - 1)
@@ -80,6 +87,8 @@ var ix = 0;
     })
     
   }
+
+  
 
   // function setValues(indexBefore){
   //   console.log("saywut")
@@ -153,6 +162,8 @@ var ix = 0;
       }
     }
 
+    
+
     Chart.defaults.global.defaultFontColor = "#2f2f2d";
     
     function theFunction(){
@@ -191,6 +202,8 @@ var ix = 0;
       myChart.update();
     }
 
+    
+
     function setValues(indexBefore){
         if(indexBefore === ""){
           indexBefore=0;
@@ -205,16 +218,23 @@ var ix = 0;
         document.getElementById("memberPhone").innerHTML = "<Strong>Phone: </Strong>" + members[indexBefore].phone
         console.log("yeeee")
       }
+
+      
       
       fillNewContent(indexBefore)
       setValues(indexBefore)
 
+      
+
       $carousel.flickity( 'select', indexBefore );
+      
 
       function getInstance() {
         var flkty = $carousel.data("flickity");
         console.log(flkty.selectedIndex);
       }
+
+      
 
       // Hamburger
     var hamburger = document.querySelector(".hamburger");
@@ -229,11 +249,13 @@ var ix = 0;
       hamburger.classList.toggle("is-active");
       nav.classList.toggle("toggle");
     });
+
+    
     
     // Add smooth scrolling to all links
     $(".links a, .overlay-content a").on("click", function (event) {
       if (this.hash !== "") {
-        event.preventDefault();
+        // event.preventDefault();
         
         var hash = this.hash;
         
