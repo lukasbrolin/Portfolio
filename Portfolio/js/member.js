@@ -19,7 +19,7 @@ $(document).ready(function () {
     {
       name: "Lukas Brolin",
       introText:
-        "I am a programmer. You think thats shit funny? Its a hard and tedious task that only the best can do, and I am the best at what I do. I used to work for NASA and CERN before I got bored and decided to challenge my intellect even further and switched to HTML/CSS and JavaScript. I never test my code. Testing your code is just synonomous with being a programmer that fails at life. I write my code once and it works, simple as that.",
+        "I am a programmer. You think thats shit funny? It's a hard and tedious task that only the best can do, and I am the best at what I do. I used to work for NASA and CERN before I got bored and decided to challenge my intellect even further and switched to HTML/CSS and JavaScript. I never test my code. Testing your code is just synonomous with being a bad programmer that fails at life. I write my code once and then it works, simple as that.",
       chartLabel: ["PS", "Java", "HTML", "CSS", "JS", "XD", "Sketchup"],
       chartValue: ["7", "8", "7", "6", "7", "8", "5"],
       image: "img/Lukas.jpg",
@@ -30,7 +30,7 @@ $(document).ready(function () {
     {
       name: "Simon Wallstedt Bernsdorff",
       introText:
-        "Once every blue moon I write some code, if Lukas allows it. He i usually the boss around here, even though me and the other guys see him more as a dictator/fascist. Someday I wish I was as good as Lukas, just having that go in me and being a true rockstar programmer. For now I'll just stick to being lambasted by Lukas and commenting code which is the only thing I am allowed to do. Oh, and I also make coffee for the team. Gotta start somewhere y'know?",
+        "Once every blue moon I write some code, if Lukas allows it. He is usually the boss around here, even though me and the other guys see him more as a dictator/fascist. Someday I wish I was as good as Lukas, just having that go in me and being a true rockstar programmer. For now I'll just stick to being lambasted by Lukas and commenting code which is the only thing I am allowed to do. Oh, and I also make coffee for the team. Gotta start somewhere y'know?",
       chartLabel: ["PS", "Java", "HTML", "CSS", "JS"],
       chartValue: ["9", "1", "9", "1", "9"],
       image: "img/SimonTest.jpg",
@@ -43,7 +43,7 @@ $(document).ready(function () {
       introText:
         "Coding is more than a hobby, it's a lifestyle. Some people are just not cut out to be one. You got to have dedication, stamina, willpower, endurance and a big-dick aura to make it work. That's what I always say. Anyway I don't have time for this cute little chit-chatter, I have to write this nested 5-layer propagating machinelearning algorithm that will power up Amazons next datacenter so if you could please back off and let me do my work that would be greatly appreciated.",
       chartLabel: ["PS", "Java", "HTML", "CSS", "JS"],
-      chartValue: ["2", "3", "4", "1", "1"],
+      chartValue: ["2", "7", "7", "5", "8"],
       image: "img/Jonatan.png",
       location: "Örebro, SE",
       email: "jonte@oru.se",
