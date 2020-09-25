@@ -1,5 +1,4 @@
 /* GLOBAL */
-
 * {
   margin: 0;
   padding: 0;
@@ -21,21 +20,7 @@ body {
   height: 100%;
 }
 
-.s1{
-  height: 100vh;
-}
-
-/* #cover{
-  position: fixed;
-  background-image: linear-gradient(to right, rgb(221, 134, 53), rgba(255, 166, 0, 0.5), rgba(173, 216, 230, 0.5) , rgb(97, 193, 223));
-  width: 100%;
-  height: 100vh;
-  z-index: 0;
-  opacity: 20%;
-} */
-
 /* HEADER */
-
 .nav-horizontal {
   display: flex;
   align-items: center;
@@ -76,14 +61,15 @@ body {
   font-size: 1.2em;
 }
 
-#hamburger {
-  z-index: 2;
+.nav-horizontal ul {
+  display: none;
 }
 
 #hamburger .hamburger {
   z-index: 2;
   outline: none;
 }
+
 .overlay {
   height: 0%;
   width: 100%;
@@ -116,25 +102,14 @@ body {
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #f1f1f1;
+  color: #dadada;
 }
 
 .toggle {
   height: 100%;
 }
 
-.nav-horizontal ul {
-  display: none;
-}
-
-/* .scroll-down {
-  opacity: 1;
-  -webkit-transition: all .5s ease-in 3s;
-  transition: all .5s ease-in 3s;
-} */
-
-
-.scrollDiv{
+.scrollDiv {
   position: absolute;
   top: 0;
   width: 100%;
@@ -149,38 +124,32 @@ body {
   display: block;
   width: 32px;
   height: 32px;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   background-size: 14px auto;
   border-radius: 50%;
   z-index: 2;
   -webkit-animation-name: bounce-in-top, bounce;
-  -webkit-animation-duration:1.1s, 2s ;
+  -webkit-animation-duration: 1.1s, 2s;
   -webkit-animation-delay: 5s, 2s;
   -webkit-animation-fill-mode: both, both;
   -webkit-animation-iteration-count: 1, infinite;
   animation-name: bounce-in-top, bounce;
-  animation-duration:1.1s, 2s ;
+  animation-duration: 1.1s, 2s;
   animation-delay: 5s, 8s;
   animation-fill-mode: both, both;
-  /* -webkit-animation: bounce 2s infinite 7s, bounce-in-top 1.1s 5s both ;
-  animation: bounce 2s infinite 7s, bounce-in-top 1.1s 5s both; */
-  /* -webkit-transition: all .2s ease-in; */
-  /* transition: all .2s ease-in; */
-  /* transform: scale(1) */
 }
 
-
 .scroll-down:before {
-    position: absolute;
-    top: calc(50% - 9px);
-    left: calc(50% - 7px);
-    transform: rotate(-45deg);
-    display: block;
-    width: 12px;
-    height: 12px;
-    content: "";
-    border: 2px solid white;
-    border-width: 0px 0 2px 2px;
+  position: absolute;
+  top: calc(50% - 9px);
+  left: calc(50% - 7px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
 }
 
 @keyframes bounce {
@@ -205,111 +174,110 @@ body {
   }
 }
 
- @-webkit-keyframes bounce-in-top {
+@-webkit-keyframes bounce-in-top {
   0% {
     -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
+    transform: translateY(-500px);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     opacity: 0;
   }
   38% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     opacity: 1;
   }
   55% {
     -webkit-transform: translateY(-65px);
-            transform: translateY(-65px);
+    transform: translateY(-65px);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   72% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   81% {
     -webkit-transform: translateY(-28px);
-            transform: translateY(-28px);
+    transform: translateY(-28px);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   90% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   95% {
     -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
+    transform: translateY(-8px);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 @keyframes bounce-in-top {
   0% {
     -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
+    transform: translateY(-500px);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     opacity: 0;
   }
   38% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     opacity: 1;
   }
   55% {
     -webkit-transform: translateY(-65px);
-            transform: translateY(-65px);
+    transform: translateY(-65px);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   72% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   81% {
     -webkit-transform: translateY(-28px);
-            transform: translateY(-28px);
+    transform: translateY(-28px);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   90% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   95% {
     -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
+    transform: translateY(-8px);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
-
 
 .sticky {
   position: fixed;
@@ -320,18 +288,12 @@ body {
   transition: all 0.3s ease;
 }
 
-.toggle-margin {
-  margin-top: 0;
-}
-
 /* BACKGROUND VIDEO */
-
 div.backgroundHeader {
   width: 100%;
   height: 100vh;
   position: absolute;
   z-index: -1;
-  /* filter: blur(20px); */
 }
 
 div.backgroundHeader #myVideo {
@@ -342,14 +304,13 @@ div.backgroundHeader #myVideo {
 }
 
 div.movieBackground {
-  background-color: rgba(99, 99, 99, 0.4);
+  background-color: rgba(99, 99, 99, 0.3);
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
 /* HEADER CONTENT */
-
 div.mainContent {
   background-color: #f7f7f7;
 }
@@ -390,7 +351,6 @@ div.content {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-image: url("");
 }
 
 div.contentTitle {
@@ -413,11 +373,6 @@ div.contentTitle p {
 }
 
 #wave-top {
-  position: absolute;
-  opacity: 0.25;
-}
-
-#wave-bottom {
   position: absolute;
   opacity: 0.25;
 }
@@ -573,7 +528,6 @@ div.project:hover {
   overflow: hidden;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   border-bottom: 2px solid rgb(170, 170, 170);
-  /* box-shadow: 5px 3px 7px 1px rgba(0,0,0,0.75); */
 }
 
 .project:hover .projectBx {
@@ -661,48 +615,6 @@ div.contentTwo {
   background-color: #ebebeb;
 }
 
-.sideImage {
-  opacity: 0.4;
-  border: 6px solid white;
-}
-
-.picture {
-  background-color: white;
-}
-
-.sideDiv {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
-
-.sideDiv h1 {
-  position: absolute;
-  font-size: 1.4em;
-}
-
-div.contentHeader div.pictureMiddle {
-  width: 300px;
-  height: 360px;
-  margin: 0.8em 1em;
-}
-
-#pictureContent {
-  width: 280px;
-  height: 50px;
-  margin: 6px 10px 10px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-#pictureContent h1 {
-  font-size: 1.5em;
-}
-
 div.contentContent {
   background-color: #c9c9bb;
   height: auto;
@@ -717,8 +629,6 @@ div.contentBackground {
   height: 100%;
   justify-content: center;
   background-color: #c9c9bb;
-  /* border-radius: 15px; */
-  /* box-shadow: 0px 0px 24px -8px rgba(47, 47, 45, 1); */
   margin-top: 1em;
 }
 
@@ -745,6 +655,15 @@ div.memberInfo ul li strong {
   color: #2f2f2d;
 }
 
+#memberIntro {
+  line-height: 1.7em;
+}
+
+#memberIntro h1 {
+  margin-bottom: 20px;
+  font-size: 1.6em;
+}
+
 #chart {
   width: 80%;
   position: relative;
@@ -767,44 +686,6 @@ div.memberInfo ul li strong {
 #textContent h1,
 #textContent p {
   color: #2f2f2d;
-}
-
-#prevMember {
-  top: 64px;
-  margin-top: 0px;
-  right: -22px;
-  width: 48px;
-}
-
-#nextMember {
-  top: 64px;
-  margin-top: 0px;
-  left: -22px;
-  width: 48px;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 .contentHeader {
@@ -866,7 +747,6 @@ div.memberInfo ul li strong {
 .form {
   position: relative;
   padding: 16px 0px;
-  /* background: #f7f7f7; */
   font-family: inherit;
   border-radius: 10px;
   width: 90%;
@@ -896,6 +776,7 @@ div.memberInfo ul li strong {
 
 textarea {
   resize: none;
+  min-height: 120px;
 }
 
 .form input[type="submit"],
@@ -975,15 +856,6 @@ a#stop {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
-
-#memberIntro {
-  line-height: 1.7em;
-}
-
-#memberIntro h1 {
-  margin-bottom: 20px;
-  font-size: 1.6em;
 }
 
 .error {
@@ -1211,21 +1083,4 @@ a#stop {
   .flickity-button {
     background: #e2e1d2 !important ;
   }
-
-  .arrow {
-    color: #2f2f2d;
-  }
-
-  /* ----------------------------------------------
- * Generated by Animista on 2020-9-24 13:17:24
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info.
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-  /**
- * ----------------------------------------
- * animation swing-left-bck
- * ----------------------------------------
- */
 }

@@ -5,8 +5,6 @@ $(document).ready(function () {
   var txtPhone = document.getElementById("input-phone");
   var txtEmail = document.getElementById("input-email");
 
-  var fNameSend, lNameSend, phoneSend, emailSend;
-
   // Regex - regular expressions patterns.
   var $regexName = /^[a-öA-Ö- ]+$/;
   var $regexNum = /^[0-9+-]+$/;
@@ -102,13 +100,9 @@ $(document).ready(function () {
 
   // Fetch data from localStorage when page loads
   function fetchStorage() {
-    // fetch firstname
     txtFName.value = localStorage.getItem("input-name");
-    // fetch lastName
     txtLName.value = localStorage.getItem("input-lastname");
-    // fetch phone
     txtPhone.value = localStorage.getItem("input-phone");
-    // fetch email
     txtEmail.value = localStorage.getItem("input-email");
   }
 });

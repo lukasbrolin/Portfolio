@@ -14,7 +14,6 @@ $(document).ready(function () {
     },
   });
 
-  var ix = 0;
   var members = [
     {
       name: "Lukas Brolin",
@@ -66,38 +65,22 @@ $(document).ready(function () {
     },
   ];
 
-  console.log(sessionStorage.getItem("number"));
   var getIndex = sessionStorage.getItem("number");
   var indexBefore = getIndex.substring(getIndex.length - 1);
-  console.log(indexBefore + " dehära");
   var clickedAnchor = "";
   var contentAnchors = document.getElementsByClassName("contentAnchor");
-  console.log(contentAnchors);
   for (i = 0; i < contentAnchors.length; i++) {
     console.log("hej");
-    //document.
     contentAnchors[i].addEventListener("click", function (e) {
       sessionStorage.setItem("number", this);
       clickedAnchor = e;
-      console.log(e);
     });
   }
-
-  // function setValues(indexBefore){
-  //   console.log("saywut")
-  //  document.getElementById("memberIntro").innerHTML = "<p><h1>" + members[indexBefore].name + "</h1>" + members[indexBefore].introText + "</p>"
-  //  document.getElementById("memberName").innerHTML = "<Strong>Name: </Strong>" + members[indexBefore].name
-  //  document.getElementById("memberLocation").innerHTML = "<Strong>Location: </Strong>" + members[indexBefore].location
-  //  document.getElementById("memberMail").innerHTML = "<Strong>Email: </Strong>" + members[indexBefore].email
-  //  document.getElementById("memberPhone").innerHTML = "<Strong>Phone: </Strong>" + members[indexBefore].phone
-  //  console.log("yeeee")
-  // }
 
   var config = {
     type: "bar",
     data: {
       labels: members[4].chartLabel,
-      // labels: ["PS", "Java", "HTML", "CSS", "JS"],
       datasets: [
         {
           label: "Expertise",
@@ -158,15 +141,14 @@ $(document).ready(function () {
   Chart.defaults.global.defaultFontColor = "#2f2f2d";
 
   function theFunction() {
-    console.log("check");
     var ctx = document.getElementById("myChart").getContext("2d");
     window.myChart = getNewChart(ctx, config);
-    console.log(myChart.data.labels.length + " är längden");
   }
 
   function getNewChart(canvas, config) {
     return new Chart(canvas, config);
   }
+
   theFunction();
 
   function fillNewContent(index) {
@@ -184,12 +166,6 @@ $(document).ready(function () {
     for (i = 0; i < members[index].chartValue.length; i++) {
       myChart.data.datasets[0].data[i] = members[index].chartValue[i];
     }
-    // for(i = 0; i < myChart.data.labels.length; i++){
-    //   myChart.data.labels[i] = members[index].chartLabel[i]
-    // }
-    // for(i = 0; i < myChart.data.datasets[0].data.length; i++){
-    // myChart.data.datasets[0].data[i] = members[index].chartValue[i]
-    // }
     myChart.update();
   }
 
@@ -197,9 +173,6 @@ $(document).ready(function () {
     if (indexBefore === "") {
       indexBefore = 0;
     }
-    console.log("saywut");
-    console.log(members[1]);
-    console.log(indexBefore + "hej");
     document.getElementById("memberIntro").innerHTML =
       "<p><h1>" +
       members[indexBefore].name +
@@ -222,11 +195,6 @@ $(document).ready(function () {
 
   $carousel.flickity("select", indexBefore);
 
-  function getInstance() {
-    var flkty = $carousel.data("flickity");
-    console.log(flkty.selectedIndex);
-  }
-
   // Hamburger
   var hamburger = document.querySelector(".hamburger");
   var nav = document.getElementById("nav");
@@ -244,8 +212,6 @@ $(document).ready(function () {
   // Add smooth scrolling to all links
   $(".links a, .overlay-content a").on("click", function (event) {
     if (this.hash !== "") {
-      // event.preventDefault();
-
       var hash = this.hash;
 
       $("html, body").animate(
