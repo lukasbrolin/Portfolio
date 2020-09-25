@@ -58,65 +58,43 @@ $(document).ready(function () {
     }
   });
 
-  // // Save the data input, from the forms, into local storage.
-  // if (window.localStorage) {
-  //   txtFName.addEventListener(
-  //     "input",
-  //     function () {
-  //       localStorage.setItem("input-name", txtFName.value);
-  //     },
-  //     false
-  //   );
+  // Save the data input, from the forms, into local storage.
+  if (window.localStorage) {
+    txtFName.addEventListener(
+      "input",
+      function () {
+        localStorage.setItem("input-name", txtFName.value);
+      },
+      false
+    );
 
-  //   txtLName.addEventListener(
-  //     "input",
-  //     function () {
-  //       localStorage.setItem("input-lastname", txtLName.value);
-  //     },
-  //     false
-  //   );
+    txtLName.addEventListener(
+      "input",
+      function () {
+        localStorage.setItem("input-lastname", txtLName.value);
+      },
+      false
+    );
 
-  //   txtPhone.addEventListener(
-  //     "input",
-  //     function () {
-  //       localStorage.setItem("input-phone", txtPhone.value);
-  //     },
-  //     false
-  //   );
+    txtPhone.addEventListener(
+      "input",
+      function () {
+        localStorage.setItem("input-phone", txtPhone.value);
+      },
+      false
+    );
 
-  //   txtEmail.addEventListener(
-  //     "input",
-  //     function () {
-  //       localStorage.setItem("input-email", txtEmail.value);
-  //     },
-  //     false
-  //   );
-  // }
+    txtEmail.addEventListener(
+      "input",
+      function () {
+        localStorage.setItem("input-email", txtEmail.value);
+      },
+      false
+    );
+  }
 
   document.getElementById("formSubmit").addEventListener("click", (e) => {
     e.preventDefault(); // prevent site form reloading
-
-    // if all fields are correct submit to localStorage
-    if (fNameSend && lNameSend && phoneSend && emailSend) {
-      // set JS object and set its data to the user inputs
-      const user = {
-        name: txtFName.value,
-        lastname: txtLName.value,
-        phone: txtPhone.value,
-        email: txtEmail.value,
-      };
-
-      // Convert the user object into JSON string and save it into storage
-      localStorage.setItem("user", JSON.stringify(user));
-
-      // Empty fields
-      txtFName.value = "";
-      txtLName.value = "";
-      txtPhone.value = "";
-      txtEmail.value = "";
-    } else {
-      console.log("false");
-    }
   });
 
   // run function fetchStorage when page loads
@@ -124,16 +102,13 @@ $(document).ready(function () {
 
   // Fetch data from localStorage when page loads
   function fetchStorage() {
-    var jsonString = localStorage.getItem("user");
-    var retrievedObject = JSON.parse(jsonString);
-
     // fetch firstname
-    txtFName.value = retrievedObject.name;
+    txtFName.value = localStorage.getItem("input-name");
     // fetch lastName
-    txtLName.value = retrievedObject.lastname;
+    txtLName.value = localStorage.getItem("input-lastname");
     // fetch phone
-    txtPhone.value = retrievedObject.phone;
+    txtPhone.value = localStorage.getItem("input-phone");
     // fetch email
-    txtEmail.value = retrievedObject.email;
+    txtEmail.value = localStorage.getItem("input-email");
   }
 });
