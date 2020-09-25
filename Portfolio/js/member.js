@@ -54,9 +54,9 @@ var ix = 0;
     },
     {
       name: "Sven Isac Hedengren",
-      introText: "Hej jag heter Isac",
+      introText: "Hej jag heter Isac. Detta är en beskrivande text, i enlighet med projektuppgiften.",
       chartLabel: ["PS", "Java", "HTML", "CSS"],
-      chartValue: ["1", "10", "5", "2"],
+      chartValue: ["2", "4", "4", "4"],
       image: "img/Isac.png",
       location: "Örebro, SE",
       email: "isac@oru.se",

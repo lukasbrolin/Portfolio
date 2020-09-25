@@ -20,7 +20,8 @@ $(document).ready(function () {
     autoPlay: true,
     fullscreen: true,
   });
-
+   
+  
   document.getElementById("stop").addEventListener("click", (e) => {
     e.preventDefault();
     let $carousels = $(
