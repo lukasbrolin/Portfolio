@@ -636,10 +636,7 @@ div.memberInfo ul li strong {
   position: relative;
   width: 80%;
   height: 400px;
-  justify-content: center;
   margin: 15px auto;
-  /* padding: 30px; */
-  /* border: 3px solid #f1c40f; */
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
@@ -664,8 +661,8 @@ div.memberInfo ul li strong {
 
 .mainCarousel h1 {
   color: #2f2f2d;
-  margin-top: 16px;
-  font-size: 1.5em;
+  font-size: 2.2em;
+  margin-top: 0.5em;
 }
 
 .flickity-button {
@@ -792,6 +789,15 @@ a#stop {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
+#memberIntro {
+  line-height: 1.7em;
+}
+
+#memberIntro h1 {
+  margin-bottom: 20px;
+  font-size: 1.6em;
+}
+
 .error {
   margin-bottom: 1%;
 }
@@ -878,7 +884,7 @@ a#stop {
   }
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES FOR DESKTOP */
 @media screen and (min-width: 768px) {
   .hamburger {
     display: none;
@@ -896,6 +902,16 @@ a#stop {
     width: 500px;
     height: 500px;
     margin: 40px 80px 80px 80px;
+  }
+
+  div.memberInfo {
+    padding: 5%;
+    width: 100%;
+    position: relative;
+    margin: 6% 0;
+    padding-bottom: 1em;
+    background-color: #e2e1d2;
+    border-radius: 15px;
   }
 
   div.member:hover {
@@ -921,10 +937,6 @@ a#stop {
 
   .member .contentBx h2 span {
     font-size: 0.5em;
-  }
-
-  div.contentBackground {
-    width: 70%;
   }
 
   #map {
@@ -968,13 +980,11 @@ a#stop {
   .projectCarouselMib,
   .projectCarouselScrumXP {
     width: 100%;
-    /* margin: 1em auto; */
     border-radius: 10px;
   }
 
   .projectCell {
     border-radius: 10px;
-    /* background-color: #353333c9; */
     width: 100%;
     margin-right: 10px;
   }
@@ -987,41 +997,27 @@ a#stop {
     object-fit: contain;
     text-align: center;
     padding: 0px 0px;
-    /* width: 100%; */
     height: 100%;
     border-radius: 10px;
   }
 
-  /* MEMBERS CAROUSEL */
+  div.contentBackground {
+    width: 70%;
+  }
+
   .mainCarousel {
     width: 100%;
     margin: 0 auto;
-    height: 500px;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
   }
 
   .cell {
     width: 50%;
-    max-width: 500px;
-    height: 500px;
-    justify-content: center;
-    margin: 0 15px;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
   }
 
   .cell img {
-    width: 100%;
-    height: 400px;
-    object-fit: contain;
-  }
-
-  .mainCarousel h1 {
-    color: #2f2f2d;
-    margin-top: 0.5em;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
   }
 
   .flickity-button {
