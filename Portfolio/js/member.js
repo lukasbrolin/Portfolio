@@ -43,7 +43,7 @@ $(document).ready(function () {
       introText:
         "Coding is more than a hobby, it's a lifestyle. Some people are just not cut out to be one. You got to have dedication, stamina, willpower, endurance and a big-dick aura to make it work. That's what I always say. Anyway I don't have time for this cute little chit-chatter, I have to write this nested 5-layer propagating machinelearning algorithm that will power up Amazons next datacenter so if you could please back off and let me do my work that would be greatly appreciated.",
       chartLabel: ["PS", "Java", "HTML", "CSS", "JS"],
-      chartValue: ["2", "3", "4", "1", "1"],
+      chartValue: ["2", "7", "7", "5", "8"],
       image: "img/Jonatan.png",
       location: "Örebro, SE",
       email: "jonte@oru.se",
