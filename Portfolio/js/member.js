@@ -51,11 +51,7 @@ $(document).ready(function () {
     },
     {
       name: "Sven Isac Hedengren",
-<<<<<<< HEAD
-      introText: "Hej jag heter Isac. Detta är en beskrivande text, i enlighet med projektuppgiften.",
-=======
-      introText: "",
->>>>>>> c650679f7f85ea08189247320b9481f7797780ab
+      introText: "Hej jag heter Isac. Detta är en beskrivande text, i enlighet med projektuppgift.",
       chartLabel: ["PS", "Java", "HTML", "CSS"],
       chartValue: ["2", "4", "4", "4"],
       image: "img/Isac.png",
