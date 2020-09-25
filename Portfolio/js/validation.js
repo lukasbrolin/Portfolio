@@ -96,8 +96,6 @@ $(document).ready(function () {
   document.getElementById("formSubmit").addEventListener("click", (e) => {
     e.preventDefault(); // prevent site form reloading
 
-    console.log(fNameSend, lNameSend, phoneSend, emailSend);
-
     // if all fields are correct submit to localStorage
     if (fNameSend && lNameSend && phoneSend && emailSend) {
       // set JS object and set its data to the user inputs
