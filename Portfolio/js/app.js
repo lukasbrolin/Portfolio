@@ -1,7 +1,5 @@
 $(document).ready(function () {
-
-  AOS.init({
-  })
+  AOS.init({});
 
   document.getElementById("theScroll").addEventListener(
     "click",
@@ -11,6 +9,16 @@ $(document).ready(function () {
     },
     false
   );
+
+  // remove vertical overlay with navbars if screen size is bigger than 768px.
+  window.addEventListener("resize", () => {
+    let w = window.innerWidth;
+
+    if (w > 768) {
+      hamburger.classList.remove("is-active");
+      nav.classList.remove("toggle");
+    }
+  });
 
   function scrollWindow() {
     if (
@@ -55,7 +63,6 @@ $(document).ready(function () {
 
   var clickedAnchor = "";
   var contentAnchors = document.getElementsByClassName("contentAnchor");
-  console.log(contentAnchors);
   for (i = 0; i < contentAnchors.length; i++) {
     contentAnchors[i].addEventListener("click", function (e) {
       sessionStorage.setItem("number", this);
@@ -71,7 +78,7 @@ $(document).ready(function () {
     false
   );
 
-  // Toggle navbar when viewing projects in fullscreen
+  // Hide navbar when viewing projects in fullscreen
   $(".flickity-button").on("click", () => {
     $("#navbar").toggle();
   });

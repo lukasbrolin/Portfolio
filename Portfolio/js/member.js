@@ -7,7 +7,7 @@ $(document).ready(function () {
       change: function (index) {
         setValues(index);
         fillNewContent(index);
-        console.log("Detta är index" + index);
+        // console.log("Detta är index" + index);
         carouselIndex = index;
         console.log(members[carouselIndex].chartLabel);
       },
@@ -49,9 +49,9 @@ $(document).ready(function () {
       phone: "020202040",
     },
     {
-      name: "Sven Isac Hedengren",
+      name: "Isac Sven Hedengren",
       introText:
-        "Hej jag heter Isac. Detta är en beskrivande text, i enlighet med projektuppgift.",
+        "Before I joined this team of bitche- I mean colleagues I used to serve time in Afghanistan, Iraq and Mali but I wanted some more action and to get that sweet adrenaline rush so I decided to pivot and went balls deep into webdevelopment. I have to say it's pretty nice to be indoors and sit in a comfy office chair rather than sweating my balls off in a tent somewhere in west Africa. I just have no idea how Simon got this gig, he is worthless at his job and he makes terrible coffee. It's nice to have a punching bag at the office though when you just need to vent a bit. In my freetime I like to write medieval poems, being woke or take long brisk walks in the forest contemplating our brittle existence in this universe. I also run a highly successfull OnlyFans.",
       chartLabel: ["PS", "Java", "HTML", "CSS"],
       chartValue: ["2", "7", "8", "7"],
       image: "img/Isac.png",
@@ -70,7 +70,6 @@ $(document).ready(function () {
   var clickedAnchor = "";
   var contentAnchors = document.getElementsByClassName("contentAnchor");
   for (i = 0; i < contentAnchors.length; i++) {
-    console.log("hej");
     contentAnchors[i].addEventListener("click", function (e) {
       sessionStorage.setItem("number", this);
       clickedAnchor = e;
@@ -187,7 +186,6 @@ $(document).ready(function () {
       "<Strong>Email: </Strong>" + members[indexBefore].email;
     document.getElementById("memberPhone").innerHTML =
       "<Strong>Phone: </Strong>" + members[indexBefore].phone;
-    console.log("yeeee");
   }
 
   fillNewContent(indexBefore);
