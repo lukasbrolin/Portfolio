@@ -8,6 +8,16 @@ $(document).ready(function () {
     false
   );
 
+  // remove vertical overlay with navbars if screen size is bigger than 768px.
+  window.addEventListener("resize", () => {
+    let w = window.innerWidth;
+
+    if (w > 768) {
+      hamburger.classList.remove("is-active");
+      nav.classList.remove("toggle");
+    }
+  });
+
   function scrollWindow() {
     if (
       window.scrollY < document.getElementById("backgroundHeader").clientHeight
@@ -67,7 +77,7 @@ $(document).ready(function () {
     false
   );
 
-  // Toggle navbar when viewing projects in fullscreen
+  // Hide navbar when viewing projects in fullscreen
   $(".flickity-button").on("click", () => {
     $("#navbar").toggle();
   });
