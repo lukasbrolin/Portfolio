@@ -539,6 +539,10 @@ div.mainContent {
   background-color: #f7f7f7;
 }
 
+#mainContentMember{
+  padding-top: 10vh;
+}
+
 div.headerContent {
   padding: 1.8em 1.8em 0 1.8em;
   height: 100%;
