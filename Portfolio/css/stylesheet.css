@@ -347,7 +347,7 @@ div.headerContent h1 {
 
 div.content {
   width: 80%;
-  margin: 0 auto;
+  margin: 5% auto 0;
   display: flex;
   justify-content: center;
   align-items: center;

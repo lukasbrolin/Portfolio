@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+  AOS.init({
+  })
+
   document.getElementById("theScroll").addEventListener(
     "click",
     function (e) {
