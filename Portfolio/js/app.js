@@ -1,7 +1,5 @@
 $(document).ready(function () {
-
-  AOS.init({
-  })
+  AOS.init({});
 
   document.getElementById("theScroll").addEventListener(
     "click",
@@ -65,7 +63,6 @@ $(document).ready(function () {
 
   var clickedAnchor = "";
   var contentAnchors = document.getElementsByClassName("contentAnchor");
-  console.log(contentAnchors);
   for (i = 0; i < contentAnchors.length; i++) {
     contentAnchors[i].addEventListener("click", function (e) {
       sessionStorage.setItem("number", this);
