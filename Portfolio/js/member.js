@@ -51,7 +51,7 @@ $(document).ready(function () {
     {
       name: "Isac Sven Hedengren",
       introText:
-        "Before I joined this team of bitche- I mean colleagues I used to serve time in Afghanistan, Iraq and Mali but I wanted some more action and to get that sweet adrenaline rush so I decided to pivot and went balls deep into webdevelopment. I have to say its pretty nice to be indoors and sit in a comfy office chair rather than sweating my balls off in a tent somewhere in west Africa. I just have no idea how Simon got this gig, he is worthless at his job and he makes terrible coffee. It's nice to have a punching bag at the office though. In my freetime I like to write medieval lovepoems, post woke content at Instagram or take long brisk walks in the forest contemplating our brittle existence in life. I also run a highly successfull OnlyFans.",
+        "Before I joined this team of bitche- I mean colleagues I used to serve time in Afghanistan, Iraq and Mali but I wanted some more action and to get that sweet adrenaline rush so I decided to pivot and went balls deep into webdevelopment. I have to say it's pretty nice to be indoors and sit in a comfy office chair rather than sweating my balls off in a tent somewhere in west Africa. I just have no idea how Simon got this gig, he is worthless at his job and he makes terrible coffee. It's nice to have a punching bag at the office though when you just need to vent a bit. In my freetime I like to write medieval poems, being woke or take long brisk walks in the forest contemplating our brittle existence in this universe. I also run a highly successfull OnlyFans.",
       chartLabel: ["PS", "Java", "HTML", "CSS"],
       chartValue: ["2", "7", "8", "7"],
       image: "img/Isac.png",
