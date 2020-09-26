@@ -110,23 +110,28 @@ $(document).ready(function () {
       );
     }
   });
-
   // Sticky Navbar
   var navbar = document.getElementById("navbar");
   navBarFunction();
   function navBarFunction() {
     if (
-      document.body.getBoundingClientRect().top +
-        document.getElementById("backgroundHeader").clientHeight <=
+      $(window).scrollTop() >
+      // document.body.getBoundingClientRect().top +
+      //   document.getElementById("navbar").clientHeight <=
+      // document.getElementById("backgroundHeader").clientHeight <=
       1
     ) {
       navbar.classList.add("sticky");
+      navbar.classList.remove("stickyRemove");
     } else if (
-      document.body.getBoundingClientRect().top +
-        document.getElementById("backgroundHeader").clientHeight >
+      $(window).scrollTop() <
+      // document.body.getBoundingClientRect().top +
+      //   document.getElementById("navbar").clientHeight >
+      // document.getElementById("backgroundHeader").clientHeight >
       1
     ) {
       navbar.classList.remove("sticky");
+      navbar.classList.add("stickyRemove");
     }
   }
 });

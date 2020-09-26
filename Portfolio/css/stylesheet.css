@@ -22,10 +22,13 @@ body {
 
 /* HEADER */
 .nav-horizontal {
+  position: absolute;
+  width: 100%;
   display: flex;
   align-items: center;
   padding-left: 2%;
   min-height: 10vh;
+  z-index: 4;
 }
 
 .nav-horizontal > a {
@@ -280,13 +283,233 @@ body {
   }
 }
 
+.stickyRemove{
+  animation: myFirstBackwards 0.5s linear;
+  animation-direction: reverse;
+}
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #000;
   z-index: 2;
-  transition: all 0.3s ease;
+  animation: myFirst 0.5s linear;
+  animation-fill-mode: forwards;
+  -webkit-animation: myFirst 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+}
+
+
+@keyframes myFirst{
+  0% {background: linear-gradient(180deg,blackB 0%, rgba(3, 3, 3, 0)10%);}
+  1% {background: linear-gradient(180deg,blackB 1%, rgba(3, 3, 3, 0)10%);}
+  2% {background: linear-gradient(180deg,blackB 2%, rgba(3, 3, 3, 0)10%);}
+  3% {background: linear-gradient(180deg,blackB 3%, rgba(3, 3, 3, 0)10%);}
+  4% {background: linear-gradient(180deg,blackB 4%, rgba(3, 3, 3, 0)10%);}
+  5% {background: linear-gradient(180deg,blackB 5%, rgba(3, 3, 3, 0)10%);}
+  6% {background: linear-gradient(180deg,blackB 6%, rgba(3, 3, 3, 0)10%);}
+  7% {background: linear-gradient(180deg,blackB 7%, rgba(3, 3, 3, 0)10%);}
+  8% {background: linear-gradient(180deg,blackB 8%, rgba(3, 3, 3, 0)10%);}
+  9% {background: linear-gradient(180deg,blackB 9%, rgba(3, 3, 3, 0)10%);}
+  10% {background: linear-gradient(180deg, black 10%, rgba(3, 3, 3, 0)10%);}
+  11% {background: linear-gradient(180deg, black 11%, rgba(3, 3, 3, 0)10%);}
+  12% {background: linear-gradient(180deg, black 12%, rgba(3, 3, 3, 0)10%);}
+  13% {background: linear-gradient(180deg, black 13%, rgba(3, 3, 3, 0)10%);}
+  14% {background: linear-gradient(180deg, black 14%, rgba(3, 3, 3, 0)10%);}
+  15% {background: linear-gradient(180deg, black 15%, rgba(3, 3, 3, 0)10%);}
+  16% {background: linear-gradient(180deg, black 16%, rgba(3, 3, 3, 0)10%);}
+  17% {background: linear-gradient(180deg, black 17%, rgba(3, 3, 3, 0)10%);}
+  18% {background: linear-gradient(180deg, black 18%, rgba(3, 3, 3, 0)10%);}
+  19% {background: linear-gradient(180deg, black 19%, rgba(3, 3, 3, 0)10%);}
+  20% {background: linear-gradient(180deg, black 20%, rgba(3, 3, 3, 0)10%);}
+  21% {background: linear-gradient(180deg, black 21%, rgba(3, 3, 3, 0)10%);}
+  22% {background: linear-gradient(180deg, black 22%, rgba(3, 3, 3, 0)10%);}
+  23% {background: linear-gradient(180deg, black 23%, rgba(3, 3, 3, 0)10%);}
+  24% {background: linear-gradient(180deg, black 24%, rgba(3, 3, 3, 0)10%);}
+  25% {background: linear-gradient(180deg, black 25%, rgba(3, 3, 3, 0)10%);}
+  26% {background: linear-gradient(180deg, black 26%, rgba(3, 3, 3, 0)10%);}
+  27% {background: linear-gradient(180deg, black 27%, rgba(3, 3, 3, 0)10%);}
+  28% {background: linear-gradient(180deg, black 28%, rgba(3, 3, 3, 0)10%);}
+  29% {background: linear-gradient(180deg, black 29%, rgba(3, 3, 3, 0)10%);}
+  30% {background: linear-gradient(180deg, black 30%, rgba(3, 3, 3, 0)10%);}
+  31% {background: linear-gradient(180deg, black 31%, rgba(3, 3, 3, 0)10%);}
+  32% {background: linear-gradient(180deg, black 32%, rgba(3, 3, 3, 0)10%);}
+  33% {background: linear-gradient(180deg, black 33%, rgba(3, 3, 3, 0)10%);}
+  34% {background: linear-gradient(180deg, black 34%, rgba(3, 3, 3, 0)10%);}
+  35% {background: linear-gradient(180deg, black 35%, rgba(3, 3, 3, 0)10%);}
+  36% {background: linear-gradient(180deg, black 36%, rgba(3, 3, 3, 0)10%);}
+  37% {background: linear-gradient(180deg, black 37%, rgba(3, 3, 3, 0)10%);}
+  38% {background: linear-gradient(180deg, black 38%, rgba(3, 3, 3, 0)10%);}
+  39% {background: linear-gradient(180deg, black 39%, rgba(3, 3, 3, 0)10%);}
+  40% {background: linear-gradient(180deg, black 40%, rgba(3, 3, 3, 0)10%);}
+  41% {background: linear-gradient(180deg, black 41%, rgba(3, 3, 3, 0)10%);}
+  42% {background: linear-gradient(180deg, black 42%, rgba(3, 3, 3, 0)10%);}
+  43% {background: linear-gradient(180deg, black 43%, rgba(3, 3, 3, 0)10%);}
+  44% {background: linear-gradient(180deg, black 44%, rgba(3, 3, 3, 0)10%);}
+  45% {background: linear-gradient(180deg, black 45%, rgba(3, 3, 3, 0)10%);}
+  46% {background: linear-gradient(180deg, black 46%, rgba(3, 3, 3, 0)10%);}
+  47% {background: linear-gradient(180deg, black 47%, rgba(3, 3, 3, 0)10%);}
+  48% {background: linear-gradient(180deg, black 48%, rgba(3, 3, 3, 0)10%);}
+  49% {background: linear-gradient(180deg, black 49%, rgba(3, 3, 3, 0)10%);}
+  50% {background: linear-gradient(180deg, black 50%, rgba(3, 3, 3, 0)10%);}
+  51% {background: linear-gradient(180deg, black 51%, rgba(3, 3, 3, 0)10%);}
+  52% {background: linear-gradient(180deg, black 52%, rgba(3, 3, 3, 0)10%);}
+  53% {background: linear-gradient(180deg, black 53%, rgba(3, 3, 3, 0)10%);}
+  54% {background: linear-gradient(180deg, black 54%, rgba(3, 3, 3, 0)10%);}
+  55% {background: linear-gradient(180deg, black 55%, rgba(3, 3, 3, 0)10%);}
+  56% {background: linear-gradient(180deg, black 56%, rgba(3, 3, 3, 0)10%);}
+  57% {background: linear-gradient(180deg, black 57%, rgba(3, 3, 3, 0)10%);}
+  58% {background: linear-gradient(180deg, black 58%, rgba(3, 3, 3, 0)10%);}
+  59% {background: linear-gradient(180deg, black 59%, rgba(3, 3, 3, 0)10%);}
+  60% {background: linear-gradient(180deg, black 60%, rgba(3, 3, 3, 0)10%);}
+  61% {background: linear-gradient(180deg, black 61%, rgba(3, 3, 3, 0)10%);}
+  62% {background: linear-gradient(180deg, black 62%, rgba(3, 3, 3, 0)10%);}
+  63% {background: linear-gradient(180deg, black 63%, rgba(3, 3, 3, 0)10%);}
+  64% {background: linear-gradient(180deg, black 64%, rgba(3, 3, 3, 0)10%);}
+  65% {background: linear-gradient(180deg, black 65%, rgba(3, 3, 3, 0)10%);}
+  66% {background: linear-gradient(180deg, black 66%, rgba(3, 3, 3, 0)10%);}
+  67% {background: linear-gradient(180deg, black 67%, rgba(3, 3, 3, 0)10%);}
+  68% {background: linear-gradient(180deg, black 68%, rgba(3, 3, 3, 0)10%);}
+  69% {background: linear-gradient(180deg, black 69%, rgba(3, 3, 3, 0)10%);}
+  70% {background: linear-gradient(180deg, black 70%, rgba(3, 3, 3, 0)10%);}
+  71% {background: linear-gradient(180deg, black 71%, rgba(3, 3, 3, 0)10%);}
+  72% {background: linear-gradient(180deg, black 72%, rgba(3, 3, 3, 0)10%);}
+  73% {background: linear-gradient(180deg, black 73%, rgba(3, 3, 3, 0)10%);}
+  74% {background: linear-gradient(180deg, black 74%, rgba(3, 3, 3, 0)10%);}
+  75% {background: linear-gradient(180deg, black 75%, rgba(3, 3, 3, 0)10%);}
+  76% {background: linear-gradient(180deg, black 76%, rgba(3, 3, 3, 0)10%);}
+  77% {background: linear-gradient(180deg, black 77%, rgba(3, 3, 3, 0)10%);}
+  78% {background: linear-gradient(180deg, black 78%, rgba(3, 3, 3, 0)10%);}
+  79% {background: linear-gradient(180deg, black 79%, rgba(3, 3, 3, 0)10%);}
+  80% {background: linear-gradient(180deg, black 80%, rgba(3, 3, 3, 0)10%);}
+  81% {background: linear-gradient(180deg, black 81%, rgba(3, 3, 3, 0)10%);}
+  82% {background: linear-gradient(180deg, black 82%, rgba(3, 3, 3, 0)10%);}
+  83% {background: linear-gradient(180deg, black 83%, rgba(3, 3, 3, 0)10%);}
+  84% {background: linear-gradient(180deg, black 84%, rgba(3, 3, 3, 0)10%);}
+  85% {background: linear-gradient(180deg, black 85%, rgba(3, 3, 3, 0)10%);}
+  86% {background: linear-gradient(180deg, black 86%, rgba(3, 3, 3, 0)10%);}
+  87% {background: linear-gradient(180deg, black 87%, rgba(3, 3, 3, 0)10%);}
+  88% {background: linear-gradient(180deg, black 88%, rgba(3, 3, 3, 0)10%);}
+  89% {background: linear-gradient(180deg, black 89%, rgba(3, 3, 3, 0)10%);}
+  90% {background: linear-gradient(180deg, black 90%, rgba(3, 3, 3, 0)10%);}
+  91% {background: linear-gradient(180deg, black 91%, rgba(3, 3, 3, 0)10%);}
+  92% {background: linear-gradient(180deg, black 92%, rgba(3, 3, 3, 0)10%);}
+  93% {background: linear-gradient(180deg, black 93%, rgba(3, 3, 3, 0)10%);}
+  94% {background: linear-gradient(180deg, black 94%, rgba(3, 3, 3, 0)10%);}
+  95% {background: linear-gradient(180deg, black 95%, rgba(3, 3, 3, 0)10%);}
+  96% {background: linear-gradient(180deg, black 96%, rgba(3, 3, 3, 0)10%);}
+  97% {background: linear-gradient(180deg, black 97%, rgba(3, 3, 3, 0)10%);}
+  98% {background: linear-gradient(180deg, black 98%, rgba(3, 3, 3, 0)10%);}
+  99% {background: linear-gradient(180deg, black 99%, rgba(3, 3, 3, 0)10%);}
+  100% {background: linear-gradient(180deg, black 100%, rgba(3, 3, 3, 0)10%);}
+  
+}
+@keyframes myFirstBackwards{
+  0% {background: linear-gradient(180deg,blackB 0%, rgba(3, 3, 3, 0)10%);}
+  1% {background: linear-gradient(180deg,blackB 1%, rgba(3, 3, 3, 0)10%);}
+  2% {background: linear-gradient(180deg,blackB 2%, rgba(3, 3, 3, 0)10%);}
+  3% {background: linear-gradient(180deg,blackB 3%, rgba(3, 3, 3, 0)10%);}
+  4% {background: linear-gradient(180deg,blackB 4%, rgba(3, 3, 3, 0)10%);}
+  5% {background: linear-gradient(180deg,blackB 5%, rgba(3, 3, 3, 0)10%);}
+  6% {background: linear-gradient(180deg,blackB 6%, rgba(3, 3, 3, 0)10%);}
+  7% {background: linear-gradient(180deg,blackB 7%, rgba(3, 3, 3, 0)10%);}
+  8% {background: linear-gradient(180deg,blackB 8%, rgba(3, 3, 3, 0)10%);}
+  9% {background: linear-gradient(180deg,blackB 9%, rgba(3, 3, 3, 0)10%);}
+  10% {background: linear-gradient(180deg, black 10%, rgba(3, 3, 3, 0)10%);}
+  11% {background: linear-gradient(180deg, black 11%, rgba(3, 3, 3, 0)10%);}
+  12% {background: linear-gradient(180deg, black 12%, rgba(3, 3, 3, 0)10%);}
+  13% {background: linear-gradient(180deg, black 13%, rgba(3, 3, 3, 0)10%);}
+  14% {background: linear-gradient(180deg, black 14%, rgba(3, 3, 3, 0)10%);}
+  15% {background: linear-gradient(180deg, black 15%, rgba(3, 3, 3, 0)10%);}
+  16% {background: linear-gradient(180deg, black 16%, rgba(3, 3, 3, 0)10%);}
+  17% {background: linear-gradient(180deg, black 17%, rgba(3, 3, 3, 0)10%);}
+  18% {background: linear-gradient(180deg, black 18%, rgba(3, 3, 3, 0)10%);}
+  19% {background: linear-gradient(180deg, black 19%, rgba(3, 3, 3, 0)10%);}
+  20% {background: linear-gradient(180deg, black 20%, rgba(3, 3, 3, 0)10%);}
+  21% {background: linear-gradient(180deg, black 21%, rgba(3, 3, 3, 0)10%);}
+  22% {background: linear-gradient(180deg, black 22%, rgba(3, 3, 3, 0)10%);}
+  23% {background: linear-gradient(180deg, black 23%, rgba(3, 3, 3, 0)10%);}
+  24% {background: linear-gradient(180deg, black 24%, rgba(3, 3, 3, 0)10%);}
+  25% {background: linear-gradient(180deg, black 25%, rgba(3, 3, 3, 0)10%);}
+  26% {background: linear-gradient(180deg, black 26%, rgba(3, 3, 3, 0)10%);}
+  27% {background: linear-gradient(180deg, black 27%, rgba(3, 3, 3, 0)10%);}
+  28% {background: linear-gradient(180deg, black 28%, rgba(3, 3, 3, 0)10%);}
+  29% {background: linear-gradient(180deg, black 29%, rgba(3, 3, 3, 0)10%);}
+  30% {background: linear-gradient(180deg, black 30%, rgba(3, 3, 3, 0)10%);}
+  31% {background: linear-gradient(180deg, black 31%, rgba(3, 3, 3, 0)10%);}
+  32% {background: linear-gradient(180deg, black 32%, rgba(3, 3, 3, 0)10%);}
+  33% {background: linear-gradient(180deg, black 33%, rgba(3, 3, 3, 0)10%);}
+  34% {background: linear-gradient(180deg, black 34%, rgba(3, 3, 3, 0)10%);}
+  35% {background: linear-gradient(180deg, black 35%, rgba(3, 3, 3, 0)10%);}
+  36% {background: linear-gradient(180deg, black 36%, rgba(3, 3, 3, 0)10%);}
+  37% {background: linear-gradient(180deg, black 37%, rgba(3, 3, 3, 0)10%);}
+  38% {background: linear-gradient(180deg, black 38%, rgba(3, 3, 3, 0)10%);}
+  39% {background: linear-gradient(180deg, black 39%, rgba(3, 3, 3, 0)10%);}
+  40% {background: linear-gradient(180deg, black 40%, rgba(3, 3, 3, 0)10%);}
+  41% {background: linear-gradient(180deg, black 41%, rgba(3, 3, 3, 0)10%);}
+  42% {background: linear-gradient(180deg, black 42%, rgba(3, 3, 3, 0)10%);}
+  43% {background: linear-gradient(180deg, black 43%, rgba(3, 3, 3, 0)10%);}
+  44% {background: linear-gradient(180deg, black 44%, rgba(3, 3, 3, 0)10%);}
+  45% {background: linear-gradient(180deg, black 45%, rgba(3, 3, 3, 0)10%);}
+  46% {background: linear-gradient(180deg, black 46%, rgba(3, 3, 3, 0)10%);}
+  47% {background: linear-gradient(180deg, black 47%, rgba(3, 3, 3, 0)10%);}
+  48% {background: linear-gradient(180deg, black 48%, rgba(3, 3, 3, 0)10%);}
+  49% {background: linear-gradient(180deg, black 49%, rgba(3, 3, 3, 0)10%);}
+  50% {background: linear-gradient(180deg, black 50%, rgba(3, 3, 3, 0)10%);}
+  51% {background: linear-gradient(180deg, black 51%, rgba(3, 3, 3, 0)10%);}
+  52% {background: linear-gradient(180deg, black 52%, rgba(3, 3, 3, 0)10%);}
+  53% {background: linear-gradient(180deg, black 53%, rgba(3, 3, 3, 0)10%);}
+  54% {background: linear-gradient(180deg, black 54%, rgba(3, 3, 3, 0)10%);}
+  55% {background: linear-gradient(180deg, black 55%, rgba(3, 3, 3, 0)10%);}
+  56% {background: linear-gradient(180deg, black 56%, rgba(3, 3, 3, 0)10%);}
+  57% {background: linear-gradient(180deg, black 57%, rgba(3, 3, 3, 0)10%);}
+  58% {background: linear-gradient(180deg, black 58%, rgba(3, 3, 3, 0)10%);}
+  59% {background: linear-gradient(180deg, black 59%, rgba(3, 3, 3, 0)10%);}
+  60% {background: linear-gradient(180deg, black 60%, rgba(3, 3, 3, 0)10%);}
+  61% {background: linear-gradient(180deg, black 61%, rgba(3, 3, 3, 0)10%);}
+  62% {background: linear-gradient(180deg, black 62%, rgba(3, 3, 3, 0)10%);}
+  63% {background: linear-gradient(180deg, black 63%, rgba(3, 3, 3, 0)10%);}
+  64% {background: linear-gradient(180deg, black 64%, rgba(3, 3, 3, 0)10%);}
+  65% {background: linear-gradient(180deg, black 65%, rgba(3, 3, 3, 0)10%);}
+  66% {background: linear-gradient(180deg, black 66%, rgba(3, 3, 3, 0)10%);}
+  67% {background: linear-gradient(180deg, black 67%, rgba(3, 3, 3, 0)10%);}
+  68% {background: linear-gradient(180deg, black 68%, rgba(3, 3, 3, 0)10%);}
+  69% {background: linear-gradient(180deg, black 69%, rgba(3, 3, 3, 0)10%);}
+  70% {background: linear-gradient(180deg, black 70%, rgba(3, 3, 3, 0)10%);}
+  71% {background: linear-gradient(180deg, black 71%, rgba(3, 3, 3, 0)10%);}
+  72% {background: linear-gradient(180deg, black 72%, rgba(3, 3, 3, 0)10%);}
+  73% {background: linear-gradient(180deg, black 73%, rgba(3, 3, 3, 0)10%);}
+  74% {background: linear-gradient(180deg, black 74%, rgba(3, 3, 3, 0)10%);}
+  75% {background: linear-gradient(180deg, black 75%, rgba(3, 3, 3, 0)10%);}
+  76% {background: linear-gradient(180deg, black 76%, rgba(3, 3, 3, 0)10%);}
+  77% {background: linear-gradient(180deg, black 77%, rgba(3, 3, 3, 0)10%);}
+  78% {background: linear-gradient(180deg, black 78%, rgba(3, 3, 3, 0)10%);}
+  79% {background: linear-gradient(180deg, black 79%, rgba(3, 3, 3, 0)10%);}
+  80% {background: linear-gradient(180deg, black 80%, rgba(3, 3, 3, 0)10%);}
+  81% {background: linear-gradient(180deg, black 81%, rgba(3, 3, 3, 0)10%);}
+  82% {background: linear-gradient(180deg, black 82%, rgba(3, 3, 3, 0)10%);}
+  83% {background: linear-gradient(180deg, black 83%, rgba(3, 3, 3, 0)10%);}
+  84% {background: linear-gradient(180deg, black 84%, rgba(3, 3, 3, 0)10%);}
+  85% {background: linear-gradient(180deg, black 85%, rgba(3, 3, 3, 0)10%);}
+  86% {background: linear-gradient(180deg, black 86%, rgba(3, 3, 3, 0)10%);}
+  87% {background: linear-gradient(180deg, black 87%, rgba(3, 3, 3, 0)10%);}
+  88% {background: linear-gradient(180deg, black 88%, rgba(3, 3, 3, 0)10%);}
+  89% {background: linear-gradient(180deg, black 89%, rgba(3, 3, 3, 0)10%);}
+  90% {background: linear-gradient(180deg, black 90%, rgba(3, 3, 3, 0)10%);}
+  91% {background: linear-gradient(180deg, black 91%, rgba(3, 3, 3, 0)10%);}
+  92% {background: linear-gradient(180deg, black 92%, rgba(3, 3, 3, 0)10%);}
+  93% {background: linear-gradient(180deg, black 93%, rgba(3, 3, 3, 0)10%);}
+  94% {background: linear-gradient(180deg, black 94%, rgba(3, 3, 3, 0)10%);}
+  95% {background: linear-gradient(180deg, black 95%, rgba(3, 3, 3, 0)10%);}
+  96% {background: linear-gradient(180deg, black 96%, rgba(3, 3, 3, 0)10%);}
+  97% {background: linear-gradient(180deg, black 97%, rgba(3, 3, 3, 0)10%);}
+  98% {background: linear-gradient(180deg, black 98%, rgba(3, 3, 3, 0)10%);}
+  99% {background: linear-gradient(180deg, black 99%, rgba(3, 3, 3, 0)10%);}
+  100% {background: linear-gradient(180deg, black 100%, rgba(3, 3, 3, 0)10%);}
+}
+
+.sticky:after{
+  background-color: black;
 }
 
 /* BACKGROUND VIDEO */
@@ -318,7 +541,7 @@ div.mainContent {
 
 div.headerContent {
   padding: 1.8em 1.8em 0 1.8em;
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -955,9 +1178,43 @@ a#stop {
     display: flex;
   }
 
+  #membersTitle {
+    padding-top: 40vh;
+  }
+
+  div.content{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+  }
+
   div.contentTitle {
     font-size: 1.2em;
   }
+
+  .contentAnchor{
+    clear: both;
+  }
+
+  #contentAnchorOne{
+    margin-top: 5%;
+  }
+
+  #contentAnchorOne, #contentAnchorThree{
+    float: left;
+    margin-left: 10%;
+  }
+
+  #contentAnchorTwo, #contentAnchorFour{
+    float: right;
+    margin-right: 10%;
+  }
+
+  #contentAnchorTwo, #contentAnchorThree, #contentAnchorFour{
+    margin-top: -12%;
+  }
+
+  
 
   div.member {
     width: 500px;
@@ -1034,8 +1291,8 @@ a#stop {
 
   #interaktion {
     width: 350px;
-    margin: 40px 300px;
   }
+  
 
   .projectCarouselInteraktion,
   .projectCarouselMib,
@@ -1050,8 +1307,9 @@ a#stop {
     margin-right: 10px;
   }
 
-  .project {
+  div.project {
     max-width: 800px;
+    margin: 80px auto;
   }
 
   .projectCell img {
