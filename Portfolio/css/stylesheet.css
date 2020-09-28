@@ -911,7 +911,6 @@ body {
 }
 
 
-
 @keyframes myFirst{
   0% {background: linear-gradient(180deg,blackB 0%, rgba(3, 3, 3, 0)10%);}
   1% {background: linear-gradient(180deg,blackB 1%, rgba(3, 3, 3, 0)10%);}
