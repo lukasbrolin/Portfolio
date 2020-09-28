@@ -55,8 +55,8 @@ html {
   font-size: 35px;
 }
 
-.nav-horizontal h2:hover{
-  color: #EB502F;
+.nav-horizontal h2:hover {
+  color: #eb502f;
 }
 
 .nav-horizontal > ul {
@@ -74,20 +74,20 @@ html {
 
 .nav-horizontal ul a:hover,
 .nav-horizontal ul a:focus {
-  color: #EB502F;
+  color: #eb502f;
 }
 
 .nav-horizontal ul {
   display: none;
 }
 
-#team-svg{
+#team-svg {
   padding-top: 10vh;
 }
-.project-svg{
+.project-svg {
   padding-top: 10vh;
 }
-.contact-svg{
+.contact-svg {
   padding-top: 10vh;
 }
 
@@ -151,7 +151,7 @@ html {
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #E9411D;
+  color: #e9411d;
 }
 
 .toggle {
@@ -1629,9 +1629,8 @@ div.headerContent p {
   text-align: left;
 }
 
-
-div.headerContent p strong{
-  color: #EB502F;
+div.headerContent p strong {
+  color: #eb502f;
   text-shadow: 0px 1px #fff;
 }
 
@@ -1652,7 +1651,7 @@ div.content {
 
 div.contentTitle {
   padding-top: 20vh;
-  margin-bottom: 10vh;
+  /* margin-bottom: 10vh; */
 }
 
 div.contentTitle p {
@@ -1758,8 +1757,8 @@ div.member:after {
   opacity: 0;
   transition: 0.5s;
   width: 100%;
-  height: 100px ;
-  border-right: 5px solid #EB502F;
+  height: 100px;
+  border-right: 5px solid #eb502f;
 }
 
 .member:hover .contentBx {
@@ -1794,22 +1793,22 @@ div.project {
   z-index: -0;
 }
 
-#svgBannerTwo{
+#svgBannerTwo {
   transform: rotateX(180deg);
   position: relative;
 }
 
-#svgBannerThree, #svgBannerFour{
+#svgBannerThree,
+#svgBannerFour {
   position: relative;
   transform: rotateY(180deg);
 }
 
-#svgBannerFour, #svgBannerFive{
+#svgBannerFour,
+#svgBannerFive {
   margin-top: -4px;
-  border-top: 2px solid #1A1A1A;
+  border-top: 2px solid #1a1a1a;
 }
-
-
 
 div.project:hover {
   height: 700px;
@@ -1831,12 +1830,11 @@ div.project:hover {
   opacity: 0;
   transition: 0.5s;
   width: 100%;
-  border-right: 5px solid #EB502F;
+  border-right: 5px solid #eb502f;
 }
 
 .projectBx {
   overflow: hidden;
-  
 }
 
 .projectBx img {
@@ -2030,7 +2028,7 @@ div.memberInfo ul li strong {
 }
 
 .cell {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   position: relative;
   width: 80%;
   height: 400px;
@@ -2060,11 +2058,11 @@ div.memberInfo ul li strong {
 .mainCarousel h1 {
   color: #1a1a1a;
   font-size: 1.6em;
-  margin-top: -2px
+  margin-top: -2px;
 }
 
 .flickity-button {
-  background: #E2E2DF !important ;
+  background: #e2e2df !important ;
   box-shadow: 0px 0px 24px -8px rgba(47, 47, 45, 1);
 }
 
@@ -2098,7 +2096,7 @@ div.memberInfo ul li strong {
   background: #fff;
   margin-bottom: 0;
   border: 1px solid #ccc;
-  border-right: 5px solid #E9411D;
+  border-right: 5px solid #e9411d;
   padding: 12px;
   color: #000;
   font-size: 16px;
@@ -2187,7 +2185,7 @@ a#stop {
   padding: 20px;
   box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.5);
   bottom: 1em;
-  border-right: 5px solid #E9411D;
+  border-right: 5px solid #e9411d;
 }
 
 .error {
@@ -2300,7 +2298,6 @@ a#stop {
   div.contentTitle {
     font-size: 1.2em;
   }
-  
 
   .contentAnchor {
     clear: both;
@@ -2357,7 +2354,6 @@ a#stop {
 
   .member .contentBx {
     height: 160px;
-    
   }
 
   .member .contentBx h2 {
@@ -2451,20 +2447,15 @@ a#stop {
   }
 
   .flickity-button {
-    background: #E2E2DF !important ;
+    background: #e2e2df !important ;
   }
-
- 
 
   .team-svg img {
     display: block;
     margin: auto;
     width: 40%;
     margin-bottom: -11%;
-    
   }
-
-  
 
   .project-svg img {
     display: block;
@@ -2473,8 +2464,6 @@ a#stop {
     margin-top: -10%;
     margin-bottom: -20%;
   }
-
-  
 
   .contact-svg img {
     display: block;
