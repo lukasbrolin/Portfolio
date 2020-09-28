@@ -28,7 +28,7 @@ $(document).ready(function () {
     ) {
       $("html,body").animate(
         {
-          scrollTop: $("#membersTitle").offset().top,
+          scrollTop: $("#team-svg").offset().top,
         },
         "slow",
         "linear"
