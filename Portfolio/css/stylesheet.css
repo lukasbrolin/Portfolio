@@ -1664,6 +1664,7 @@ div.contentTitle p {
 
 /* MEMBER BOX */
 div.member {
+  background: rgba(0, 0, 0, 0.4);
   position: relative;
   width: 300px;
   height: 300px;
@@ -1671,7 +1672,6 @@ div.member {
   justify-content: center;
   align-items: center;
   margin: 40px;
-  background: #fff;
   transition: 0.5s;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
@@ -1680,7 +1680,7 @@ div.member:hover {
   height: 400px;
 }
 
-div.member:before {
+/* div.member:before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1689,7 +1689,7 @@ div.member:before {
   bottom: -2px;
   background: #fff;
   z-index: -1;
-}
+} */
 
 div.member:after {
   content: "";
@@ -1708,7 +1708,7 @@ div.member:after {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  /* padding: 10px; */
   box-sizing: border-box;
 }
 
@@ -1725,9 +1725,9 @@ div.member:after {
 .member .contentBx {
   position: absolute;
   bottom: 0;
-  left: 10px;
+  /* left: 10px;
   right: 10px;
-  bottom: 10px;
+  bottom: 10px; */
   height: 90px;
   background: rgba(0, 0, 0, 0.4);
   display: flex;
@@ -1736,6 +1736,8 @@ div.member:after {
   align-items: center;
   opacity: 0;
   transition: 0.5s;
+  width: 100%;
+  height: 100px ;
 }
 
 .member:hover .contentBx {
@@ -1770,6 +1772,18 @@ div.project {
   z-index: -0;
 }
 
+#svgBannerTwo{
+  transform: rotateX(180deg);
+  position: relative;
+}
+
+#svgBannerThree{
+  position: relative;
+  transform: rotateY(180deg);
+}
+
+
+
 div.project:hover {
   height: 700px;
   /* transition: 0.5s; */
@@ -1778,10 +1792,10 @@ div.project:hover {
 .project .projectBx {
   position: absolute;
   bottom: 0;
-  left: 10px;
+  /* left: 10px;
   right: 10px;
-  bottom: 10px;
-  height: 140px;
+  bottom: 10px; */
+  height: 160px;
   background: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
@@ -1789,6 +1803,7 @@ div.project:hover {
   align-items: center;
   opacity: 0;
   transition: 0.5s;
+  width: 100%;
 }
 
 .projectBx {
@@ -2246,7 +2261,7 @@ a#stop {
   }
 
   div.content {
-    width: 100%;
+    width: 90%;
     display: block;
     overflow: hidden;
   }
@@ -2254,6 +2269,7 @@ a#stop {
   div.contentTitle {
     font-size: 1.2em;
   }
+  
 
   .contentAnchor {
     clear: both;
@@ -2309,7 +2325,7 @@ a#stop {
   }
 
   .member .contentBx {
-    height: 150px;
+    height: 160px;
   }
 
   .member .contentBx h2 {
