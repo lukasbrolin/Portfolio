@@ -68,8 +68,27 @@ html {
   font-size: 1.2em;
 }
 
+.nav-horizontal ul a:hover,
+.nav-horizontal ul a:focus {
+  color: #dadada;
+}
+
 .nav-horizontal ul {
   display: none;
+}
+
+.team-svg img {
+  display: block;
+  margin: auto;
+  width: 60%;
+  margin-bottom: -200px;
+}
+
+.project-svg img {
+  display: block;
+  margin: auto;
+  width: 80%;
+  margin-bottom: -200px;
 }
 
 #hamburger .hamburger {
@@ -1545,7 +1564,6 @@ div.backgroundHeader #myVideo {
 }
 
 div.movieBackground {
-  /* background-color: rgba(99, 99, 99, 0.3); */
   background: linear-gradient(
     0deg,
     rgb(0, 0, 0) 0%,
@@ -1562,7 +1580,7 @@ div.mainContent {
 }
 
 #mainContentMember {
-  padding-top: 20vh;
+  padding-top: 10vh;
 }
 
 div.headerContent {
@@ -1578,17 +1596,8 @@ div.headerContent {
   text-align: center;
 }
 
-/* #membersTitle {
+#membersTitle {
   padding-top: 20vh;
-} */
-
-.mug {
-  text-align: center;
-  position: relative;
-}
-
-.mug img {
-  width: 200px;
 }
 
 div.headerContent p {
@@ -1633,7 +1642,6 @@ div.contentTitle p {
 
 #wave-top {
   position: absolute;
-  /* opacity: 0.25; */
 }
 
 /* MEMBER BOX */
@@ -2215,9 +2223,9 @@ a#stop {
     display: flex;
   }
 
-  /* #membersTitle {
-    padding-top: -20vh;
-  } */
+  #membersTitle {
+    padding-top: 20vh;
+  }
 
   div.content {
     width: 100%;
@@ -2378,5 +2386,19 @@ a#stop {
 
   .flickity-button {
     background: #e2e1d2 !important ;
+  }
+
+  .team-svg img {
+    display: block;
+    margin: auto;
+    width: 35%;
+    margin-bottom: -200px;
+  }
+}
+  .project-svg img {
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-bottom: -170px;
   }
 }
