@@ -81,14 +81,23 @@ html {
   display: block;
   margin: auto;
   width: 60%;
-  margin-bottom: -200px;
+  margin-bottom: -20%;
 }
 
 .project-svg img {
   display: block;
   margin: auto;
-  width: 80%;
-  margin-bottom: -200px;
+  width: 100%;
+  margin-top: -10%;
+  margin-bottom: -40%;
+}
+
+.contact-svg img {
+  display: block;
+  margin: auto;
+  margin-bottom: -20%;
+  margin-top: 10%;
+  width: 100%;
 }
 
 #hamburger .hamburger {
@@ -1614,7 +1623,7 @@ div.headerContent h1 {
 
 div.content {
   width: 80%;
-  margin: 5% auto 0;
+  margin: 0 auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1644,14 +1653,14 @@ div.contentTitle p {
   position: absolute;
 }
 
-#colorPng{
+#colorPng {
   position: absolute;
   right: 0;
-  }
+}
 
-  #colorPng img{
-    height: 800px;
-  }
+#colorPng img {
+  height: 800px;
+}
 
 /* MEMBER BOX */
 div.member {
@@ -2400,13 +2409,22 @@ a#stop {
   .team-svg img {
     display: block;
     margin: auto;
-    width: 35%;
-    margin-bottom: -200px;
+    width: 50%;
+    margin-bottom: -10%;
   }
   .project-svg img {
     display: block;
     margin: auto;
     width: 80%;
-    margin-bottom: -170px;
+    margin-top: -10%;
+    margin-bottom: -25%;
+  }
+  .contact-svg img {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+
+    margin-bottom: -8%;
+    width: 60%;
   }
 }

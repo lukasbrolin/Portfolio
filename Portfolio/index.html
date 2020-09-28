@@ -259,45 +259,52 @@
             <a href="#" class="stop formBx" id="stop">Stop Slideshow</a>
         </div>
 
-        <!-- CONTACT US -->
-        <div class="contentTitle" id="contactUsTitle">
-            <p>Contact Us</p>
+        <!-- CONTACT US -->'
+        <div class="mainContent" id="projectContent">
+            <div class="contact-svg">
+                <img src="img/contact.svg" alt="Contact">
+            </div>
+            <div class="contentTitle" id="contactUsTitle">
+                <p>Contact Us</p>
+            </div>
+
+            <div class="form">
+                <form class="theForm">
+                    <label for="input-name">Name</label>
+                    <input type="text" id="input-name" class="formBx">
+                    <p class="error"><span class="emsg hidden" id="fname">Please Enter a Valid Name</span></p>
+
+                    <label for="input-lastname">Lastname</label>
+                    <input type="text" id="input-lastname" class="formBx">
+                    <p class="error"><span class="emsg hidden" id="lname">Please Enter a Valid Name</span></p>
+
+                    <label for="input-phone">Phone</label>
+                    <input type="tel" id="input-phone" class="formBx">
+                    <p class="error"><span class="emsg hidden" id="phone">Please Enter a Valid Phonenumber</span></p>
+
+                    <label for="input-email">Email Address</label>
+                    <input type="email" id="input-email" class="formBx">
+                    <p class="error"><span class="emsg hidden" id="email">Please Enter a Valid Emailadress</span></p>
+
+                    <label for="input-textarea">Type your Message</label>
+                    <textarea id="input-textarea" class="formBx"></textarea>
+
+                    <input type="submit" class="formSubmit formBx" id="formSubmit" value="Send" />
+                </form>
+            </div>
         </div>
+    </div>
 
-        <div class="form">
-            <form class="theForm">
-                <label for="input-name">Name</label>
-                <input type="text" id="input-name" class="formBx">
-                <p class="error"><span class="emsg hidden" id="fname">Please Enter a Valid Name</span></p>
 
-                <label for="input-lastname">Lastname</label>
-                <input type="text" id="input-lastname" class="formBx">
-                <p class="error"><span class="emsg hidden" id="lname">Please Enter a Valid Name</span></p>
-
-                <label for="input-phone">Phone</label>
-                <input type="tel" id="input-phone" class="formBx">
-                <p class="error"><span class="emsg hidden" id="phone">Please Enter a Valid Phonenumber</span></p>
-
-                <label for="input-email">Email Address</label>
-                <input type="email" id="input-email" class="formBx">
-                <p class="error"><span class="emsg hidden" id="email">Please Enter a Valid Emailadress</span></p>
-
-                <label for="input-textarea">Type your Message</label>
-                <textarea id="input-textarea" class="formBx"></textarea>
-
-                <input type="submit" class="formSubmit formBx" id="formSubmit" value="Send" />
-            </form>
-        </div>
-
-        <!-- MAP -->
-        <div id="map"></div>
-        <script src="js/map.js"></script>
-        <script defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQOBQKCDNzap41-VM-CQ-k5KPI4y6cwvc&callback=initMap">
-            </script>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+    <!-- MAP -->
+    <div id="map"></div>
+    <script src="js/map.js"></script>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQOBQKCDNzap41-VM-CQ-k5KPI4y6cwvc&callback=initMap">
+        </script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
 </body>
 
 </html>
