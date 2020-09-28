@@ -1636,6 +1636,15 @@ div.contentTitle p {
   /* opacity: 0.25; */
 }
 
+#colorPng{
+  position: absolute;
+  right: 0;
+  }
+
+  #colorPng img{
+    height: 800px;
+  }
+
 /* MEMBER BOX */
 div.member {
   position: relative;
