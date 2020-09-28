@@ -20,6 +20,10 @@ body {
   height: 100%;
 }
 
+html {
+  background-color: #f7f7f7;
+}
+
 /* HEADER */
 .nav-horizontal {
   position: absolute;
