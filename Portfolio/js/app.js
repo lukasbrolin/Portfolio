@@ -1,13 +1,6 @@
 $(document).ready(function () {
   AOS.init({});
 
-  var vid = document.getElementById="myVideo";
-
-  function setPlaySpeed() { 
-    vid.playbackRate = 0.2;
-  } 
-  setPlaySpeed()
-
   document.getElementById("theScroll").addEventListener(
     "click",
     function (e) {
