@@ -5,6 +5,8 @@ $(document).ready(function () {
     "click",
     function (e) {
       e.preventDefault();
+      hamburger.classList.remove("is-active");
+      nav.classList.remove("toggle");
       scrollWindow();
     },
     false
