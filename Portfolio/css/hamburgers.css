@@ -21,6 +21,16 @@
   overflow: visible;
 }
 
+.hamburger.is-active .hamburger-inner:hover,
+.hamburger.is-active .hamburger-inner:hover::before,
+.hamburger.is-active .hamburger-inner:hover::after{
+  background-color: #EB502F;
+}
+
+.hamburger-inner:hover, .hamburger-inner:hover::before, .hamburger-inner:hover::after{
+  background-color: #EB502F;
+}
+
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
