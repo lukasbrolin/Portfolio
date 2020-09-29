@@ -40,7 +40,7 @@ html {
   align-items: center;
 }
 
-.nav-horizontal a#hamburger {
+.nav-horizontal .hamburger {
   display: flex;
   margin-left: auto;
   padding-right: 2%;
@@ -114,7 +114,7 @@ html {
   width: 100%;
 }
 
-#hamburger .hamburger {
+#hamburger {
   z-index: 2;
   outline: none;
 }
@@ -347,34 +347,34 @@ html {
 
 @keyframes myFirst {
   0% {
-    background: linear-gradient(180deg, blackB 0%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 0%, rgba(3, 3, 3, 0) 10%);
   }
   1% {
-    background: linear-gradient(180deg, blackB 1%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 1%, rgba(3, 3, 3, 0) 10%);
   }
   2% {
-    background: linear-gradient(180deg, blackB 2%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 2%, rgba(3, 3, 3, 0) 10%);
   }
   3% {
-    background: linear-gradient(180deg, blackB 3%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 3%, rgba(3, 3, 3, 0) 10%);
   }
   4% {
-    background: linear-gradient(180deg, blackB 4%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 4%, rgba(3, 3, 3, 0) 10%);
   }
   5% {
-    background: linear-gradient(180deg, blackB 5%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 5%, rgba(3, 3, 3, 0) 10%);
   }
   6% {
-    background: linear-gradient(180deg, blackB 6%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 6%, rgba(3, 3, 3, 0) 10%);
   }
   7% {
-    background: linear-gradient(180deg, blackB 7%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 7%, rgba(3, 3, 3, 0) 10%);
   }
   8% {
-    background: linear-gradient(180deg, blackB 8%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 8%, rgba(3, 3, 3, 0) 10%);
   }
   9% {
-    background: linear-gradient(180deg, blackB 9%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 9%, rgba(3, 3, 3, 0) 10%);
   }
   10% {
     background: linear-gradient(180deg, black 10%, rgba(3, 3, 3, 0) 10%);
@@ -652,34 +652,34 @@ html {
 }
 @keyframes myFirstBackwards {
   0% {
-    background: linear-gradient(180deg, blackB 0%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 0%, rgba(3, 3, 3, 0) 10%);
   }
   1% {
-    background: linear-gradient(180deg, blackB 1%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 1%, rgba(3, 3, 3, 0) 10%);
   }
   2% {
-    background: linear-gradient(180deg, blackB 2%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 2%, rgba(3, 3, 3, 0) 10%);
   }
   3% {
-    background: linear-gradient(180deg, blackB 3%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 3%, rgba(3, 3, 3, 0) 10%);
   }
   4% {
-    background: linear-gradient(180deg, blackB 4%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 4%, rgba(3, 3, 3, 0) 10%);
   }
   5% {
-    background: linear-gradient(180deg, blackB 5%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 5%, rgba(3, 3, 3, 0) 10%);
   }
   6% {
-    background: linear-gradient(180deg, blackB 6%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 6%, rgba(3, 3, 3, 0) 10%);
   }
   7% {
-    background: linear-gradient(180deg, blackB 7%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 7%, rgba(3, 3, 3, 0) 10%);
   }
   8% {
-    background: linear-gradient(180deg, blackB 8%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 8%, rgba(3, 3, 3, 0) 10%);
   }
   9% {
-    background: linear-gradient(180deg, blackB 9%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 9%, rgba(3, 3, 3, 0) 10%);
   }
   10% {
     background: linear-gradient(180deg, black 10%, rgba(3, 3, 3, 0) 10%);
@@ -958,34 +958,34 @@ html {
 
 @keyframes myFirst {
   0% {
-    background: linear-gradient(180deg, blackB 0%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 0%, rgba(3, 3, 3, 0) 10%);
   }
   1% {
-    background: linear-gradient(180deg, blackB 1%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 1%, rgba(3, 3, 3, 0) 10%);
   }
   2% {
-    background: linear-gradient(180deg, blackB 2%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 2%, rgba(3, 3, 3, 0) 10%);
   }
   3% {
-    background: linear-gradient(180deg, blackB 3%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 3%, rgba(3, 3, 3, 0) 10%);
   }
   4% {
-    background: linear-gradient(180deg, blackB 4%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 4%, rgba(3, 3, 3, 0) 10%);
   }
   5% {
-    background: linear-gradient(180deg, blackB 5%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 5%, rgba(3, 3, 3, 0) 10%);
   }
   6% {
-    background: linear-gradient(180deg, blackB 6%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 6%, rgba(3, 3, 3, 0) 10%);
   }
   7% {
-    background: linear-gradient(180deg, blackB 7%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 7%, rgba(3, 3, 3, 0) 10%);
   }
   8% {
-    background: linear-gradient(180deg, blackB 8%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 8%, rgba(3, 3, 3, 0) 10%);
   }
   9% {
-    background: linear-gradient(180deg, blackB 9%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 9%, rgba(3, 3, 3, 0) 10%);
   }
   10% {
     background: linear-gradient(180deg, black 10%, rgba(3, 3, 3, 0) 10%);
@@ -1263,34 +1263,34 @@ html {
 }
 @keyframes myFirstBackwards {
   0% {
-    background: linear-gradient(180deg, blackB 0%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 0%, rgba(3, 3, 3, 0) 10%);
   }
   1% {
-    background: linear-gradient(180deg, blackB 1%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 1%, rgba(3, 3, 3, 0) 10%);
   }
   2% {
-    background: linear-gradient(180deg, blackB 2%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 2%, rgba(3, 3, 3, 0) 10%);
   }
   3% {
-    background: linear-gradient(180deg, blackB 3%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 3%, rgba(3, 3, 3, 0) 10%);
   }
   4% {
-    background: linear-gradient(180deg, blackB 4%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 4%, rgba(3, 3, 3, 0) 10%);
   }
   5% {
-    background: linear-gradient(180deg, blackB 5%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 5%, rgba(3, 3, 3, 0) 10%);
   }
   6% {
-    background: linear-gradient(180deg, blackB 6%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 6%, rgba(3, 3, 3, 0) 10%);
   }
   7% {
-    background: linear-gradient(180deg, blackB 7%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 7%, rgba(3, 3, 3, 0) 10%);
   }
   8% {
-    background: linear-gradient(180deg, blackB 8%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 8%, rgba(3, 3, 3, 0) 10%);
   }
   9% {
-    background: linear-gradient(180deg, blackB 9%, rgba(3, 3, 3, 0) 10%);
+    background: linear-gradient(180deg, black 9%, rgba(3, 3, 3, 0) 10%);
   }
   10% {
     background: linear-gradient(180deg, black 10%, rgba(3, 3, 3, 0) 10%);
@@ -1799,13 +1799,16 @@ div.project {
 }
 
 #svgBannerThree,
-#svgBannerFour {
+#svgBannerFour,
+#svgBannerSix {
   position: relative;
   transform: rotateY(180deg);
 }
 
 #svgBannerFour,
-#svgBannerFive {
+#svgBannerFive,
+#svgBannerSix,
+#svgBannerSeven {
   margin-top: -4px;
   border-top: 2px solid #1a1a1a;
 }
@@ -2058,7 +2061,7 @@ div.memberInfo ul li strong {
 .mainCarousel h1 {
   color: #1a1a1a;
   font-size: 1.6em;
-  margin-top: -2px;
+  margin-top: -2%;
 }
 
 .flickity-button {

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/validation.js"></script>
@@ -32,21 +32,25 @@
     <!-- HORIZONTAL NAV -->
     <div class="nav-horizontal" id="navbar">
         <a href="#">
-            <img src="img/logo.png" id="logo">
+            <img src="img/logo.png" id="logo" alt="Website's Logo">
             <h2>JOSILUIS</h2>
         </a>
         <ul class="links">
-            <a href="#team-svg">Members</a>
-            <a href="#project-svg">Project</a>
-            <a href="#contact-svg">Contact Us</a>
+            <li>
+                <a href="#team-svg">Members</a>
+            </li>
+            <li>
+                <a href="#project-svg">Project</a>
+            </li>
+            <li>
+                <a href="#contact-svg">Contact Us</a>
+            </li>
         </ul>
-        <a href="#" id="hamburger">
-            <button class="hamburger hamburger--emphatic" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </a>
+        <button class="hamburger hamburger--emphatic" id="hamburger" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
     </div>
 
     <!-- VERTICAL NAV -->
@@ -72,7 +76,7 @@
         <path fill="#000000" fill-opacity="1" d="M0,64L1440,128L1440,0L0,0Z"></path>
     </svg>
     <div class="mainContent " id="mainContent">
-        
+
         <div class="team-svg" id="team-svg">
             <img src="img/team.svg" alt="Team">
         </div>
@@ -197,8 +201,8 @@
                     <h2>
                         Interaktionsdesign
                     </h2>
-                    <a class="banner" href="https://github.com/pandrum/interaktionsdesign/blob/master/README.md" target="_blank"><img
-                            src="img/github.svg" class="heartbeat" alt="GitHub"></a>
+                    <a class="banner" href="https://github.com/pandrum/interaktionsdesign/blob/master/README.md"
+                        target="_blank"><img src="img/github.svg" class="heartbeat" alt="GitHub"></a>
                 </div>
             </div>
 
@@ -225,8 +229,8 @@
                     <h2>
                         Men in Black
                     </h2>
-                    <a class="banner" href="https://github.com/pandrum/mib" target="_blank"><img src="img/github.svg" class="heartbeat"
-                            alt="GitHub"></a>
+                    <a class="banner" href="https://github.com/pandrum/mib" target="_blank"><img src="img/github.svg"
+                            class="heartbeat" alt="GitHub"></a>
                 </div>
             </div>
 
@@ -253,8 +257,8 @@
                     <h2>
                         Scrum XP
                     </h2>
-                    <a class="banner" href="https://github.com/dannebas/ScrumXP" target="_blank"><img src="img/github.svg"
-                            class="heartbeat" alt="GitHub"></a>
+                    <a class="banner" href="https://github.com/dannebas/ScrumXP" target="_blank"><img
+                            src="img/github.svg" class="heartbeat" alt="GitHub"></a>
                 </div>
             </div>
         </div>
@@ -264,7 +268,7 @@
         </div>
 
         <!-- CONTACT US -->'
-        <div class="mainContent" id="projectContent">
+        <div class="mainContent" id="contactContent">
             <div class="contact-svg" id="contact-svg">
                 <img src="img/contact.svg" alt="Contact">
             </div>
