@@ -92,7 +92,7 @@ $(document).ready(function () {
     $("#navbar").toggle();
   });
 
-  // Hamburger
+  // Change appereance of hamburger and toggle overlay
   var hamburger = document.querySelector(".hamburger");
   var nav = document.getElementById("nav");
 
@@ -113,8 +113,10 @@ $(document).ready(function () {
     if (this.hash !== "") {
       event.preventDefault();
 
+      // Fetches item clicked on
       var hash = this.hash;
 
+      // Scroll to item on page with slight delay
       $("html, body").animate(
         {
           scrollTop: $(hash).offset().top,
@@ -130,6 +132,7 @@ $(document).ready(function () {
   // Sticky Navbar
   var navbar = document.getElementById("navbar");
   navBarFunction();
+  // Adds sticky navbar to top whenever user scrolls down on page and removes it when user is on top at the page.
   function navBarFunction() {
     if ($(window).scrollTop() > 1) {
       navbar.classList.add("sticky");
