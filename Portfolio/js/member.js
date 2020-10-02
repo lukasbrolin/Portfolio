@@ -1,18 +1,21 @@
 $(document).ready(function () {
+  //Initializing carousel and settings for slideshow
   var carouselIndex = 0;
   var $carousel = $(".mainCarousel").flickity({
     cellAlign: "center",
     wrapAround: false,
     on: {
       change: function (index) {
+        //Sets values for name, picture, information
         setValues(index);
+        //Sets values for Chart
         fillNewContent(index);
         carouselIndex = index;
-        console.log(members[carouselIndex].chartLabel);
       },
     },
   });
 
+  //Creates an array of objects for each member
   var members = [
     {
       name: "Lukas Brolin",
@@ -64,9 +67,11 @@ $(document).ready(function () {
     },
   ];
 
+  //Gets index number for the selected member when initialized from index.html
   var getIndex = sessionStorage.getItem("number");
   var indexBefore = getIndex.substring(getIndex.length - 1);
 
+  //Sets standard config for chart
   var config = {
     type: "bar",
     data: {
@@ -100,7 +105,7 @@ $(document).ready(function () {
             "#1A1A1A",
             "#EB502F",
             "#1A1A1A",
-            "#EB502F", //"#808080"
+            "#EB502F",
             "#1A1A1A",
           ],
           borderWidth: 1,
@@ -130,6 +135,7 @@ $(document).ready(function () {
 
   Chart.defaults.global.defaultFontColor = "#2f2f2d";
 
+  //Creating a chart using canvas and config
   function theFunction() {
     var ctx = document.getElementById("myChart").getContext("2d");
     window.myChart = getNewChart(ctx, config);
@@ -139,26 +145,33 @@ $(document).ready(function () {
     return new Chart(canvas, config);
   }
 
+  //Initializing theFunction
   theFunction();
 
+  //Fills content for selected member into chart
   function fillNewContent(index) {
     if (index === "") {
       index = 0;
     }
+    //If selected member has less expertises than previous member it removes bars to fit amount of expertises
     if (members[index].chartValue.length < myChart.data.labels.length) {
       while (members[index].chartValue.length < myChart.data.labels.length) {
         config.data.labels.splice(-1, 1);
       }
     }
+    //Fills labels for chart
     for (i = 0; i < members[index].chartValue.length; i++) {
       myChart.data.labels[i] = members[index].chartLabel[i];
     }
+    //Fills data for chart
     for (i = 0; i < members[index].chartValue.length; i++) {
       myChart.data.datasets[0].data[i] = members[index].chartValue[i];
     }
+    //Updates chart
     myChart.update();
   }
 
+  //Sets values for name, picture, information etc
   function setValues(indexBefore) {
     if (indexBefore === "") {
       indexBefore = 0;
@@ -179,9 +192,9 @@ $(document).ready(function () {
       "<Strong>Phone: </Strong>" + members[indexBefore].phone;
   }
 
+  //Initializing page using indexBefore from selected picture in index.html
   fillNewContent(indexBefore);
   setValues(indexBefore);
-
   $carousel.flickity("select", indexBefore);
 
   // Hamburger
