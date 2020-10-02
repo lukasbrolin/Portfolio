@@ -7,7 +7,6 @@ $(document).ready(function () {
       change: function (index) {
         setValues(index);
         fillNewContent(index);
-        // console.log("Detta är index" + index);
         carouselIndex = index;
         console.log(members[carouselIndex].chartLabel);
       },
@@ -67,14 +66,6 @@ $(document).ready(function () {
 
   var getIndex = sessionStorage.getItem("number");
   var indexBefore = getIndex.substring(getIndex.length - 1);
-  var clickedAnchor = "";
-  var contentAnchors = document.getElementsByClassName("contentAnchor");
-  for (i = 0; i < contentAnchors.length; i++) {
-    contentAnchors[i].addEventListener("click", function (e) {
-      sessionStorage.setItem("number", this);
-      clickedAnchor = e;
-    });
-  }
 
   var config = {
     type: "bar",

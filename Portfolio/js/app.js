@@ -1,6 +1,8 @@
 $(document).ready(function () {
-  AOS.init({});
+  AOS.init({}); // initiate fade in images for the members
 
+  /* make scrollbutton on landingpage clickable and scrolls down to member section.
+  Also removes overlay if there is one and toggle hamburger back to normal */
   document.getElementById("theScroll").addEventListener(
     "click",
     function (e) {
@@ -22,6 +24,7 @@ $(document).ready(function () {
     }
   });
 
+  // Scrolls down to the image in memberssection
   function scrollWindow() {
     if (
       window.scrollY < document.getElementById("backgroundHeader").clientHeight
@@ -35,6 +38,7 @@ $(document).ready(function () {
       );
     }
   }
+  // Settings on how the projectcarousel behaves
   $(".projects").flickity({
     cellAlign: "center",
     wrapAround: true,
@@ -43,6 +47,7 @@ $(document).ready(function () {
     fullscreen: true,
   });
 
+  // Button that stops the carouself from autoplaying
   document.getElementById("stop").addEventListener("click", (e) => {
     e.preventDefault();
     let $carousels = $(
@@ -63,6 +68,7 @@ $(document).ready(function () {
     }
   });
 
+  // Sets a click function on each membercard that saves information in sessionStorage that member.html use.
   var clickedAnchor = "";
   var contentAnchors = document.getElementsByClassName("contentAnchor");
   for (i = 0; i < contentAnchors.length; i++) {
@@ -72,6 +78,7 @@ $(document).ready(function () {
     });
   }
 
+  // Event listener that listens for scrollevent
   window.addEventListener(
     "scroll",
     function () {
@@ -119,26 +126,15 @@ $(document).ready(function () {
       );
     }
   });
+
   // Sticky Navbar
   var navbar = document.getElementById("navbar");
   navBarFunction();
   function navBarFunction() {
-    if (
-      $(window).scrollTop() >
-      // document.body.getBoundingClientRect().top +
-      //   document.getElementById("navbar").clientHeight <=
-      // document.getElementById("backgroundHeader").clientHeight <=
-      1
-    ) {
+    if ($(window).scrollTop() > 1) {
       navbar.classList.add("sticky");
       navbar.classList.remove("stickyRemove");
-    } else if (
-      $(window).scrollTop() <
-      // document.body.getBoundingClientRect().top +
-      //   document.getElementById("navbar").clientHeight >
-      // document.getElementById("backgroundHeader").clientHeight >
-      1
-    ) {
+    } else if ($(window).scrollTop() < 1) {
       navbar.classList.remove("sticky");
       navbar.classList.add("stickyRemove");
     }
