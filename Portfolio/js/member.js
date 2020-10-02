@@ -197,7 +197,7 @@ $(document).ready(function () {
   setValues(indexBefore);
   $carousel.flickity("select", indexBefore);
 
-  // Hamburger
+  // Change appereance of hamburger and toggle overlay
   var hamburger = document.querySelector(".hamburger");
   var nav = document.getElementById("nav");
 
